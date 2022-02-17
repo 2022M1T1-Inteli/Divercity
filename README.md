@@ -31,7 +31,7 @@ May the force be with you!
 
 ## 🛠 Estrutura de pastas
 
-- 📂 __[Projeto4](./)__
+- 📂 __Projeto4__
    - 📄 [README.md](README.md)
    - 📂 __[documentos](documentos/)__
      - 📄 Arquivos de documentos do projeto
