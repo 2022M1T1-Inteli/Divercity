@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec2 direction = vec2(0.0, -1.0);
+uniform float speed_scale = 0.5;
+
+void fragment(){
+	vec2 move = direction * TIME * speed_scale;
+	COLOR = texture(TEXTURE, UV + move);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/direction = Vector2( 0, -1 )
+shader_param/speed_scale = 0.5
+
+[node name="InfinityBackground" type="Sprite"]
+material = SubResource( 2 )
+position = Vector2( -238, 291 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1300, 740 )
