@@ -18,7 +18,6 @@ shader_param/speed_scale = 0.5
 
 [node name="InfinityBackground" type="Sprite"]
 material = SubResource( 2 )
-position = Vector2( -238, 291 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 1300, 740 )
+region_rect = Rect2( 0, 0, 720, 1280 )
