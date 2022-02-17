@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/INbev.png-9a6c325e7df4599502e36dc96367b6df.stex"
+path="res://.import/Cloud1.png-4993e3cd659934016649d3f2e66ee573.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/icons/INbev.png"
-dest_files=[ "res://.import/INbev.png-9a6c325e7df4599502e36dc96367b6df.stex" ]
+source_file="res://resources/backgrounds/Cloud1.png"
+dest_files=[ "res://.import/Cloud1.png-4993e3cd659934016649d3f2e66ee573.stex" ]
 
 [params]
 

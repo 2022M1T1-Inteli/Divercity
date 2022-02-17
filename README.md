@@ -31,19 +31,22 @@ May the force be with you!
 
 ## 🛠 Estrutura de pastas
 
--Raiz<br>
-|<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-|readme.md<br>
-|license.txt<br>
+- 📂 __[Projeto4](.)__
+   - 📄 [README.md](README.md)
+   - 📂 __[documentos](documentos/)__
+     - 📄 Arquivos de documentos do projeto
+   - 📂 __[executáveis](executáveis/)__
+      - 📄 Local onde estão os executáveis do jogo
+   - 📂 __[imagens](imagens/)__
+      - 📄 Imagens usadas para descrição do projeto
+   - 📂 __[src](src/)__ | Projetos
+      - 📂 __[InBev](src/InBev)__ | Projeto GODOT principal
+        - 📂 __[resources](src/InBev/resources)__
+          - 📄 Materiais usados para a criação
+        - 📂 __[scenes](src/InBev/scenes)__
+          - 📄 Cenas contidas do jogo
+        - 📂 __[sources](src/InBev/sources)__
+          - 📄 Código fonte do jogo
 
 A pasta raiz contem dois arquivos que devem ser alterados:
 
