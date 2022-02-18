@@ -10,3 +10,6 @@ export_presets.cfg
 
 # Remove binaries folder
 bin/
+
+# Remove template folders
+src/InBev/android

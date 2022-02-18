@@ -16,8 +16,9 @@ shader = SubResource( 1 )
 shader_param/direction = Vector2( -1, 0 )
 shader_param/speed_scale = 0.2
 
-[node name="InfinityBackground" type="Sprite"]
+[node name="InfinityBackground" type="TextureRect"]
 material = SubResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 0, 720, 1280 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

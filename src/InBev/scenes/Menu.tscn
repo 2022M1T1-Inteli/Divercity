@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://resources/fonts/UbuntuMono-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sources/menu/Menu.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://resources/backgrounds/background_3.png" type="Texture" id=5]
 [ext_resource path="res://resources/backgrounds/logo.png" type="Texture" id=6]
 [ext_resource path="res://resources/backgrounds/background_7.png" type="Texture" id=7]
-[ext_resource path="res://resources/backgrounds/background_1.png" type="Texture" id=8]
+[ext_resource path="res://scenes/InfinityBackground.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -105,22 +105,6 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Shader" id=7]
-code = "shader_type canvas_item;
-
-uniform vec2 direction = vec2(0.0, -1.0);
-uniform float speed_scale = 0.5;
-
-void fragment(){
-	vec2 move = direction * TIME * speed_scale;
-	COLOR = texture(TEXTURE, UV + move);
-}"
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 7 )
-shader_param/direction = Vector2( -1, 0 )
-shader_param/speed_scale = 0.035
-
 [sub_resource type="DynamicFont" id=6]
 size = 50
 outline_size = 4
@@ -151,43 +135,68 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Sprite" parent="Background"]
-position = Vector2( 360, 640 )
-scale = Vector2( 1.40625, 5.33333 )
-texture = ExtResource( 8 )
+[node name="NightBackground" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0352941, 0, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Moon" type="Sprite" parent="Background"]
-position = Vector2( 620, 100 )
-scale = Vector2( 2.50962, 2.50962 )
+[node name="Moon" type="TextureRect" parent="Background"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -184.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 184.0
 texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="InfinityClouds" type="Sprite" parent="Background"]
-modulate = Color( 2, 2, 2.7, 1 )
-material = SubResource( 2 )
-position = Vector2( -0.00012207, 312 )
-scale = Vector2( 3.7551, 3.7551 )
+[node name="InfinityClouds" parent="Background" instance=ExtResource( 8 )]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -336.0
+margin_right = -582.0
+margin_bottom = -286.0
+rect_scale = Vector2( 5, 5 )
+rect_clip_content = true
 texture = ExtResource( 7 )
-centered = false
-region_rect = Rect2( 0, 0, 720, 1280 )
+expand = true
 
-[node name="InfinityMontains" type="Sprite" parent="Background"]
-modulate = Color( 1.3, 1.3, 2, 1 )
-material = SubResource( 2 )
-position = Vector2( -9.53674e-07, 808 )
-scale = Vector2( 1.8, 1.96667 )
+[node name="InfinityMontains" parent="Background" instance=ExtResource( 8 )]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -240.0
 texture = ExtResource( 5 )
-centered = false
-region_rect = Rect2( 0, 0, 720, 1280 )
 
-[node name="StartButton" type="TouchScreenButton" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -360.0
+margin_top = -256.0
+margin_right = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="TouchScreenButton" parent="CenterContainer"]
 modulate = Color( 0.8, 0.8, 0.901961, 1 )
-position = Vector2( 250, 893 )
+position = Vector2( 240, 0 )
 normal = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="StartButton"]
+[node name="Label" type="Label" parent="CenterContainer/StartButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -204,9 +213,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Logo" type="Sprite" parent="."]
-modulate = Color( 0.823529, 0.823529, 0.823529, 1 )
-position = Vector2( 384, 1016 )
+[node name="Logo" type="TextureRect" parent="."]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -352.0
+margin_top = -760.0
+margin_right = 368.0
+margin_bottom = 520.0
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
