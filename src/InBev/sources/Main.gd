@@ -1,7 +1,7 @@
 extends Node
 
 # Load the menu node
-var menu = load("res://scenes/Menu.tscn")
+var menu = load("res://scenes/Menu/Menu.tscn")
 
 func _ready():
 	# Add the menu scene to the scene stack
