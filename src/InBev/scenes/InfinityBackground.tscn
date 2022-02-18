@@ -13,8 +13,8 @@ void fragment(){
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/direction = Vector2( 0, -1 )
-shader_param/speed_scale = 0.5
+shader_param/direction = Vector2( -1, 0 )
+shader_param/speed_scale = 0.2
 
 [node name="InfinityBackground" type="Sprite"]
 material = SubResource( 2 )

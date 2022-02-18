@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/African3.mp3-92d0874d735b85eefe9f897208041cf4.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/ui/African3.mp3"
+dest_files=[ "res://.import/African3.mp3-92d0874d735b85eefe9f897208041cf4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

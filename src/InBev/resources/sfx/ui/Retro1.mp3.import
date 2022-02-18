@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Retro1.mp3-1f4df72376f247d1d799d3267c5baa56.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/ui/Retro1.mp3"
+dest_files=[ "res://.import/Retro1.mp3-1f4df72376f247d1d799d3267c5baa56.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

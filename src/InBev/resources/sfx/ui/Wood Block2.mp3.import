@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wood Block2.mp3-800c0ee1a1f3bc285e05fbe9a085fee5.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/ui/Wood Block2.mp3"
+dest_files=[ "res://.import/Wood Block2.mp3-800c0ee1a1f3bc285e05fbe9a085fee5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

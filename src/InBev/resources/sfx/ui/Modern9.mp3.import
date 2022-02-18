@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Modern9.mp3-8104d20694f9aaeebc95798470ec511f.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/ui/Modern9.mp3"
+dest_files=[ "res://.import/Modern9.mp3-8104d20694f9aaeebc95798470ec511f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
