@@ -59,16 +59,8 @@ Faça o Download do ultimo binário do [jogo](/executáveis/Android), transfira 
 
 ---
 
-## 📈 Exemplo de uso WIP
-
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
-
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
-
-Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
-
+## 📈 Exemplo de uso
+### WIP
 ---
 
 ## 💻 Configuração para Desenvolvimento
