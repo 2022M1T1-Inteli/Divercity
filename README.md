@@ -12,21 +12,18 @@
 
 ## Descrição
 
-📜 O jogo é composto por um quiz, com perguntas relacionadas a equidade de gênero de raça, e, paralelo a ele, existe um mapa no qual o personagem principal avança conforme o usuário acerta as perguntas propostas.
+📜 Jogo DIVERCITY, desenvolvido por alunos do Instituto de Tecnologia e Liderança, durante o projeto do primeiro módulo em parceria com a empresa <a href="https://www.ambev.com.br/">ambev</a>.
 
-<br>
-Tem como objetivo primordial aumentar a retenção do programa de D&I, oferecido pela empresa Ambev (Companhia de bebidas das Américas), a qual enfrentava problemas de engajamento durante a sua aplicação.<br><br>
+📜 Tem como objetivo primordial aumentar a retenção do programa de D&I, oferecido pela empresa Ambev (Companhia de bebidas das Américas), a qual enfrentava problemas de engajamento durante a sua aplicação.<br><br>
 <p align="center">
 <img src="imagens/game.png" alt="DiverCity" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+💡 O jogo é composto por um quiz, com perguntas relacionadas a equidade de gênero de raça, e, paralelo a ele, existe um mapa no qual o personagem principal avança conforme o usuário acerta as perguntas propostas.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
+Nosso projeto ajuda no ensinamento de funcionários da <a href="https://www.ambev.com.br/">ambev</a> sobre diversidade utilizando de meios simples, educativos e interativos.
 <br><br>
 
 ## 🛠 Estrutura de pastas
@@ -47,47 +44,13 @@ May the force be with you!
           - 📄 Cenas contidas do jogo
         - 📂 __[sources](src/InBev/sources)__
           - 📄 Código fonte do jogo
-
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-<b>license.txt</b>: Arquivo de licença do projeto, para que qualquer um possa entender até que ponto podem utilizar seu projeto. Aconselhável utilizar a licença Creative Commons Attribution 4.0 International.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
-
-<b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há no mínimo 3 pastas, uma para binários <b>Windows</b>, uma para binários <b>android</b> e uma para a <b>Web/HTML</b>
-
-<b>imagens</b>: Algumas imagens do jogo/sistema e logos prontos para serem utilizados e visualizados.
-
-<b>src</b>: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
-
 ## 🛠 Instalação
 
 <b>Android:</b>
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+Faça o Download do ultimo binário do [jogo](/executáveis/Android), transfira o arquivo `.apk` para o seu dispositivo Android e instale o jogo.
 
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+⚠️ Atenção, caso seu dispositivo afirme que o jogo não possa ser instalado por conta de permissões de fontes externas desconhecidas, aceite as permissões, habilite a autorização de instação de aplicativos de fontes desconhecidas e instale novamente!
 
 ## 📈 Exemplo de uso
 
@@ -114,21 +77,10 @@ Coloque código do prompt de comnando se for necessário
 ```
 
 ## 🗃 Histórico de lançamentos
-
-A cada atualização os detalhes devem ser lançados aqui.
-
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 1.0.0 - Versão inicial do projeto
+  * Primeiro lançamento.
+  * Menu simples com animações e sistema de ilumunação ( GLOW ).
+  * Cena do jogo simples com primeiras ideias de mapa e movimentação de personagem.
 
 ## 📋 Licença/License
 
