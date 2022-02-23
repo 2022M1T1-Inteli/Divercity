@@ -72,12 +72,15 @@ Através da cópia/clone/ download do repositório, altere os dados do readme.md
 ---
 
 ## 💻 Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
 Para abrir este projeto você necessita das seguintes ferramentas:
 
 - <a href="https://godotengine.org/download">GODOT</a>
+
+1. Baixe o projeto.
+2. Abra o Godot Engine.
+3. Selecione a opção "Importar" para importar um projeto.
+4. Selecione o arquivo `project.godot` localizado em `src/InBev/` da pasta raiz do projeto.
+5. Agora o godot irá importar o jogo e você poderá ter acesso a todo projeto!
 
 ---
 
@@ -99,5 +102,6 @@ target audienc
 ## 🎓 Referências
 
 Aqui estão as referências usadas no projeto.
-1. <https://docs.godotengine.org/pt_BR/latest/index.html>
-2. <https://creativecommons.org/share-your-work>
+1. <https://docs.godotengine.org/pt_BR/latest/tutorials/2d/index.html>
+2. <https://docs.godotengine.org/en/3.0/tutorials/shading/shading_language.html>
+3. <https://creativecommons.org/share-your-work>
