@@ -4,11 +4,11 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# DiverCity
 
-## Nome do Grupo
+## InBev
 
-## Integrantes: <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>, <a href="https://www.linkedin.com/in/izabella-almeida-10">Izabella Almeida</a>, <a href="https://www.linkedin.com/in/mihaell-alves-4ab12720b/">Mihaell Alves</a>, <a href="https://www.linkedin.com/in/gabriel-torres-233851231/">Gabriel Torres</a>, <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8">Valentina Garcia</a>, <a href="https://www.linkedin.com/in/rebecca-perng-52a86b12b">Rebecca Perng</a>
+## Integrantes: <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>, <a href="https://www.linkedin.com/in/izabella-almeida-10">Izabella Almeida</a>, <a href="https://www.linkedin.com/in/mihaell-alves-4ab12720b/">Mihaell Alves</a>, <a href="https://www.linkedin.com/in/gabriel-torres-233851231/">Gabriel Torres</a>, <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8">Valentina Garcia</a>
 
 ## Descrição
 
@@ -17,7 +17,7 @@
 Meu projeto é um exemplo de como utilizar o github.
 <br><br>
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
+<img src="imagens/game.png" alt="DiverCity" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
