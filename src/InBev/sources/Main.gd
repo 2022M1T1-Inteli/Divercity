@@ -17,5 +17,6 @@ func _change_scene_to(scene): # Callback to change scene from childs
 	# Wait tween finish animation
 	yield($FadeAnimator, "tween_completed")
 
+
 	# Change tree scene for the new scene
 	get_node("Menu").get_tree().change_scene_to(load(scene))

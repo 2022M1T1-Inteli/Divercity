@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/MiniGames/Golf/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sources/minigames/Golf.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.145098, 0.509804, 0.254902, 1 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.348571, 0.531429, 0.702857, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0.968627, 1, 0, 1, 0.450195, 1, 0, 1, 0.968627, 1, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 3 )
+
+[node name="Golf" type="Node"]
+script = ExtResource( 3 )
+
+[node name="GolfBall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 344, 1048 )
+
+[node name="Indicator" type="CenterContainer" parent="."]
+margin_right = 720.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Indicator"]
+margin_left = 100.0
+margin_top = 17.0
+margin_right = 620.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 520, 65 )
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForceLength" type="TextureProgress" parent="Indicator"]
+margin_left = 110.0
+margin_top = 27.0
+margin_right = 610.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 500, 45 )
+texture_progress = SubResource( 2 )
+fill_mode = 6
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
