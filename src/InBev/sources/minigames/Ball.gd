@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-export var deceleration = 75
+export var deceleration = 100
 export var max_speed = 600
-export var line_multiplier = 2.75
+export var max_reach = 250
 
 var is_holding = false
 var start_position = Vector2.ZERO
@@ -12,8 +12,8 @@ var velocity = Vector2()
 var speed = 0
 
 func calculate_speed(distance):
-	distance = distance * line_multiplier
-	distance = clamp(distance, 0, max_speed)
+	distance = clamp(distance, 0, max_reach)
+	distance = range_lerp(distance, 0, max_reach, 0, max_speed)
 	return distance
 
 func _input(event):
