@@ -240,7 +240,7 @@ position = Vector2( 375, -304 )
 scale = Vector2( 3.20961, 3.20961 )
 frames = SubResource( 10 )
 animation = "Walking"
-frame = 3
+frame = 8
 playing = true
 
 [node name="Logo" type="TextureRect" parent="."]
