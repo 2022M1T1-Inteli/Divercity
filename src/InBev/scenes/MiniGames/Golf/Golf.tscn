@@ -19,14 +19,14 @@ script = ExtResource( 3 )
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 360, 1000 )
 
-[node name="IndicatorContainer" type="CenterContainer" parent="."]
+[node name="Indicators" type="CenterContainer" parent="."]
 margin_right = 720.0
 margin_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="IndicatorContainer"]
+[node name="Panel" type="Panel" parent="Indicators"]
 margin_left = 100.0
 margin_top = 17.0
 margin_right = 620.0
@@ -37,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ForceLength" type="TextureProgress" parent="IndicatorContainer"]
+[node name="ForceLength" type="TextureProgress" parent="Indicators"]
 margin_left = 110.0
 margin_top = 27.0
 margin_right = 610.0
