@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resources/effects/texture/offset_glow.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="OffsetGlowParticle2D" type="CPUParticles2D"]
+material = SubResource( 1 )
+emitting = false
+amount = 1
+one_shot = true
+texture = ExtResource( 1 )
+angle = 360.0

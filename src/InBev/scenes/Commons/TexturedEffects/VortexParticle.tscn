@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/effects/texture/effect_4.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, -0.427576, 0, 0, Vector2( 1, 0.459091 ), -1.77025, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.546961, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[node name="VortexParticle2D" type="CPUParticles2D"]
+material = SubResource( 1 )
+amount = 5
+texture = ExtResource( 1 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 50.0
+angle = 360.0
+angle_random = 1.0
+scale_amount = 0.3
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
