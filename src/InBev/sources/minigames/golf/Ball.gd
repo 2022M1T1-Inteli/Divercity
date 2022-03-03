@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 export var deceleration = 100
-export var maxSpeed = 600
-export var max_reach = 250
+export var maxSpeed = 750
+export var maxReach = 250
 
 var isHolding = false
 var startPosition = Vector2.ZERO
@@ -10,12 +10,10 @@ var dropDirection = Vector2.ZERO
 
 var velocity = Vector2(0, 0)
 var speed = 0
-const DEFAULT_XFX_PATH = "res://resources/sfx/golf/"
-const HIT_BALL_XFX_LIST = ["golf_hit_ball_001.mp3", "golf_hit_ball_002.mp3", "golf_hit_ball_003.mp3"]
 
 func calculate_speed(distance): # Calcule speed of all in base of distance of start and drop click
-	distance = clamp(distance, 0, max_reach) # Clamp distance to max reach
-	distance = range_lerp(distance, 0, max_reach, 0, maxSpeed) # Lerp distance to speed
+	distance = clamp(distance, 0, maxReach) # Clamp distance to max reach
+	distance = range_lerp(distance, 0, maxReach, 0, maxSpeed) # Lerp distance to speed
 	return distance # Return speed
 
 func _input(event):
@@ -61,9 +59,13 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta) # Move and get collisions
 
 	if collision: # If has collision
-		$GolfBallAudioPlayer.play_wall_bounce_sound() # Play wall bounce sound
 		velocity = velocity.bounce(collision.normal) # Bounce ball with object
 		velocity -= velocity.normalized() * (deceleration * 2.5) * delta # Apply extra deceleration
+		$GolfBallAudioPlayer.play_wall_bounce_sound() # Play wall bounce sound
+		if velocity.length() > (maxSpeed * 0.7): # If is too fast
+			$FlareParticle2D.direction = velocity.normalized() # Set flare direction
+			$FlareParticle2D.gravity = velocity.normalized() # Set flare gravity
+			$FlareParticle2D.restart() # Init or reset flare animation
 
 func _anim_enter_hole(hole):
 	self.set_process_input(false) # Disable input

@@ -1,9 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/minigames/golf/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/minigames/golf/Indicators.gd" type="Script" id=2]
 [ext_resource path="res://sources/minigames/golf/Golf.gd" type="Script" id=3]
 [ext_resource path="res://sources/minigames/golf/GolfBallAudioPlayer.gd" type="Script" id=4]
+[ext_resource path="res://scenes/commons/textured_effects/FlareParticle.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.99495 )
+colors = PoolColorArray( 0.47451, 0.796078, 0.160784, 1, 0.14902, 0.301961, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.145098, 0.509804, 0.254902, 1 )
@@ -20,6 +25,13 @@ script = ExtResource( 3 )
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 378, 960 )
+
+[node name="FlareParticle2D" parent="GolfBall" instance=ExtResource( 5 )]
+scale = Vector2( 1, 1 )
+lifetime = 3.0
+speed_scale = 5.0
+scale_amount = 1.7
+color_ramp = SubResource( 5 )
 
 [node name="GolfBallAudioPlayer" type="AudioStreamPlayer" parent="GolfBall"]
 bus = "Effects"
