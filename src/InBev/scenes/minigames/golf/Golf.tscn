@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/minigames/golf/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/minigames/golf/Indicators.gd" type="Script" id=2]
 [ext_resource path="res://sources/minigames/golf/Golf.gd" type="Script" id=3]
+[ext_resource path="res://sources/minigames/golf/GolfBallAudioPlayer.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.145098, 0.509804, 0.254902, 1 )
@@ -19,6 +20,10 @@ script = ExtResource( 3 )
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 378, 960 )
+
+[node name="GolfBallAudioPlayer" type="AudioStreamPlayer" parent="GolfBall"]
+bus = "Effects"
+script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="GolfBall"]
 scale = Vector2( 1.25, 1.25 )
