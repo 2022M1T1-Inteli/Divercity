@@ -39,9 +39,9 @@ func _draw():
 func _process(_delta):
 	if isHolding: # If is holding
 		speed = calculate_speed(global_position.distance_to(get_global_mouse_position())) # Calculate speed
-		get_node("../Indicators/ForceLength").value = int(speed / maxSpeed * 100) # Set force length indicator
+		get_node("Indicators/ForceLength").value = int(speed / maxSpeed * 100) # Set force length indicator
 	else:
-		get_node("../Indicators/ForceLength").value = 0 # Set force length indicator to default
+		get_node("Indicators/ForceLength").value = 0 # Set force length indicator to default
 	update() # Update draw
 
 
@@ -58,3 +58,23 @@ func _physics_process(delta):
 	if collision: # If has collision
 		velocity = velocity.bounce(collision.normal) # Bounce ball with object
 		velocity -= velocity.normalized() * (deceleration * 2.5) * delta # Apply extra deceleration
+
+
+func _anim_enter_hole(hole):
+	self.set_process_input(false) # Disable input
+
+	var tween = Tween.new() # Create tween
+	add_child(tween) # Add tween to node
+
+	var transition_time = clamp((maxSpeed / abs(velocity.x)) * 0.05, 0.15, 0.3) # Calculate transition time
+
+	velocity = Vector2(0, 0) # Set velocity to zero
+
+	tween.interpolate_property(self, "position", self.position, hole.position, transition_time, Tween.TRANS_LINEAR, Tween.EASE_IN) # Position animation
+	tween.interpolate_property(self, "modulate", Color(1, 1, 1), Color(0, 0, 0),  transition_time, Tween.TRANS_LINEAR, Tween.EASE_IN) # Color animation
+
+	tween.start() # Start fade animation
+
+	yield(tween, "tween_completed") # Wait tween animation complete
+
+	tween.call_deferred("free") # Free tween animator

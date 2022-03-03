@@ -3,7 +3,7 @@ extends Node
 onready var currentNode = get_node("BaseReplaceNode") # get current template node
 
 func _ready():
-	_change_scene_to("res://scenes/Menu/Menu.tscn", false) # Add the menu scene to the scene stack
+	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 
 func _change_scene_to(scene, fade = true): # Callback to change scene from childs
 	if fade: # If need fade

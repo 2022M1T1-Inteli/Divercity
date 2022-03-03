@@ -15,4 +15,4 @@ func _on_StartButton_pressed(): # Callback on click start button
 	$CenterContainer/StartButton.modulate = Color(0.95, 0.95, 0.95, 1)
 
 	# Emit signal to change scene
-	emit_signal("go_to_game", "res://scenes/MiniGames/Golf/Golf.tscn")
+	emit_signal("go_to_game", "res://scenes/miniGames/golf/Golf.tscn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/MiniGames/Golf/Ball.tscn" type="PackedScene" id=1]
-[ext_resource path="res://sources/minigames/Golf.gd" type="Script" id=3]
+[ext_resource path="res://scenes/minigames/golf/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sources/minigames/golf/Indicators.gd" type="Script" id=2]
+[ext_resource path="res://sources/minigames/golf/Golf.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.145098, 0.509804, 0.254902, 1 )
@@ -17,16 +18,30 @@ gradient = SubResource( 3 )
 script = ExtResource( 3 )
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 360, 1000 )
+position = Vector2( 378, 960 )
 
-[node name="Indicators" type="CenterContainer" parent="."]
-margin_right = 720.0
-margin_bottom = 100.0
+[node name="Camera2D" type="Camera2D" parent="GolfBall"]
+scale = Vector2( 1.25, 1.25 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 4.0
+
+[node name="Indicators" type="CenterContainer" parent="GolfBall"]
+margin_left = -145.0
+margin_top = -120.0
+margin_right = 575.0
+margin_bottom = -20.0
+rect_scale = Vector2( 0.4, 0.4 )
+script = ExtResource( 2 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="Indicators"]
+[node name="Panel" type="Panel" parent="GolfBall/Indicators"]
 margin_left = 100.0
 margin_top = 17.0
 margin_right = 620.0
@@ -37,7 +52,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ForceLength" type="TextureProgress" parent="Indicators"]
+[node name="ForceLength" type="TextureProgress" parent="GolfBall/Indicators"]
 margin_left = 110.0
 margin_top = 27.0
 margin_right = 610.0
