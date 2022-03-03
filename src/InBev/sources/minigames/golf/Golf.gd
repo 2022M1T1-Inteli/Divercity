@@ -16,7 +16,7 @@ func load_map(map_id):
 func on_golfball_entered():
 	$GolfBall._anim_enter_hole(current_map.get_node("Hole")) # Play the animation of the golf ball entering the hole
 
-	$GolfBall/GolfBallAudioPlayer.play_win_sound()
+	$GolfBall/GolfBallAudioPlayer.play_win_sound() # Play the win sound
 
 	var timer = Timer.new() # Create a new timer
 	timer.set_wait_time(1.5) # Set the wait time
