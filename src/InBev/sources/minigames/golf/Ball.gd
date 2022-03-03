@@ -6,11 +6,10 @@ export var max_reach = 250
 
 var isHolding = false
 var startPosition = Vector2.ZERO
-var drop_direction = Vector2.ZERO
+var dropDirection = Vector2.ZERO
 
 var velocity = Vector2(0, 0)
 var speed = 0
-
 const DEFAULT_XFX_PATH = "res://resources/sfx/golf/"
 const HIT_BALL_XFX_LIST = ["golf_hit_ball_001.mp3", "golf_hit_ball_002.mp3", "golf_hit_ball_003.mp3"]
 
@@ -31,10 +30,10 @@ func _input(event):
 		if not event.pressed: # If touch up
 			$GolfBallAudioPlayer.play_hit_sound() # Play shot sound
 
-			drop_direction = get_global_mouse_position().direction_to(global_position) # Get direction of drop from start position and current position
+			dropDirection = get_global_mouse_position().direction_to(global_position) # Get direction of drop from start position and current position
 			isHolding = false # Set is not holding
 
-			velocity = Vector2(speed, 0).rotated(drop_direction.angle()) # Set velocity
+			velocity = Vector2(speed, 0).rotated(dropDirection.angle()) # Set velocity
 
 func _draw():
 	if isHolding: # If is holding
@@ -49,8 +48,11 @@ func _process(_delta):
 	update() # Update draw
 
 func _physics_process(delta):
-	if velocity.length() < 1: # If is noising velocity
+	if velocity == Vector2.ZERO: # If velocity is zero
+		return
+	elif velocity.length() < 1: # If is noising velocity
 		velocity = Vector2(0, 0) # Set velocity to zero
+		$GolfBallAudioPlayer.play_turn_sound()
 		return
 
 	if velocity.length() > 0: # If is moving
@@ -59,6 +61,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta) # Move and get collisions
 
 	if collision: # If has collision
+		$GolfBallAudioPlayer.play_wall_bounce_sound() # Play wall bounce sound
 		velocity = velocity.bounce(collision.normal) # Bounce ball with object
 		velocity -= velocity.normalized() * (deceleration * 2.5) * delta # Apply extra deceleration
 

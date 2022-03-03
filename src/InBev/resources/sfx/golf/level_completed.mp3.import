@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/level_completed.mp3-c8c25cf1b00eeb71350e175fb3bde2c1.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/golf/level_completed.mp3"
+dest_files=[ "res://.import/level_completed.mp3-c8c25cf1b00eeb71350e175fb3bde2c1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
