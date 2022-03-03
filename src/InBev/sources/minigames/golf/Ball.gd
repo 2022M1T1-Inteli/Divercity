@@ -80,7 +80,7 @@ func _anim_enter_hole(hole):
 	$GolfBallAudioPlayer.play_hole_enter_sound() # Play hole enter sound
 
 	tween.interpolate_property(self, "position", self.position, hole.position, transition_time, Tween.TRANS_LINEAR, Tween.EASE_IN) # Position animation
-	tween.interpolate_property(self, "modulate", Color(1, 1, 1), Color(0, 0, 0),  transition_time, Tween.TRANS_LINEAR, Tween.EASE_IN) # Color animation
+	tween.interpolate_property(self, "modulate", Color(1, 1, 1, 1), Color(1, 1, 1, 0),  transition_time, Tween.TRANS_LINEAR, Tween.EASE_IN) # Color animation
 
 	tween.start() # Start fade animation
 
