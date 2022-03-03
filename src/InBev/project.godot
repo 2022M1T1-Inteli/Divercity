@@ -31,7 +31,7 @@ Test_Directory="res://tests"
 [application]
 
 config/name="DiverCity"
-run/main_scene="res://scenes/minigames/golf/Golf.tscn"
+run/main_scene="res://scenes/Main.tscn"
 config/icon="res://resources/icons/INbev.png"
 
 [display]

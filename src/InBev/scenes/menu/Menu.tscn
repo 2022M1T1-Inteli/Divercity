@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://resources/fonts/UbuntuMono-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sources/menu/Menu.gd" type="Script" id=2]
@@ -8,20 +8,7 @@
 [ext_resource path="res://resources/backgrounds/logo.png" type="Texture" id=6]
 [ext_resource path="res://resources/backgrounds/background_7.png" type="Texture" id=7]
 [ext_resource path="res://scenes/menu/InfinityBackground.tscn" type="PackedScene" id=8]
-[ext_resource path="res://resources/characters/bomber/12.png" type="Texture" id=9]
-[ext_resource path="res://resources/characters/bomber/8.png" type="Texture" id=10]
-[ext_resource path="res://resources/characters/bomber/6.png" type="Texture" id=11]
-[ext_resource path="res://resources/characters/bomber/10.png" type="Texture" id=12]
-[ext_resource path="res://resources/characters/bomber/1.png" type="Texture" id=13]
-[ext_resource path="res://resources/characters/bomber/5.png" type="Texture" id=14]
-[ext_resource path="res://resources/characters/bomber/11.png" type="Texture" id=15]
-[ext_resource path="res://resources/characters/bomber/7.png" type="Texture" id=16]
-[ext_resource path="res://resources/characters/bomber/4.png" type="Texture" id=17]
-[ext_resource path="res://resources/characters/bomber/14.png" type="Texture" id=18]
-[ext_resource path="res://resources/characters/bomber/13.png" type="Texture" id=19]
-[ext_resource path="res://resources/characters/bomber/2.png" type="Texture" id=20]
-[ext_resource path="res://resources/characters/bomber/3.png" type="Texture" id=21]
-[ext_resource path="res://resources/characters/bomber/9.png" type="Texture" id=22]
+[ext_resource path="res://resources/characters/alex/alex_anim.png" type="Texture" id=9]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -127,12 +114,47 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 100, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 200, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 300, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 400, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 500, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 600, 0, 100, 140 )
+
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "Walking",
-"speed": 20.0
+"speed": 8.0
 } ]
 
 [node name="Menu" type="Control"]
@@ -198,6 +220,20 @@ anchor_bottom = 1.0
 margin_top = -240.0
 texture = ExtResource( 5 )
 
+[node name="Logo" type="TextureRect" parent="Background"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -360.0
+margin_top = -1280.0
+margin_right = 360.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -236,25 +272,11 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CenterContainer"]
-position = Vector2( 375, -304 )
-scale = Vector2( 3.20961, 3.20961 )
+position = Vector2( 368, -248 )
+scale = Vector2( 2.1674, 2.1674 )
 frames = SubResource( 10 )
 animation = "Walking"
-frame = 8
+frame = 1
 playing = true
-
-[node name="Logo" type="TextureRect" parent="."]
-modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -360.0
-margin_top = -1280.0
-margin_right = 360.0
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]

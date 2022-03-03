@@ -63,9 +63,14 @@ func _physics_process(delta):
 		velocity -= velocity.normalized() * (deceleration * 2.5) * delta # Apply extra deceleration
 		$GolfBallAudioPlayer.play_wall_bounce_sound() # Play wall bounce sound
 		if velocity.length() > (maxSpeed * 0.7): # If is too fast
-			$FlareParticle2D.direction = velocity.normalized() # Set flare direction
-			$FlareParticle2D.gravity = velocity.normalized() # Set flare gravity
-			$FlareParticle2D.restart() # Init or reset flare animation
+			$FlareParticle2D.lifetime = 1 # Set lifetime
+			$FlareParticle2D.scale_amount = 1.7 # Set lifetime
+		else:
+			$FlareParticle2D.lifetime = 0.3 # Set lifetime
+			$FlareParticle2D.scale_amount = 1.0 # Set lifetime
+		$FlareParticle2D.direction = velocity.normalized() # Set flare direction
+		$FlareParticle2D.gravity = velocity.normalized() # Set flare gravity
+		$FlareParticle2D.restart() # Init or reset flare animation
 
 func _anim_enter_hole(hole):
 	self.set_process_input(false) # Disable input

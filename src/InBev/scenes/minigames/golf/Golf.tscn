@@ -23,12 +23,18 @@ gradient = SubResource( 3 )
 [node name="Golf" type="Node"]
 script = ExtResource( 3 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 360, 640 )
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 4.0
+
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 378, 960 )
 
 [node name="FlareParticle2D" parent="GolfBall" instance=ExtResource( 5 )]
-scale = Vector2( 1, 1 )
-lifetime = 3.0
 speed_scale = 5.0
 scale_amount = 1.7
 color_ramp = SubResource( 5 )
@@ -36,15 +42,6 @@ color_ramp = SubResource( 5 )
 [node name="GolfBallAudioPlayer" type="AudioStreamPlayer" parent="GolfBall"]
 bus = "Effects"
 script = ExtResource( 4 )
-
-[node name="Camera2D" type="Camera2D" parent="GolfBall"]
-scale = Vector2( 1.25, 1.25 )
-current = true
-zoom = Vector2( 0.5, 0.5 )
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = true
-smoothing_speed = 4.0
 
 [node name="Indicators" type="CenterContainer" parent="GolfBall"]
 margin_left = -145.0
