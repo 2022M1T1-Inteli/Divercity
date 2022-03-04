@@ -4,15 +4,11 @@ extends Control
 signal go_to_game
 
 func _construct(mainNode):
-	# Connect callback for local signal
-	connect("go_to_game", mainNode, "_change_scene_to")
+	connect("go_to_game", mainNode, "_change_scene_to") # Connect callback for local signal
 
-	# Init main moon light animation
-	$AnimationPlayerMenu.play("ModulateVariation")
+	$AnimationPlayerMenu.play("ModulateVariation") # Init main moon light animation
 
 func _on_StartButton_pressed(): # Callback on click start button
-	# Change button light for response click
-	$CenterContainer/StartButton.modulate = Color(0.95, 0.95, 0.95, 1)
+	$CenterContainer/StartButton.modulate = Color(0.95, 0.95, 0.95, 1) # Change button light for response click
 
-	# Emit signal to change scene
-	emit_signal("go_to_game", "res://scenes/minigames/golf/Golf.tscn")
+	emit_signal("go_to_game", "res://scenes/game/Map.tscn") # Emit signal to change scene

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vehicles.png-12f258e3cf683880bb76b83e0f23a23c.stex"
+path="res://.import/Road.png-4aaf85c796736d3c9dc2049df6f68c30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/tilemaps/ModerCity/vehicles.png"
-dest_files=[ "res://.import/vehicles.png-12f258e3cf683880bb76b83e0f23a23c.stex" ]
+source_file="res://resources/tilemaps/FantasyHex/CustomTiles/Road.png"
+dest_files=[ "res://.import/Road.png-4aaf85c796736d3c9dc2049df6f68c30.stex" ]
 
 [params]
 

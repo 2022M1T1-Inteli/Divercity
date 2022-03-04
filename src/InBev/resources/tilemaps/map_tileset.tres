@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=162 format=2]
+[gd_resource type="TileSet" load_steps=168 format=2]
 
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Cerro de Potosi.png" type="Texture" id=1]
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Coast.png" type="Texture" id=2]
@@ -161,6 +161,12 @@
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Truffles+Camp.png" type="Texture" id=159]
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Grassland+Forest+Truffles+Camp.png" type="Texture" id=160]
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/HillForest+Lumber mill.png" type="Texture" id=161]
+[ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Railroad.png" type="Texture" id=162]
+[ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Road.png" type="Texture" id=163]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road_green.png" type="Texture" id=164]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road_red.png" type="Texture" id=165]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road.png" type="Texture" id=166]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road_blue.png" type="Texture" id=167]
 
 [resource]
 0/name = "Academy-Snow"
@@ -2417,3 +2423,87 @@
 160/shape_one_way_margin = 0.0
 160/shapes = [  ]
 160/z_index = 0
+161/name = "Railroad"
+161/texture = ExtResource( 162 )
+161/tex_offset = Vector2( 0, 0 )
+161/modulate = Color( 1, 1, 1, 1 )
+161/region = Rect2( 0, 0, 60, 32 )
+161/tile_mode = 0
+161/occluder_offset = Vector2( 30, 16 )
+161/navigation_offset = Vector2( 30, 16 )
+161/shape_offset = Vector2( 0, 0 )
+161/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+161/shape_one_way = false
+161/shape_one_way_margin = 0.0
+161/shapes = [  ]
+161/z_index = 0
+162/name = "Road"
+162/texture = ExtResource( 163 )
+162/tex_offset = Vector2( 0, 0 )
+162/modulate = Color( 1, 1, 1, 1 )
+162/region = Rect2( 0, 0, 60, 32 )
+162/tile_mode = 0
+162/occluder_offset = Vector2( 30, 16 )
+162/navigation_offset = Vector2( 30, 16 )
+162/shape_offset = Vector2( 0, 0 )
+162/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+162/shape_one_way = false
+162/shape_one_way_margin = 0.0
+162/shapes = [  ]
+162/z_index = 0
+164/name = "Road2"
+164/texture = ExtResource( 166 )
+164/tex_offset = Vector2( 0, 0 )
+164/modulate = Color( 1, 1, 1, 1 )
+164/region = Rect2( 0, 0, 32, 28 )
+164/tile_mode = 0
+164/occluder_offset = Vector2( 16, 14 )
+164/navigation_offset = Vector2( 16, 14 )
+164/shape_offset = Vector2( 0, 0 )
+164/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+164/shape_one_way = false
+164/shape_one_way_margin = 0.0
+164/shapes = [  ]
+164/z_index = 0
+165/name = "RoadRed"
+165/texture = ExtResource( 165 )
+165/tex_offset = Vector2( 0, 0 )
+165/modulate = Color( 1, 1, 1, 1 )
+165/region = Rect2( 0, 0, 32, 28 )
+165/tile_mode = 0
+165/occluder_offset = Vector2( 16, 14 )
+165/navigation_offset = Vector2( 16, 14 )
+165/shape_offset = Vector2( 0, 0 )
+165/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+165/shape_one_way = false
+165/shape_one_way_margin = 0.0
+165/shapes = [  ]
+165/z_index = 0
+166/name = "RoadGreen"
+166/texture = ExtResource( 164 )
+166/tex_offset = Vector2( 0, 0 )
+166/modulate = Color( 1, 1, 1, 1 )
+166/region = Rect2( 0, 0, 32, 28 )
+166/tile_mode = 0
+166/occluder_offset = Vector2( 16, 14 )
+166/navigation_offset = Vector2( 16, 14 )
+166/shape_offset = Vector2( 0, 0 )
+166/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+166/shape_one_way = false
+166/shape_one_way_margin = 0.0
+166/shapes = [  ]
+166/z_index = 0
+167/name = "RoadBlue"
+167/texture = ExtResource( 167 )
+167/tex_offset = Vector2( 0, 0 )
+167/modulate = Color( 1, 1, 1, 1 )
+167/region = Rect2( 0, 0, 32, 28 )
+167/tile_mode = 0
+167/occluder_offset = Vector2( 16, 14 )
+167/navigation_offset = Vector2( 16, 14 )
+167/shape_offset = Vector2( 0, 0 )
+167/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+167/shape_one_way = false
+167/shape_one_way_margin = 0.0
+167/shapes = [  ]
+167/z_index = 0

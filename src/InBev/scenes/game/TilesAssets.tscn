@@ -1,4 +1,4 @@
-[gd_scene load_steps=162 format=2]
+[gd_scene load_steps=168 format=2]
 
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Fountain of Youth.png" type="Texture" id=1]
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Furs+Camp.png" type="Texture" id=2]
@@ -161,649 +161,679 @@
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Truffles+Camp.png" type="Texture" id=159]
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Grassland+Forest+Truffles+Camp.png" type="Texture" id=160]
 [ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/HillForest+Lumber mill.png" type="Texture" id=161]
+[ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Railroad.png" type="Texture" id=162]
+[ext_resource path="res://resources/tilemaps/FantasyHex/Tiles/Road.png" type="Texture" id=163]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road_red.png" type="Texture" id=164]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road.png" type="Texture" id=165]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road_green.png" type="Texture" id=166]
+[ext_resource path="res://resources/tilemaps/FantasyHex/CustomTiles/Road_blue.png" type="Texture" id=167]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Academy-Snow" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 56 )
 
 [node name="Academy" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 6 )
 
 [node name="Aluminum" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 54 )
 
 [node name="AncientRuins2" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 152 )
 
 [node name="AncientRuins-Jungle" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 47 )
 
 [node name="AncientRuins-Sand" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 60 )
 
 [node name="AncientRuins-Snow" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 67 )
 
 [node name="AncientRuins" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 5 )
 
 [node name="Atoll" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 114 )
 
 [node name="Bananas" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 108 )
 
 [node name="BarbarianEncampment-Snow" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 59 )
 
 [node name="BarbarianEncampment" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 96 )
 
 [node name="BarringerCrater" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 10 )
 
 [node name="Bison+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 137 )
 
 [node name="Bison" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 154 )
 
 [node name="Cattle+Pasture" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 25 )
 
 [node name="Cattle" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 117 )
 
 [node name="CerroDePotosi" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 19 )
 
 [node name="Citadel-Snow" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 66 )
 
 [node name="Citadel" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 115 )
 
 [node name="Citrus+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 43 )
 
 [node name="Citrus" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 77 )
 
 [node name="CityCenter-AncientEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 73 )
 
 [node name="CityCenter-AtomicEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 135 )
 
 [node name="CityCenter-ClassicalEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 84 )
 
 [node name="CityCenter-FutureEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 39 )
 
 [node name="CityCenter-IndustrialEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 32 )
 
 [node name="CityCenter-InformationEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 20 )
 
 [node name="CityCenter-MedievalEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 36 )
 
 [node name="CityCenter-ModernEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 112 )
 
 [node name="CityCenter-RenaissanceEra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 11 )
 
 [node name="CityCenter" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 3 )
 
 [node name="CityRuins" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 29 )
 
 [node name="Coal" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 76 )
 
 [node name="Coast" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 106 )
 
 [node name="Cocoa+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 113 )
 
 [node name="Cocoa" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 64 )
 
 [node name="Copper" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 45 )
 
 [node name="Cotton" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 145 )
 
 [node name="Crab" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 23 )
 
 [node name="CustomsHouse" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 27 )
 
 [node name="Deer+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 52 )
 
 [node name="Deer" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 57 )
 
 [node name="Desert+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 105 )
 
 [node name="Desert+FloodPlains+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 71 )
 
 [node name="Desert" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 37 )
 
 [node name="Dyes+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 50 )
 
 [node name="Dyes" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 144 )
 
 [node name="ElDorado" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 142 )
 
 [node name="Fallout" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 104 )
 
 [node name="Fish" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 98 )
 
 [node name="FishingBoats" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 101 )
 
 [node name="FloodPlains" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 107 )
 
 [node name="Forest" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 31 )
 
 [node name="Fort" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 69 )
 
 [node name="FountainOfYouth" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 1 )
 
 [node name="Furs+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 2 )
 
 [node name="Furs" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 4 )
 
 [node name="Gems" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 18 )
 
 [node name="GoldOre" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 111 )
 
 [node name="GrandMesa" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 110 )
 
 [node name="Grassland+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 75 )
 
 [node name="Grassland+Forest+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 22 )
 
 [node name="Grassland+Forest+Deer+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 21 )
 
 [node name="Grassland+Forest+Furs+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 44 )
 
 [node name="Grassland+Forest+LumberMill" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 150 )
 
 [node name="Grassland+Forest+Truffles+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 160 )
 
 [node name="Grassland+Hill+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 91 )
 
 [node name="Grassland+Hill+Forest+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 58 )
 
 [node name="Grassland+Hill+Forest+LumberMill" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 94 )
 
 [node name="Grassland+Hill+Forest+TradingPost" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 89 )
 
 [node name="Grassland+Jungle+TradingPost" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 151 )
 
 [node name="Grassland" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 46 )
 
 [node name="GrasslandForest" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 118 )
 
 [node name="GreatBarrierReef" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 85 )
 
 [node name="Hill" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 72 )
 
 [node name="HillForest+LumberMill" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 161 )
 
 [node name="HillMarbleQuarry" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 86 )
 
 [node name="HillMine" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 53 )
 
 [node name="HillStoneQuarry" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 16 )
 
 [node name="HolySite" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 30 )
 
 [node name="Horses+Pasture" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 109 )
 
 [node name="Horses" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 128 )
 
 [node name="Ice" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 9 )
 
 [node name="Incense+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 61 )
 
 [node name="Incense" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 12 )
 
 [node name="Iron" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 24 )
 
 [node name="Ivory+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 51 )
 
 [node name="Ivory" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 35 )
 
 [node name="Jungle" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 38 )
 
 [node name="Krakatoa" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 13 )
 
 [node name="Lakes" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 33 )
 
 [node name="Landmark" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 119 )
 
 [node name="Manufactory" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 126 )
 
 [node name="Marble" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 65 )
 
 [node name="Marsh" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 143 )
 
 [node name="Mine" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 100 )
 
 [node name="Moai" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 134 )
 
 [node name="MountFuji" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 99 )
 
 [node name="MountKailash" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 97 )
 
 [node name="MountSinai" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 90 )
 
 [node name="Mountain" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 63 )
 
 [node name="Oasis" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 70 )
 
 [node name="Ocean" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 95 )
 
 [node name="OffshorePlatform" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 153 )
 
 [node name="OilWell" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 55 )
 
 [node name="Oil" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 83 )
 
 [node name="OldFaithful" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 125 )
 
 [node name="Pasture" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 139 )
 
 [node name="Pearls" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 124 )
 
 [node name="Plains+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 82 )
 
 [node name="Plains+Forest+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 146 )
 
 [node name="Plains+Forest+LumberMill" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 17 )
 
 [node name="Plains+Jungle+TradingPost" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 49 )
 
 [node name="Plains" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 42 )
 
 [node name="PlainsForest" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 40 )
 
 [node name="PlainsJungle" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 87 )
 
 [node name="Plantation+Bananas" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 92 )
 
 [node name="Plantation+Cotton" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 79 )
 
 [node name="Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 74 )
 
 [node name="Polder" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 155 )
 
 [node name="Quarry+Marble" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 26 )
 
 [node name="Quarry+Stone" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 48 )
 
 [node name="Quarry" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 93 )
 
+[node name="Railroad" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 162 )
+
 [node name="River-Bottom" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 14 )
 
 [node name="River-BottomLeft" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 140 )
 
 [node name="River-BottomRight" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 141 )
 
+[node name="Road" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 163 )
+
 [node name="RockOfGibraltar" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 88 )
 
 [node name="Salt" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 136 )
 
 [node name="Sheep+Pasture" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 81 )
 
 [node name="Sheep" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 127 )
 
 [node name="Silk+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 68 )
 
 [node name="Silk" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 34 )
 
 [node name="Silver" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 28 )
 
 [node name="Snow+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 80 )
 
 [node name="Snow" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 7 )
 
 [node name="Spices+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 8 )
 
 [node name="Spices" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 15 )
 
 [node name="SriPada" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 62 )
 
 [node name="Stone" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 116 )
 
 [node name="Sugar+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 78 )
 
 [node name="Sugar" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 129 )
 
 [node name="TerraceFarm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 130 )
 
 [node name="TradingPost" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 138 )
 
 [node name="Truffles+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 159 )
 
 [node name="Truffles" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 102 )
 
 [node name="Tundra+Farm" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 103 )
 
 [node name="Tundra+Forest+Camp+Furs" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 156 )
 
 [node name="Tundra+Forest+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 41 )
 
 [node name="Tundra+Forest+Deer+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 148 )
 
 [node name="Tundra+Forest+LumberMill" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 149 )
 
 [node name="Tundra+Forest+Truffles+Camp" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 120 )
 
 [node name="Tundra" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 122 )
 
 [node name="TundraForest" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 157 )
 
 [node name="Uluru" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 158 )
 
 [node name="Uranium" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 123 )
 
 [node name="Whales+FishingBoats" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 121 )
 
 [node name="Whales" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 147 )
 
 [node name="Wheat" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 131 )
 
 [node name="Wine+Plantation" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 132 )
 
 [node name="Wine" type="Sprite" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 32, 24 )
 texture = ExtResource( 133 )
+
+[node name="Road2" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 165 )
+
+[node name="RoadRed" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 164 )
+
+[node name="RoadGreen" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 166 )
+
+[node name="RoadBlue" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 167 )
