@@ -77,11 +77,21 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ---
 
 ## 🗃 Histórico de lançamentos
-* 1.0.0 - Versão inicial do projeto
+* 1.0.0
   * Primeiro lançamento.
   * Menu simples com animações e sistema de ilumunação ( GLOW ).
   * Cena do jogo simples com primeiras ideias de mapa e movimentação de personagem.
-target audienc
+
+* 1.1.1
+  * Adicionado minigame de golfe.
+  * Adicionado animação de transição de cenas.
+  * Criado gerenciador principal de cenas.
+
+* 1.2.0
+  * Refatorado minigame de golfe, mapa principal e transições de cenas.
+  * Corrigido falhas de cena não existente (null scenes).
+  * Reorganizado arquivos de workspace ( pastas e arquivos ).
+  * Adicionado novos pacotes de recursos 2D.
 
 ---
 
@@ -96,4 +106,8 @@ target audienc
 Aqui estão as referências usadas no projeto.
 1. <https://docs.godotengine.org/pt_BR/latest/tutorials/2d/index.html>
 2. <https://docs.godotengine.org/en/3.0/tutorials/shading/shading_language.html>
-3. <https://creativecommons.org/share-your-work>
+3. <https://github.com/yairm210/Unciv/tree/master/android/Images/TileSets/FantasyHex>
+4. <https://freesound.org/>
+5. <https://www.zapsplat.com/>
+6. <https://github.com/RPicster/Godot-particle-and-vfx-textures/>
+
