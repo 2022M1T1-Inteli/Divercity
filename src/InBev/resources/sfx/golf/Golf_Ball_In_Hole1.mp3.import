@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Golf_Ball_In_Hole1.mp3-812e146488fb4733bc540dd4f38cf810.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/golf/Golf_Ball_In_Hole1.mp3"
+dest_files=[ "res://.import/Golf_Ball_In_Hole1.mp3-812e146488fb4733bc540dd4f38cf810.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

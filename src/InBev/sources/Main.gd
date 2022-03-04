@@ -2,10 +2,16 @@ extends Node
 
 onready var currentNode = get_node("BaseReplaceNode") # get current template node
 
+var onChangingScene = false
+
 func _ready():
-	_change_scene_to("res://scenes/Menu/Menu.tscn", false) # Add the menu scene to the scene stack
+	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 
 func _change_scene_to(scene, fade = true): # Callback to change scene from childs
+	if onChangingScene: # Return if the scene is already changing
+		return
+
+	onChangingScene = true # Set the scene changing flag
 	if fade: # If need fade
 		## In fade
 
@@ -36,3 +42,5 @@ func _change_scene_to(scene, fade = true): # Callback to change scene from child
 		$FadeAnimator.start() # Start fade animation
 
 		yield($FadeAnimator, "tween_completed") # Wait tween finish animation
+
+	onChangingScene = false # Reset the scene changing flag

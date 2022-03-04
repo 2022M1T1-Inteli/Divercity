@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/golf_hit_ball_001.mp3-4f94ff70e3912c2dc6b086ea320c9fad.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/golf/golf_hit_ball_001.mp3"
+dest_files=[ "res://.import/golf_hit_ball_001.mp3-4f94ff70e3912c2dc6b086ea320c9fad.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

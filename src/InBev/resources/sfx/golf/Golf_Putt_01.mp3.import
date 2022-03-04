@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Golf_Putt_01.mp3-c800308bcd0ffb15a5f584398941f68b.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/golf/Golf_Putt_01.mp3"
+dest_files=[ "res://.import/Golf_Putt_01.mp3-c800308bcd0ffb15a5f584398941f68b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
