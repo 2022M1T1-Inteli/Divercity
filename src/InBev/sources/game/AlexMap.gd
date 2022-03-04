@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 100
+var speed = 60
 var patrolPoints = null
 var patrolIndex = 0
 var velocity = Vector2.ZERO
@@ -10,7 +10,7 @@ func _construct(mainNode):
 
 func _ready():
 	var timer = Timer.new() # Create a new timer
-	timer.set_wait_time(0.75) # Set the wait time
+	timer.set_wait_time(1.5) # Set the wait time
 	timer.set_one_shot(true) # Set the timer to one shot
 	self.add_child(timer) # Add the timer to the scene as a child
 	timer.start() # Start the timer
