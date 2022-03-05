@@ -17,6 +17,7 @@
 📜 Tem como objetivo primordial aumentar a retenção do programa de D&I, oferecido pela empresa Ambev (Companhia de bebidas das Américas), a qual enfrentava problemas de engajamento durante a sua aplicação.<br><br>
 <p align="center">
 <img src="imagens/game.png" alt="DiverCity" border="0">
+  <br><br>
   Imagem da tela inicial do jogo
 </p>
 
