@@ -6,7 +6,11 @@ var patrolIndex = 0
 var velocity = Vector2.ZERO
 
 func _construct(mainNode):
-	get_parent().connect("go_to_golf", mainNode, "_change_scene_to") # Connect callback for local signal
+	var err = get_parent().connect("go_to_golf", mainNode, "_change_scene_to") # Connect callback for local signal
+
+	if err != null: # Check for errors
+		print("Error connecting signal on AlexMap node:", err) # Print error
+		return
 
 func _ready():
 	var timer = Timer.new() # Create a new timer

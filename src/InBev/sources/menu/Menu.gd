@@ -4,7 +4,11 @@ extends Control
 signal go_to_game
 
 func _construct(mainNode):
-	connect("go_to_game", mainNode, "_change_scene_to") # Connect callback for local signal
+	var err = connect("go_to_game", mainNode, "_change_scene_to") # Connect callback for local signal
+
+	if err != null: # Check for error
+		print("Error connecting signal on Menu node:", err) # Print error
+		return
 
 	$AnimationPlayerMenu.play("ModulateVariation") # Init main moon light animation
 
