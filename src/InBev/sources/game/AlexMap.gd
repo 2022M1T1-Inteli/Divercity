@@ -6,7 +6,7 @@ var patrolIndex = 0
 var velocity = Vector2.ZERO
 
 func _construct(mainNode):
-	var err = get_parent().connect("go_to_golf", mainNode, "_change_scene_to") # Connect callback for local signal
+	var err = get_parent().connect("go_to_next_scene", mainNode, "_change_scene_to") # Connect callback for local signal
 
 	if err != null: # Check for errors
 		print("Error connecting signal on AlexMap node:", err) # Print error
@@ -30,7 +30,7 @@ func _physics_process(_delta):
 
 	if patrolPoints.size() == patrolIndex + 1: # -
 		$AnimatedSprite.play("Stopped") # if we're at the end of the path, stop
-		get_parent().emit_signal("go_to_golf", "res://scenes/minigames/golf/Golf.tscn") # emit the signal to change the scene
+		get_parent().emit_signal("go_to_next_scene", "res://scenes/game/mentors/MentorView.tscn") # emit the signal to change the scene
 		patrolPoints = null # set the patrol points to null
 		return
 
