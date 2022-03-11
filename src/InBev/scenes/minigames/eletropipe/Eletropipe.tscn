@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeStraight.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeCurved.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sources/minigames/eletropipe/Table.gd" type="Script" id=3]
+
+[node name="Eletropipe" type="Node2D"]
+
+[node name="Interface" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Table" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Pipe1" parent="Table" instance=ExtResource( 1 )]
+position = Vector2( 136, 72 )
+
+[node name="Pipe2" parent="Table" instance=ExtResource( 1 )]
+position = Vector2( 136, 218 )
+
+[node name="Pipe3" parent="Table" instance=ExtResource( 2 )]
+position = Vector2( 136, 365 )
+
+[node name="Pipe4" parent="Table" instance=ExtResource( 2 )]
+position = Vector2( 283, 365 )
+
+[node name="Pipe5" parent="Table" instance=ExtResource( 2 )]
+position = Vector2( 283, 218 )
+
+[node name="Pipe6" parent="Table" instance=ExtResource( 1 )]
+position = Vector2( 429, 218 )

@@ -8,7 +8,7 @@ var velocity = Vector2.ZERO
 func _construct(mainNode):
 	var err = get_parent().connect("go_to_golf", mainNode, "_change_scene_to") # Connect callback for local signal
 
-	if err != null: # Check for errors
+	if err: # Check for errors
 		print("Error connecting signal on AlexMap node:", err) # Print error
 		return
 
