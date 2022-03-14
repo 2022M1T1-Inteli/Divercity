@@ -12,7 +12,7 @@
 
 ## Descrição
 
-📜 Jogo DIVERCITY, desenvolvido por alunos do Instituto de Tecnologia e Liderança, durante o projeto do primeiro módulo em parceria com a empresa <a href="https://www.ambev.com.br/">ambev</a>.
+📜 Jogo DIVERCITY, desenvolvido por alunos do Instituto de Tecnologia e Liderança, durante o projeto do primeiro módulo em parceria com a empresa <a href="https://www.ambev.com.br/">Ambev</a>.
 
 📜 Tem como objetivo primordial aumentar a retenção do programa de D&I, oferecido pela empresa Ambev (Companhia de bebidas das Américas), a qual enfrentava problemas de engajamento durante a sua aplicação.<br><br>
 <p align="center">
