@@ -8,6 +8,10 @@ func _ready():
 	current_map.get_node("Hole").connect("golfball_entered", self, "on_golfball_entered") # Connect to the hole node
 
 func load_map(map_id):
+	"""
+		Loads a map from the map id.
+		default map id: Level_{ID}
+	"""
 	var map_instance = load("res://scenes/minigames/golf/maps/Level_%d.tscn" % map_id).instance() # Copy a instance of map from the resource
 	map_instance.z_index = -1 # Set the z-index of the map to -1 so it's behind all scene
 	add_child(map_instance) # Add the map to the scene as a child

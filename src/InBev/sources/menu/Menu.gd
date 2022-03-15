@@ -4,6 +4,9 @@ extends Control
 signal go_to_game
 
 func _construct(mainNode):
+	"""
+		Node constructor for setup signal connections
+	"""
 	var err = connect("go_to_game", mainNode, "_change_scene_to") # Connect callback for local signal
 
 	if err: # Check for error
