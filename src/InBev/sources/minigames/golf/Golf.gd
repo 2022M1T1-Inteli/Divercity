@@ -4,7 +4,7 @@ var current_map
 
 func _ready():
 	VisualServer.set_default_clear_color(Color("#3A893D")) # Change default background color
-	load_map(2) # Load example first map
+	load_map(3) # Load example first map
 	current_map.get_node("Hole").connect("golfball_entered", self, "on_golfball_entered") # Connect to the hole node
 
 func load_map(map_id):
