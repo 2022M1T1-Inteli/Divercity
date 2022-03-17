@@ -12,9 +12,17 @@ const PIPES_NAME = {
 	DEFAULT = "PIPE_"
 }
 
+const PIPES_FORMAT = {
+	DEFAULT = "DEFAULT",
+	CURVED = "CURVED",
+	STRAIGHT = "STRAIGHT"
+}
 
 onready var pipeCurvedScene = preload("res://scenes/minigames/eletropipe/bases/PipeCurved.tscn")
 onready var pipeStraightScene = preload("res://scenes/minigames/eletropipe/bases/PipeStraight.tscn")
+
+static func calculate_distance_of_tile(tilePosition1, tilePosition2):
+	return (tilePosition1 - tilePosition2).length()
 
 func is_pipes_path_connected():
 	"""
@@ -89,18 +97,61 @@ func get_random_seed():
 	rng.randomize() # Randomize the number generator
 	return rng.randi() # Return a random integer
 
-#func generate_random_pipes_path():
-#	"""
-#		Generate the pipes path with correct connetions.
-#	"""
-#	# Create pipes path with the correct connections in enter and exit pipes
-#	var enterPipe = get_pipe_enter() # Get the current pipe track
-#	var endPipe = get_pipe_exit() # get the exit pipe
+func get_distance_from_exit(currentTilePosition):
+	"""
+		Return the distance length from the exit.
+	"""
+	var exitPipe = get_pipe_exit() # Get the exit pipe
+	return calculate_distance_of_tile(currentTilePosition, exitPipe.tilePosition) # Return the distance from the exit
 
-#	var trackList = [] # List of track
+func get_free_directions(tilePosition, directions = [Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]):
+	"""
+		Return a list of possible directions from the given position.
+	"""
 
-#	for _i in range(MAX_TILE_SIZE.x * MAX_TILE_SIZE.y):
-#		var pipe
+	for direction in directions: # For each direction
+		var testDirection = tilePosition + direction
+		if testDirection.x > MAX_TILE_SIZE.x or testDirection.y > MAX_TILE_SIZE.y or testDirection.x < 0 or testDirection.y < 0: # Check if the position is out of bounds
+			directions.remove(direction) # Remove the direction from the list
+			continue
+
+		if get_pipe_from_tile(testDirection) != null: # Check if the position is a pipe
+			directions.remove(direction) # Remove the direction from the list
+			continue
+
+	return directions # Return the list of possible directions
+
+#func get_formated_next_pipe(lastPipe, lastPipeDirection, nextPipeDirection):
+#	"""
+#		Return the type of the next pipe with base of last pipe added.
+#	"""
+#	var pipe = null
+
+#	if lastPipe.format  == PIPES_FORMAT.STRAIGHT:
+#		if lastPipe.get_holes_sides() in [Vector2.DOWN, Vector2.UP]:
+#			if direction in [Vector2.LEFT, Vector2.RIGHT]:
+#				pass
+#	pipe.tilePosition = lastPipe.tilePosition + direction
+
+#	return pipe
+
+func generate_random_pipes_path():
+	"""
+		Simulate a artificial intelligence to generate a random pipes path.
+	"""
+	var enterPipe = get_pipe_enter() # Get the current pipe track
+	var endPipe = get_pipe_exit() # get the exit pipe
+
+	var lastPipe = enterPipe # The last pipe
+
+	for _i in range(MAX_TILE_SIZE.x * MAX_TILE_SIZE.y):
+		var nextDirection = get_free_directions(enterPipe.tilePosition, enterPipe.get_holes_sides()) # Get the next direction
+
+		if nextDirection.empty():
+			print("[Eletropipe] NOT FOUND FREE DIRECTION: The pipes dont have free directions.")
+			return false
+
+		nextDirection = nextDirection[get_random_seed() % nextDirection.size()] # Get a random direction
 
 func init_energy_system():
 	pass

@@ -5,6 +5,7 @@
 
 [node name="PipeStraight" instance=ExtResource( 2 )]
 holes = [ true, false, true, false ]
+format = "STRAIGHT"
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 1 )

@@ -5,6 +5,7 @@
 
 [node name="PipeCurved" instance=ExtResource( 1 )]
 holes = [ false, true, true, false ]
+format = "CURVED"
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )

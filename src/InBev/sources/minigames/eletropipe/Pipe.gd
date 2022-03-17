@@ -9,6 +9,13 @@ export(Array) var holes = []
 export var tilePosition = Vector2(0, 0)
 export var canRotate = true
 
+export var format = "DEFAULT"
+"""
+	DEFAULT - basic default
+	CURVED - curved tiles
+	STRAIGHT - straight tiles
+"""
+
 export var type = "NORMAL"
 """
 	NORMAL - basic pipe
