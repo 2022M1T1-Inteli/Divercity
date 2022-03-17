@@ -5,8 +5,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Pipe" type="Area2D"]
-scale = Vector2( 2.25, 2.25 )
+scale = Vector2( 2.225, 2.225 )
 script = ExtResource( 1 )
+holes = [ false, false, false, false ]
 
 [node name="Sprite" type="Sprite" parent="."]
 

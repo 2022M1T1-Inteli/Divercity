@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/minigames/eletropipe/bases/Pipe.tscn" type="PackedScene" id=2]
 
 [node name="PipeStraight" instance=ExtResource( 2 )]
-outputs = [ true, false, true, false ]
+holes = [ true, false, true, false ]
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 1 )
