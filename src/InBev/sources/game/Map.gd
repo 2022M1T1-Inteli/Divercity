@@ -1,6 +1,6 @@
-extends Node2D
+extends Node
 
-signal go_to_golf
+signal change_scene
 
 func _construct(mainNode):
-	connect("go_to_golf", mainNode, "_change_scene_to") # Connect callback for local signal
+	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal

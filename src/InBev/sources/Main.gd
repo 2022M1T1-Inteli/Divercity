@@ -5,9 +5,10 @@ onready var currentNode = get_node("BaseReplaceNode") # get current template nod
 var onChangingScene = false
 
 func _ready():
+	LevelManager.currentLevel = 0 # set level to 0
 	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 
-func _change_scene_to(scene, fade = true): # Callback to change scene from childs
+func _change_scene_to(scene, fade = true, params = {}): # Callback to change scene from childs
 	if onChangingScene: # Return if the scene is already changing
 		return
 
@@ -30,6 +31,8 @@ func _change_scene_to(scene, fade = true): # Callback to change scene from child
 		sceneInstance._construct(self) # Call the construct method of the new scene
 
 	currentNode.call_deferred("free") # Free the old scene
+
+
 
 	add_child(sceneInstance) # Add the new scene to the tree
 	currentNode = get_node(sceneInstance.name) # Set the new scene as current node
