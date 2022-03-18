@@ -1,7 +1,15 @@
 extends Node
 
 var currentMap
+
 export var loadMap = 1
+export(String) var callbackScenePath
+export(Dictionary) var callbackSceneParams
+
+signal change_scene # Create local signal for change to game scene
+
+func _construct(mainNode):
+	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal
 
 func _ready():
 	VisualServer.set_default_clear_color(Color("#3A893D")) # Change default background color
@@ -30,3 +38,5 @@ func on_golfball_entered():
 	timer.call_deferred("free") # Free the timer
 
 	$GolfBall.call_deferred("free") # Free the golf ball
+
+	emit_signal("change_scene", callbackScenePath, true, callbackSceneParams) # Emit the change scene signal to the game scene
