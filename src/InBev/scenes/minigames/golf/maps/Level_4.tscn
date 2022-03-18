@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/minigames/golf/bases/BorderWalls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/minigames/base_gass_background.png" type="Texture" id=2]
 [ext_resource path="res://scenes/minigames/golf/Hole.tscn" type="PackedScene" id=3]
-[ext_resource path="res://resources/minigames/level01.png" type="Texture" id=4]
+[ext_resource path="res://resources/minigames/level02.png" type="Texture" id=4]
 [ext_resource path="res://scenes/minigames/golf/bases/Wall.tscn" type="PackedScene" id=5]
 
 [node name="Level_1Map" type="Node2D"]
@@ -25,16 +25,16 @@ centered = false
 [node name="Rectangle" parent="TestObstacles" instance=ExtResource( 5 )]
 
 [node name="StaticBody2D" parent="TestObstacles/Rectangle" index="0"]
-position = Vector2( -249, -192 )
-scale = Vector2( 0.985734, 1 )
-polygon = PoolVector2Array( 842.012, 949, 748.681, 433, 721.29, 438, 813.607, 953 )
+position = Vector2( -497.874, 1.98772 )
+scale = Vector2( 1.315, 0.835618 )
+polygon = PoolVector2Array( 926.137, 247.736, 768.723, -3.57546, 755.796, 15.5721, 914.731, 266.883 )
 
 [node name="Rectangle3" parent="TestObstacles" instance=ExtResource( 5 )]
 
 [node name="StaticBody2D" parent="TestObstacles/Rectangle3" index="0"]
 position = Vector2( -600, -192 )
 scale = Vector2( 0.985734, 1 )
-polygon = PoolVector2Array( 756.796, 954, 851.142, 437, 823.752, 434, 732.449, 948 )
+polygon = PoolVector2Array( 608.683, 443, 947.517, 442, 947.517, 415, 608.683, 416 )
 
 [node name="Rectangle4" parent="TestObstacles" instance=ExtResource( 5 )]
 position = Vector2( 175, 0 )
@@ -42,7 +42,7 @@ position = Vector2( 175, 0 )
 [node name="StaticBody2D" parent="TestObstacles/Rectangle4" index="0"]
 position = Vector2( -600, -192 )
 scale = Vector2( 0.985734, 1 )
-polygon = PoolVector2Array( 853.171, 606, 846.07, 568, 833.896, 546, 816.65, 532, 805.491, 528, 791.289, 528, 778.1, 532, 761.869, 545, 746.652, 568, 740.565, 606 )
+polygon = PoolVector2Array( 823.752, 1194, 823.752, 607, 797.375, 607, 797.375, 1194 )
 
 [editable path="TestObstacles/Rectangle"]
 [editable path="TestObstacles/Rectangle3"]
