@@ -1,6 +1,7 @@
 extends TouchScreenButton
 
 export(String) var callbackScenePath
+export(Dictionary) var callbackSceneParams
 export var isEnable = false setget set_status
 
 onready var grayscaleShaderPixelPerfect = preload("res://sources/common/shaders/GrayscalePixelPerfect.gdshader")
@@ -29,4 +30,4 @@ func _on_pressed_input():
 	if not isEnable:
 		return
 
-	get_parent().get_parent().emit_signal("change_scene", callbackScenePath)
+	get_parent().get_parent().emit_signal("change_scene", callbackScenePath, true, callbackSceneParams) # Emit the change_scene signal.

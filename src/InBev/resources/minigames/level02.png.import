@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Car.png-3d6a2f74de6a005791df37116aeaac9b.stex"
+path="res://.import/level02.png-b0c8fb2226e120153dfc0a8417af237b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Transitions/Car.png"
-dest_files=[ "res://.import/Car.png-3d6a2f74de6a005791df37116aeaac9b.stex" ]
+source_file="res://resources/minigames/level02.png"
+dest_files=[ "res://.import/level02.png-b0c8fb2226e120153dfc0a8417af237b.stex" ]
 
 [params]
 

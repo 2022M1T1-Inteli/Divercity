@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/montainParallax.png-f09c3ca522fb75256b619991f4f9a8b0.stex"
+path="res://.import/montainParallax.png-6cce94ef5eef918192bd4b6b2ecac992.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Transitions/montainParallax.png"
-dest_files=[ "res://.import/montainParallax.png-f09c3ca522fb75256b619991f4f9a8b0.stex" ]
+source_file="res://resources/transitions/montainParallax.png"
+dest_files=[ "res://.import/montainParallax.png-6cce94ef5eef918192bd4b6b2ecac992.stex" ]
 
 [params]
 

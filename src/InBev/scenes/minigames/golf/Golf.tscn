@@ -22,6 +22,7 @@ gradient = SubResource( 3 )
 
 [node name="Golf" type="Node"]
 script = ExtResource( 3 )
+loadMap = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 360, 640 )
@@ -32,7 +33,7 @@ smoothing_enabled = true
 smoothing_speed = 4.0
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 378, 960 )
+position = Vector2( 360, 1100 )
 
 [node name="FlareParticle2D" parent="GolfBall" instance=ExtResource( 5 )]
 speed_scale = 5.0

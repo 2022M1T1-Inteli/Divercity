@@ -32,14 +32,13 @@ __meta__ = {
 }
 
 [node name="Checkpoints" type="Node2D" parent="."]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 332, 1143 )
 callbackScenePath = "res://scenes/minigames/golf/Golf.tscn"
+callbackSceneParams = {
+"loadMap": 3
+}
 isEnable = true
 
 [node name="Quizz1" parent="Checkpoints" instance=ExtResource( 5 )]
