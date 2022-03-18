@@ -111,4 +111,5 @@ Aqui estão as referências usadas no projeto.
 4. <https://freesound.org/>
 5. <https://www.zapsplat.com/>
 6. <https://github.com/RPicster/Godot-particle-and-vfx-textures/>
+7. <https://github.com/uheartbeast/jitter-free-pixelart-scaling/>
 

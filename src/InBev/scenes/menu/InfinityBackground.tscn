@@ -1,18 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform vec2 direction = vec2(0.0, -1.0);
-uniform float speed_scale = 0.5;
-
-void fragment(){
-	vec2 move = direction * TIME * speed_scale;
-	COLOR = texture(TEXTURE, UV + move);
-}"
+[ext_resource path="res://sources/common/shaders/InfinityBackground.gdshader" type="Shader" id=1]
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = ExtResource( 1 )
 shader_param/direction = Vector2( -1, 0 )
 shader_param/speed_scale = 0.2
 

@@ -11,7 +11,10 @@ var dropDirection = Vector2.ZERO
 var velocity = Vector2(0, 0)
 var speed = 0
 
-func calculate_speed(distance): # Calcule speed of all in base of distance of start and drop click
+func calculate_speed(distance):
+	"""
+		Calcule speed of all in base of distance of start and drop click
+	"""
 	distance = clamp(distance, 0, maxReach) # Clamp distance to max reach
 	distance = range_lerp(distance, 0, maxReach, 0, maxSpeed) # Lerp distance to speed
 	return distance # Return speed
@@ -73,6 +76,9 @@ func _physics_process(delta):
 		$FlareParticle2D.restart() # Init or reset flare animation
 
 func _anim_enter_hole(hole):
+	"""
+		Function to animate the golfball enter in hole
+	"""
 	self.set_process_input(false) # Disable input
 
 	var tween = Tween.new() # Create tween

@@ -1,6 +1,16 @@
-extends Node2D
+extends Node
 
-signal go_to_golf
+signal change_scene
 
 func _construct(mainNode):
-	connect("go_to_golf", mainNode, "_change_scene_to") # Connect callback for local signal
+	"""
+		Node constructor
+	"""
+	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal
+	LevelManager.currentLevel += 1
+
+	for checkpoint in get_node("Checkpoints").get_children():
+		if checkpoint.indentifier == LevelManager.currentLevel:
+			checkpoint.set_status(true)
+		else:
+			checkpoint.set_status(false)

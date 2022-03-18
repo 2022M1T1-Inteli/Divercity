@@ -1,112 +1,26 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://resources/fonts/UbuntuMono-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sources/menu/Menu.gd" type="Script" id=2]
-[ext_resource path="res://resources/ui/Buttons/CGB01-blue_M_rounded_btn.png" type="Texture" id=3]
-[ext_resource path="res://resources/backgrounds/background_6.png" type="Texture" id=4]
-[ext_resource path="res://resources/backgrounds/background_3.png" type="Texture" id=5]
-[ext_resource path="res://resources/backgrounds/logo.png" type="Texture" id=6]
-[ext_resource path="res://resources/backgrounds/background_7.png" type="Texture" id=7]
-[ext_resource path="res://scenes/menu/InfinityBackground.tscn" type="PackedScene" id=8]
-[ext_resource path="res://resources/characters/alex/alex_anim.png" type="Texture" id=9]
+[ext_resource path="res://resources/transitions/Car.png" type="Texture" id=3]
+[ext_resource path="res://resources/map/logoTela.png" type="Texture" id=4]
+[ext_resource path="res://resources/transitions/montainParallax.png" type="Texture" id=5]
+[ext_resource path="res://sources/common/shaders/InfinityBackgroundPixelPerfect.gdshader" type="Shader" id=6]
+[ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=7]
+[ext_resource path="res://resources/ui/Buttons/CGB01-blue_M_rounded_btn.png" type="Texture" id=9]
 
-[sub_resource type="Environment" id=1]
-background_mode = 4
-glow_enabled = true
-glow_strength = 1.28
-glow_blend_mode = 1
-glow_hdr_threshold = 0.8
-adjustment_brightness = 0.71
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 6 )
+shader_param/direction = Vector2( 1, 0 )
+shader_param/speed_scale = 0.2
 
-[sub_resource type="Animation" id=8]
-resource_name = "ModulateVariation"
-length = 4.0
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Background/Moon:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1.35, -0.25, 0, 0.25, 0, 1.6, -0.25, 0, 0.25, 0, 1.35, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2, 4 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Background/Moon:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1.35, -0.25, 0, 0.25, 0, 1.6, -0.25, 0, 0.25, 0, 1.35, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2, 4 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Background/Moon:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1.35, -0.25, 0, 0.25, 0, 1.75, -0.25, 0, 0.25, 0, 1.35, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2, 4 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Background/Moon:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2, 4 )
-}
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 7 )
 
-[sub_resource type="Animation" id=9]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Background/Moon:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Background/Moon:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Background/Moon:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Background/Moon:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 50
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -114,48 +28,13 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 100, 140 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 100, 0, 100, 140 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 200, 0, 100, 140 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 300, 0, 100, 140 )
-
-[sub_resource type="AtlasTexture" id=15]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 400, 0, 100, 140 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 500, 0, 100, 140 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 600, 0, 100, 140 )
-
-[sub_resource type="SpriteFrames" id=10]
-animations = [ {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
-"loop": true,
-"name": "Walking",
-"speed": 8.0
-} ]
+[sub_resource type="Environment" id=5]
+background_mode = 4
+glow_enabled = true
+glow_strength = 1.05
+glow_blend_mode = 1
+glow_hdr_threshold = 0.8
+adjustment_brightness = 0.71
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -165,91 +44,67 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WorldEnvironmentMenu" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
-
-[node name="AnimationPlayerMenu" type="AnimationPlayer" parent="."]
-anims/ModulateVariation = SubResource( 8 )
-anims/RESET = SubResource( 9 )
-
-[node name="Background" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NightBackground" type="ColorRect" parent="Background"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.0352941, 0, 0.156863, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Moon" type="TextureRect" parent="Background"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -184.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = 184.0
-texture = ExtResource( 4 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="InfinityClouds" parent="Background" instance=ExtResource( 8 )]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -8.0
-margin_top = -336.0
-margin_right = -582.0
-margin_bottom = -286.0
-rect_scale = Vector2( 5, 5 )
-rect_clip_content = true
-texture = ExtResource( 7 )
-expand = true
-
-[node name="InfinityMontains" parent="Background" instance=ExtResource( 8 )]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -240.0
-texture = ExtResource( 5 )
-
-[node name="Logo" type="TextureRect" parent="Background"]
-modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+[node name="MontainsTexture" type="TextureRect" parent="."]
+material = SubResource( 1 )
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -360.0
-margin_top = -1280.0
-margin_right = 360.0
-texture = ExtResource( 6 )
+anchor_bottom = 0.5
+margin_left = -1080.0
+margin_top = -640.0
+margin_right = 1080.0
+margin_bottom = 640.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CarTexture" type="TextureRect" parent="."]
+material = SubResource( 2 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -683.0
+margin_top = 548.0
+margin_right = 638.0
+margin_bottom = 1281.0
+rect_pivot_offset = Vector2( -343, -204 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.941176, 0.941176, 0.941176, 1 )
+material = SubResource( 3 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -330.0
+margin_top = 200.0
+margin_right = 330.0
+margin_bottom = 400.0
+texture = ExtResource( 4 )
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -360.0
-margin_top = -256.0
-margin_right = 360.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -64.0
+margin_bottom = 256.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StartButton" type="TouchScreenButton" parent="CenterContainer"]
-modulate = Color( 0.8, 0.8, 0.901961, 1 )
-position = Vector2( 240, -24 )
-normal = ExtResource( 3 )
+modulate = Color( 1.05, 1.05, 1.05, 1 )
+position = Vector2( 232, 0 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -263,7 +118,7 @@ margin_left = -108.0
 margin_top = -43.0
 margin_right = 108.0
 margin_bottom = 43.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 text = "Iniciar"
 align = 1
 valign = 1
@@ -272,10 +127,11 @@ __meta__ = {
 }
 
 [node name="ExitButton" type="TouchScreenButton" parent="CenterContainer"]
-modulate = Color( 0.8, 0.8, 0.901961, 1 )
-position = Vector2( 259, 121 )
+modulate = Color( 1.05, 1.05, 1.05, 1 )
+position = Vector2( 252, 180 )
 scale = Vector2( 0.828125, 0.828125 )
-normal = ExtResource( 3 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -289,7 +145,7 @@ margin_left = -108.0
 margin_top = -43.0
 margin_right = 108.0
 margin_bottom = 43.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 text = "Sair"
 align = 1
 valign = 1
@@ -297,13 +153,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CenterContainer"]
-position = Vector2( 368, -248 )
-scale = Vector2( 2.1674, 2.1674 )
-frames = SubResource( 10 )
-animation = "Walking"
-frame = 4
-playing = true
+[node name="WorldEnvironmentMenu" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
+
+[node name="CarAnimator" type="Tween" parent="."]
 
 [connection signal="pressed" from="CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="CenterContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
