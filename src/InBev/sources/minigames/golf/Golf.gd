@@ -2,7 +2,7 @@ extends Node
 
 var currentMap
 
-export var loadMap = 1
+export var loadMap = 0
 export(String) var callbackScenePath
 export(Dictionary) var callbackSceneParams
 

@@ -35,29 +35,68 @@ __meta__ = {
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 332, 1143 )
-callbackScenePath = "res://scenes/minigames/golf/Golf.tscn"
+callbackScenePath = "res://scenes/game/transitions/MachadoWoodDrugstoreTalk.tscn"
 callbackSceneParams = {
+"callbackSceneParams": {
+"callbackSceneParams": {
+"backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
+"minigameName": "Mini-golfe",
+"playCallbackSceneParams": {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Quer saber de um caso que aconteceu comigo?", " Um dia estava voltando de metrô para casa, e um bêbado de cor clara sentou ao meu lado e começou a tumultuar.", "Os passageiros chamaram as autoridades, e quando elas chegaram...", "surpreendentemente, ela abordou e agrediu nós dois! E eu nem sabia quem era esse cara!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "loadMap": 3
+},
+"playCallbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
+"surrenderCallbackSceneParams": {
+},
+"surrenderCallbackScenePath": "res://scenes/game/Map.tscn"
+},
+"callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
+"textList": [ "self: Olá, o Machado me disse que você pode me ajudar! ", "Opa, tudo bem?! Em que eu poderia te ajudar?", "self: Eu preciso passar pelo melhor caminho para sair dessa cidade.", "Já entendi, você quer que eu seja seu guia, mas tem uma condição, você terá que cumprir alguns desafios.", "self: Tudo bem, quais seriam esses desafios?", "O primeiro começa agora. Você vai ter que me ajudar a treinar para um campeonato de golf que está por vir.", "self: Claro, vamos lá! " ]
+},
+"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn"
 }
-isEnable = true
 
 [node name="Quizz1" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 322, 964 )
+callbackScenePath = "res://scenes/game/quiz/Quiz.tscn"
+callbackSceneParams = {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"correctAnswer": "Negros são 78% dos mortos pela letalidade policial",
+"otherAnswers": [ {
+"justification": "Desde 2013, houve um aumento no número de mortes decorrentes de intervenção policial de 190% ",
+"question": "Pessoas de outras raças, que são vítimas de letalidade policial, também são vítimas de racismo."
+}, {
+"justification": "Não necessariamente a causa da violência policial para todas as pessoas é o racismo. Racismo é a crença em que uma raça, etnia ou certas características físicas sejam superiores a outras.",
+"question": "Esta violência não é algo generalizado, são apenas alguns casos específicos e isolados."
+} ],
+"quizzQuestion": "Quando o assunto é violência policial contra negros no Brasil:"
+}
+indentifier = 1
 
 [node name="Minigame2" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 165, 963 )
+indentifier = 2
 
 [node name="Quizz2" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 149, 791 )
+indentifier = 3
 
 [node name="Minigame3" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 162, 642 )
+indentifier = 4
 
 [node name="Quizz3" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 321, 463 )
+indentifier = 5
 
 [node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 330, 300 )
+indentifier = 6
 
 [node name="Quizz4" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 323, 117 )
+indentifier = 7

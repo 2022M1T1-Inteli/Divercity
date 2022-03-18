@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/7.png-c4cf46ec759603cfd4708ef831fae530.stex"
+path="res://.import/empty.png-6185be9748a577ade57323e93087afd7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/characters/bomber/7.png"
-dest_files=[ "res://.import/7.png-c4cf46ec759603cfd4708ef831fae530.stex" ]
+source_file="res://resources/transitions/empty.png"
+dest_files=[ "res://.import/empty.png-6185be9748a577ade57323e93087afd7.stex" ]
 
 [params]
 

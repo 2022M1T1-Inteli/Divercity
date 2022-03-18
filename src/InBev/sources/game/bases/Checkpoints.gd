@@ -3,6 +3,7 @@ extends TouchScreenButton
 export(String) var callbackScenePath
 export(Dictionary) var callbackSceneParams
 export var isEnable = false setget set_status
+export var indentifier = 0
 
 onready var grayscaleShaderPixelPerfect = preload("res://sources/common/shaders/GrayscalePixelPerfect.gdshader")
 

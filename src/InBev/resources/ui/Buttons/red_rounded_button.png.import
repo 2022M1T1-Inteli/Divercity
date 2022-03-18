@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/10.png-23627e5c332d94bbc7a9c47949d5daf7.stex"
+path="res://.import/red_rounded_button.png-109fd548b1adb2867951bb47a07995f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/characters/bomber/10.png"
-dest_files=[ "res://.import/10.png-23627e5c332d94bbc7a9c47949d5daf7.stex" ]
+source_file="res://resources/ui/Buttons/red_rounded_button.png"
+dest_files=[ "res://.import/red_rounded_button.png-109fd548b1adb2867951bb47a07995f1.stex" ]
 
 [params]
 

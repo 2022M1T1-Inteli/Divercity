@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/13.png-dd2702a82369e99f63928a8b3c651c53.stex"
+path="res://.import/machado.png-569358d0c7b7cfa94539b4fad5aa9fb1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/characters/bomber/13.png"
-dest_files=[ "res://.import/13.png-dd2702a82369e99f63928a8b3c651c53.stex" ]
+source_file="res://resources/transitions/machado.png"
+dest_files=[ "res://.import/machado.png-569358d0c7b7cfa94539b4fad5aa9fb1.stex" ]
 
 [params]
 

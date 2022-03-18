@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://sources/minigames/MinigamePreMenu.gd" type="Script" id=1]
-[ext_resource path="res://resources/ui/Buttons/CGB01-blue_M_rounded_btn.png" type="Texture" id=2]
+[ext_resource path="res://resources/ui/Buttons/red_rounded_button.png" type="Texture" id=2]
 [ext_resource path="res://resources/fonts/UbuntuMono-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=4]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button.png" type="Texture" id=5]
+[ext_resource path="res://resources/fonts/fibberish.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 4 )
@@ -15,6 +17,13 @@ outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 128
+outline_size = 10
+outline_color = Color( 0.721569, 0.0196078, 0.0196078, 1 )
+use_mipmaps = true
+font_data = ExtResource( 6 )
 
 [node name="MinigamePreMenu" type="Control"]
 anchor_right = 1.0
@@ -29,6 +38,7 @@ __meta__ = {
 material = SubResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,8 +55,8 @@ __meta__ = {
 
 [node name="PlayButton" type="TouchScreenButton" parent="CenterContainer"]
 position = Vector2( 232, 100 )
-normal = ExtResource( 2 )
-pressed = ExtResource( 2 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -87,6 +97,18 @@ margin_right = 108.0
 margin_bottom = 43.0
 custom_fonts/font = SubResource( 1 )
 text = "Desistir"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinigameNameLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.162
+margin_top = 60.0
+margin_bottom = -3.36
+custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
 __meta__ = {

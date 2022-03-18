@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/6.png-ca1d10b22c20470711b35de377f151ed.stex"
+path="res://.import/talk_cloud_tail.png-30a85d558414de300b5addb513846685.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/characters/bomber/6.png"
-dest_files=[ "res://.import/6.png-ca1d10b22c20470711b35de377f151ed.stex" ]
+source_file="res://resources/transitions/talk_cloud_tail.png"
+dest_files=[ "res://.import/talk_cloud_tail.png-30a85d558414de300b5addb513846685.stex" ]
 
 [params]
 
