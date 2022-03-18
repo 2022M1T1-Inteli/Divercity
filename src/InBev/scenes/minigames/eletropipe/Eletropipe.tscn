@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/minigames/eletropipe/bases/PipeStraight.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/minigames/eletropipe/bases/PipeCurved.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sources/minigames/eletropipe/Table.gd" type="Script" id=3]
-[ext_resource path="res://sources/minigames/eletropipe/Pipe.gd" type="Script" id=4]
 
 [node name="Eletropipe" type="Node"]
 
@@ -13,7 +12,6 @@ script = ExtResource( 3 )
 [node name="CLEITON" parent="Table" instance=ExtResource( 1 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 72, 72 )
-script = ExtResource( 4 )
 holes = [ false, false, true, false ]
 canRotate = false
 type = "ENTER"
@@ -21,7 +19,6 @@ type = "ENTER"
 [node name="plasc" parent="Table" instance=ExtResource( 1 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 264, 328 )
-script = ExtResource( 4 )
 holes = [ true, false, false, false ]
 tilePosition = Vector2( 3, 2 )
 canRotate = false
