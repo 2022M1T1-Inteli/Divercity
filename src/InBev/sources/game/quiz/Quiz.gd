@@ -71,7 +71,7 @@ func _on_Answer3Button_pressed():
 func _on_Answer2Button_pressed():
 	if $Justification.visible or (OS.get_system_time_msecs() - lastClickTime) < 1000: # If justification is visible or last click was less than 1 second ago
 		return
-	check_answer(2, get_node("AnswersLabel/Answers2Label").text) 3 # Check answer
+	check_answer(2, get_node("AnswersLabel/Answers2Label").text) # Check answer
 
 func _on_Answer1Button_pressed():
 	if $Justification.visible or (OS.get_system_time_msecs() - lastClickTime) < 1000: # If justification is visible or last click was less than 1 second ago
