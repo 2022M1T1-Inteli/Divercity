@@ -94,6 +94,13 @@ Para abrir este projeto você necessita das seguintes ferramentas:
   * Reorganizado arquivos de workspace ( pastas e arquivos ).
   * Adicionado novos pacotes de recursos 2D.
 
+* 1.3.0
+  * Adicionado novos pacotes de recursos 2D feitos pelo grupo.
+  * Adicionado história inicial do jogo com balões de fala e interação com toques.
+  * Implementado novos mapas para o minigame de golfe.
+  * Criado base para minigame eletropipe.
+  * Refatorado mapa para melhor aproveitamento visual.
+  * Adicionado sistema de levels durante o decorrer do jogo.
 ---
 
 ## 📋 Licença/License
