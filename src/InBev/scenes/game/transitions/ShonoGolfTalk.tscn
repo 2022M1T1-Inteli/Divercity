@@ -1,0 +1,253 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://resources/transitions/Shono.png" type="Texture" id=1]
+[ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=2]
+[ext_resource path="res://resources/transitions/shono_far.png" type="Texture" id=3]
+[ext_resource path="res://resources/transitions/shono_far_plate.png" type="Texture" id=4]
+[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://resources/transitions/talk_cloud.png" type="Texture" id=6]
+[ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=7]
+[ext_resource path="res://sources/game/transitions/ShonoGolfTalk.gd" type="Script" id=8]
+[ext_resource path="res://resources/transitions/empty.png" type="Texture" id=9]
+[ext_resource path="res://resources/transitions/personagem imagem 2.png" type="Texture" id=10]
+[ext_resource path="res://resources/ui/Arrow/icons8-pixel-arrow-100.png" type="Texture" id=11]
+[ext_resource path="res://sources/game/transitions/bases/ArrowTexture.gd" type="Script" id=12]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 2 )
+
+[node name="ShonoGolfTalk" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_right = 360.0
+margin_bottom = 640.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlateFarTexture" type="TextureRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 189.0
+margin_top = 464.0
+margin_right = 189.0
+margin_bottom = 464.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TigerWoodTexture" type="TextureRect" parent="."]
+material = SubResource( 7 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 339.0
+margin_top = 598.0
+margin_right = 149.0
+margin_bottom = 260.0
+texture = ExtResource( 10 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShonoTexture" type="TextureRect" parent="."]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -142.0
+margin_top = 645.0
+margin_right = -366.0
+margin_bottom = 247.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PersonTalk" type="Control" parent="."]
+visible = false
+margin_left = 96.0
+margin_top = 169.0
+margin_right = 136.0
+margin_bottom = 209.0
+rect_scale = Vector2( 1.4, 1.4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TalkCloudTexture" type="TextureRect" parent="PersonTalk"]
+material = SubResource( 3 )
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 68.0
+margin_right = 340.0
+margin_bottom = 688.0
+texture = ExtResource( 6 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TalkLabel" type="Label" parent="PersonTalk"]
+anchor_left = 0.5
+anchor_top = 4.299
+anchor_right = 8.51
+anchor_bottom = 9.344
+margin_left = -1.0
+margin_top = 21.04
+margin_right = 0.599976
+margin_bottom = 22.24
+custom_colors/font_color = Color( 0, 0.00392157, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowTexture" type="TextureRect" parent="PersonTalk"]
+material = SubResource( 8 )
+margin_left = 310.347
+margin_top = 366.0
+margin_right = 410.347
+margin_bottom = 466.0
+rect_scale = Vector2( 0.33146, 0.33146 )
+texture = ExtResource( 11 )
+expand = true
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfTalk" type="Control" parent="."]
+visible = false
+margin_left = 153.0
+margin_top = 690.0
+margin_right = 193.0
+margin_bottom = 730.0
+rect_scale = Vector2( 1.3, 1.3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TalkCloudTexture" type="TextureRect" parent="SelfTalk"]
+modulate = Color( 0.352941, 0.752941, 0.94902, 1 )
+material = SubResource( 5 )
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.64
+margin_top = 129.443
+margin_right = 409.36
+margin_bottom = 627.443
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TalkLabel" type="Label" parent="SelfTalk"]
+anchor_left = 1.0
+anchor_top = 5.741
+anchor_right = 7.42
+anchor_bottom = 9.766
+margin_left = 6.0
+margin_top = 1.35999
+margin_right = -7.80002
+margin_bottom = -0.640015
+custom_colors/font_color = Color( 0, 0.00392157, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 0
+custom_fonts/font = SubResource( 6 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowTexture" type="TextureRect" parent="SelfTalk"]
+material = SubResource( 9 )
+margin_left = 262.403
+margin_top = 356.67
+margin_right = 362.403
+margin_bottom = 456.67
+rect_scale = Vector2( 0.395249, 0.395249 )
+texture = ExtResource( 11 )
+expand = true
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClickAreas" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NextTalk" type="TouchScreenButton" parent="ClickAreas"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 45, 61 )
+scale = Vector2( 2.45178, 4.64446 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GenericTimer" type="Timer" parent="."]
+
+[connection signal="pressed" from="ClickAreas/NextTalk" to="." method="_on_NextTalk_pressed"]

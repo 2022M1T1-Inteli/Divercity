@@ -13,16 +13,17 @@ shader = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Map" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -720.0
+margin_bottom = -1280.0
 __meta__ = {
 "_edit_group_": true,
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="MapTexture" type="TextureRect" parent="Map"]
 material = SubResource( 2 )
-anchor_right = 1.0
-anchor_bottom = 1.0
 margin_right = 720.0
 margin_bottom = 1280.0
 texture = ExtResource( 1 )
@@ -35,12 +36,12 @@ __meta__ = {
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 332, 1143 )
-callbackScenePath = "res://scenes/game/transitions/MachadoWoodDrugstoreTalk.tscn"
+callbackScenePath = "res://scenes/game/transitions/MachadoDrugstoreTalk.tscn"
 callbackSceneParams = {
 "callbackSceneParams": {
 "callbackSceneParams": {
 "backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
-"minigameName": "Mini-golfe",
+"minigameName": "Mini-golfe nível 1",
 "playCallbackSceneParams": {
 "callbackSceneParams": {
 "callbackScenePath": "res://scenes/game/Map.tscn",
@@ -55,17 +56,18 @@ callbackSceneParams = {
 "surrenderCallbackScenePath": "res://scenes/game/Map.tscn"
 },
 "callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
-"textList": [ "self: Olá, o Machado me disse que você pode me ajudar! ", "Opa, tudo bem?! Em que eu poderia te ajudar?", "self: Eu preciso passar pelo melhor caminho para sair dessa cidade.", "Já entendi, você quer que eu seja seu guia, mas tem uma condição, você terá que cumprir alguns desafios.", "self: Tudo bem, quais seriam esses desafios?", "O primeiro começa agora. Você vai ter que me ajudar a treinar para um campeonato de golf que está por vir.", "self: Claro, vamos lá! " ]
+"textList": [ "self: Olá, o Machado me disse que você pode me ajudar! ", "Opa, tudo bem?! Em que eu poderia te ajudar?", "self: Eu preciso passar pelo melhor caminho para sair dessa cidade.", "Já entendi, você quer que eu seja seu guia, mas tem uma condição, você terá que cumprir alguns desafios.", "self: Tudo bem, quais seriam esses desafios?", "O primeiro começa agora. Você vai ter que me ajudar a treinar para um campeonato de golf que está por vir.", "self: Claro, vamos lá!" ]
 },
-"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn"
+"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
+"textList": [ "Olá, meu nome é Machado, seja bem vinda(o) ao bairro Étnico-racial, hoje um dos bairros mais racialmente heterogêneos da cidade, mas nem sempre foi assim…", "Enfim, isso não convém nesse momento.", "Ah! Não sei se você percebeu, mas Divercity é uma cidade bem sinalizada, atente-se às placas e essa será a sua melhor jornada até aqui.", "Olha, foi um prazer te conhecer, eu estou apressado agora, mas a gente ainda vai se ver muito por aqui ainda.", "self: O que tem ali à frente ?", " Você vai conhecer agora um dos moradores mais influentes da cidade, ele é jogador de golfe e mora aqui desde o tempo em que esse bairro não era como você vê hoje.", "As pessoas mal olhavam umas para as outras, não havia esse ar amoroso e acolhedor que você sente. Aquele homem foi peça chave dessa transformação. Converse com ele, e ele irá te guiar." ]
 }
 
-[node name="Quizz1" parent="Checkpoints" instance=ExtResource( 5 )]
+[node name="Quiz1" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 322, 964 )
-callbackScenePath = "res://scenes/game/quiz/Quiz.tscn"
+callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
-"correctAnswer": "Negros são 78% dos mortos pela letalidade policial",
+"correctAnswer": "Negros são 78% dos mortos pela letalidade policial.",
 "otherAnswers": [ {
 "justification": "Desde 2013, houve um aumento no número de mortes decorrentes de intervenção policial de 190% ",
 "question": "Pessoas de outras raças, que são vítimas de letalidade policial, também são vítimas de racismo."
@@ -73,23 +75,59 @@ callbackSceneParams = {
 "justification": "Não necessariamente a causa da violência policial para todas as pessoas é o racismo. Racismo é a crença em que uma raça, etnia ou certas características físicas sejam superiores a outras.",
 "question": "Esta violência não é algo generalizado, são apenas alguns casos específicos e isolados."
 } ],
-"quizzQuestion": "Quando o assunto é violência policial contra negros no Brasil:"
+"quizzQuestion": "Quando o assunto é violência policial contra negros no Brasil?"
 }
 indentifier = 1
 
 [node name="Minigame2" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 165, 963 )
+callbackScenePath = "res://scenes/game/transitions/ShonoGolfTalk.tscn"
+callbackSceneParams = {
+"callbackSceneParams": {
+"backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
+"callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
+"minigameName": "Mini-golfe nível 2",
+"playCallbackSceneParams": {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Vou te dar uma ajuda para evitar problemas como esse", "O Racismo é a crença em que uma raça, etnia ou certas características físicas sejam superiores a outras", "Com isso, boa sorte durante seu percurso!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/ShonoGolfTalk.tscn",
+"loadMap": 4
+},
+"playCallbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
+"surrenderCallbackSceneParams": {
+},
+"surrenderCallbackScenePath": "res://scenes/game/Map.tscn"
+},
+"callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
+"textList": [ "Olá, que prazer me reunir a vocês hoje!", "Me chamo Shono, sou um grande competidor de golf e já ganhei muitas medalhas!", "self: Nossa, sua precisão deve ser muito boa, apesar dos olhos fechados!", "Brincadeira de mal gosto hein?! Me lembra épocas em que divercity não era como é hoje e que piadas comuns como essa me deixavam muito mal!", "self: Me desculpe se eu o ofendi, não era a intenção!", "Chega de apresentações. Vamos dar umas tacadas? caso consiga completar este campo, te dou uma ajuda sobre preconceito!" ]
+}
 indentifier = 2
 
-[node name="Quizz2" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( 149, 791 )
+[node name="Quiz2" parent="Checkpoints" instance=ExtResource( 5 )]
+position = Vector2( 151, 786 )
+callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
+callbackSceneParams = {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"correctAnswer": "Sim",
+"otherAnswers": [ {
+"justification": "O Racismo é a crença em que uma raça, etnia ou certas características físicas sejam superiores a outras.",
+"question": "Não"
+}, {
+"justification": "Você pode ter pensado em xenofobia mas isto está ligado a aversão ou a profunda antipatia em relação aos estrangeiros. Não necessariamente pessoas amarelas são estrangeiras.",
+"question": "Sofrem preconceito, mas com outro nome."
+} ],
+"quizzQuestion": "Pessoas amarelas também sofrem racismo?"
+}
 indentifier = 3
 
 [node name="Minigame3" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 162, 642 )
+callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
 indentifier = 4
 
-[node name="Quizz3" parent="Checkpoints" instance=ExtResource( 5 )]
+[node name="Quiz3" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 321, 463 )
 indentifier = 5
 
@@ -97,6 +135,6 @@ indentifier = 5
 position = Vector2( 330, 300 )
 indentifier = 6
 
-[node name="Quizz4" parent="Checkpoints" instance=ExtResource( 5 )]
+[node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( 323, 117 )
 indentifier = 7
