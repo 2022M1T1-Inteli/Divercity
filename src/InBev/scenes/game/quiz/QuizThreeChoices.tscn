@@ -29,7 +29,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=8]
-size = 48
+size = 42
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -196,6 +196,22 @@ margin_bottom = -772.0
 custom_fonts/font = SubResource( 8 )
 text = "Resposta incorreta!
 Deveria ter sido levado em conta:"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseLabel" type="Label" parent="Justification"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 1016.0
+margin_right = -40.0
+margin_bottom = -132.0
+custom_fonts/font = SubResource( 8 )
+text = "Clique para fechar a justificativa"
 align = 1
 valign = 1
 autowrap = true

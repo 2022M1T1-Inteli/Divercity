@@ -25,7 +25,6 @@ shader = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 24
-outline_size = 2
 outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
@@ -33,21 +32,18 @@ font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 26
-outline_size = 2
-outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
+outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 56
-outline_size = 2
-outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 8 )
 
-[node name="MachadoWoodDrugstoreTalk" type="Control"]
+[node name="MachadoDrugstoreTalk" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -3.0
@@ -58,7 +54,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-textList = [ "Olá, meu nome é Machado, seja bem vinda(o) ao bairro Étnico-racial, hoje um dos bairros mais racialmente heterogêneos da cidade, mas nem sempre foi assim…", "Enfim, isso não convém nesse momento.", "Ah! Não sei se você percebeu, mas Divercity é uma cidade bem sinalizada, atente-se às placas e essa será a sua melhor jornada até aqui.", "Olha, foi um prazer te conhecer, eu estou apressado agora, mas a gente ainda vai se ver muito por aqui ainda.", "self: O que tem ali à frente ?", " Você vai conhecer agora um dos moradores mais influentes da cidade, ele é jogador de golfe e mora aqui desde o tempo em que esse bairro não era como você vê hoje.", "As pessoas mal olhavam umas para as outras, não havia esse ar amoroso e acolhedor que você sente. Aquele homem foi peça chave dessa transformação. Converse com ele, e ele irá te guiar." ]
 
 [node name="AllScenery" type="Control" parent="."]
 anchor_right = 1.0

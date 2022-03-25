@@ -1,0 +1,289 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
+[ext_resource path="res://resources/map/mapa_de_longe.png" type="Texture" id=2]
+[ext_resource path="res://resources/map/Badge/Divercity_key.png" type="Texture" id=3]
+[ext_resource path="res://scenes/commons/textured_effects/RandomParticle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sources/game/transitions/EarnBadge.gd" type="Script" id=5]
+[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://resources/fonts/SUBSCRIBER-Regular.otf" type="DynamicFontData" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 54
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Badge"
+length = 3.0
+loop = true
+step = 0.0166667
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Menu/Badge/BadgeTexture:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.65, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0, 0.65, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.5, 3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Menu/Badge/BadgeTexture:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.65, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0, 0.65, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.5, 3 )
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Menu/Badge/BadgeTexture:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Menu/Badge/BadgeTexture:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Menu/Badge/BadgeTexture:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Menu/Badge/BadgeTexture:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0.8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[node name="EarnBadge" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -1432, -56 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapTexture" type="TextureRect" parent="."]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlurColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.941176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -512.0
+margin_right = 288.0
+margin_bottom = 512.0
+color = Color( 0.792157, 0.792157, 0.792157, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Badge" type="Node2D" parent="Menu"]
+
+[node name="RandomParticle2D" parent="Menu/Badge" instance=ExtResource( 4 )]
+position = Vector2( 360, 298 )
+scale = Vector2( 3, 3 )
+scale_amount = 1.25
+color = Color( 0.337255, 0, 1, 1 )
+
+[node name="BadgeTexture" type="Sprite" parent="Menu/Badge"]
+position = Vector2( 360, 298 )
+scale = Vector2( 0.727557, 0.727557 )
+texture = ExtResource( 3 )
+
+[node name="EarnLabel" type="Label" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -344.0
+margin_top = -735.0
+margin_right = 344.0
+margin_bottom = -655.0
+custom_colors/font_color = Color( 1, 0.380392, 0.533333, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Parabéns. Você ganhou a chave da cidade!!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescribeLabel" type="Label" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -344.0
+margin_top = -676.0
+margin_right = 344.0
+margin_bottom = -566.0
+custom_colors/font_color = Color( 0.662745, 0.862745, 0.462745, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Ela pode ser adicionada em suas redes socias como forma de recompensa!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmailLabel" type="Label" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -344.0
+margin_top = -438.0
+margin_right = 344.0
+margin_bottom = -396.0
+custom_colors/font_color = Color( 0.580392, 0.482353, 0.686275, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Adicione seu email para receber o badge:"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -104.0
+margin_top = -232.0
+margin_right = 100.0
+margin_bottom = -144.0
+focus_mode = 0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 7 )
+enabled_focus_mode = 0
+text = "Enviar badge"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -280.0
+margin_top = 247.0
+margin_right = 280.0
+margin_bottom = 311.0
+custom_fonts/font = SubResource( 8 )
+text = "mihaellalves@hotmails.comsand.brs"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIAnimation" type="AnimationPlayer" parent="."]
+reset_on_save = false
+anims/Badge = SubResource( 3 )
+anims/RESET = SubResource( 4 )

@@ -10,7 +10,7 @@ func _construct(mainNode):
 	LevelManager.currentLevel += 1
 
 	for checkpoint in get_node("Checkpoints").get_children():
-		if checkpoint.indentifier == LevelManager.currentLevel:
+		if true: #
 			checkpoint.set_status(true)
 		else:
 			checkpoint.set_status(false)
