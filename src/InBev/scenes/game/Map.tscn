@@ -101,7 +101,7 @@ callbackSceneParams = {
 "surrenderCallbackScenePath": "res://scenes/game/Map.tscn"
 },
 "callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
-"textList": [ "Olá, que prazer me reunir a vocês hoje!", "Me chamo Shono, sou um grande competidor de golf e já ganhei muitas medalhas!", "self: Nossa, sua precisão deve ser muito boa, apesar dos olhos fechados!", "Brincadeira de mal gosto hein?! Me lembra épocas em que divercity não era como é hoje e que piadas comuns como essa me deixavam muito mal!", "Me desculpe se eu o ofendi, não era a intenção!", "Chega de apresentações. Vamos dar umas tacadas? caso consiga completar este campo, te dou uma ajuda sobre preconceito!" ]
+"textList": [ "Olá, que prazer me reunir a vocês hoje!", "Me chamo Shono, sou um grande competidor de golf e já ganhei muitas medalhas!", "self: Nossa, sua precisão deve ser muito boa, apesar dos olhos fechados!", "Brincadeira de mal gosto hein?! Me lembra épocas em que divercity não era como é hoje e que piadas comuns como essa me deixavam muito mal!", "self: Me desculpe se eu o ofendi, não era a intenção!", "Chega de apresentações. Vamos dar umas tacadas? caso consiga completar este campo, te dou uma ajuda sobre preconceito!" ]
 }
 indentifier = 2
 
@@ -124,6 +124,7 @@ indentifier = 3
 
 [node name="Minigame3" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 162, 642 )
+callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
 indentifier = 4
 
 [node name="Quiz3" parent="Checkpoints" instance=ExtResource( 5 )]

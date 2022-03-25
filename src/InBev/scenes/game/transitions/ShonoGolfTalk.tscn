@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://resources/transitions/Shono.png" type="Texture" id=1]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=2]
@@ -9,8 +9,14 @@
 [ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=7]
 [ext_resource path="res://sources/game/transitions/ShonoGolfTalk.gd" type="Script" id=8]
 [ext_resource path="res://resources/transitions/empty.png" type="Texture" id=9]
+[ext_resource path="res://resources/transitions/personagem imagem 2.png" type="Texture" id=10]
+[ext_resource path="res://resources/ui/Arrow/icons8-pixel-arrow-100.png" type="Texture" id=11]
+[ext_resource path="res://sources/game/transitions/bases/ArrowTexture.gd" type="Script" id=12]
 
 [sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 2 )
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -26,6 +32,9 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 2 )
+
 [sub_resource type="ShaderMaterial" id=5]
 shader = ExtResource( 2 )
 
@@ -35,6 +44,9 @@ outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 2 )
 
 [node name="ShonoGolfTalk" type="Control"]
 anchor_right = 1.0
@@ -70,14 +82,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TigerWoodTexture" type="TextureRect" parent="."]
+material = SubResource( 7 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 339.0
+margin_top = 598.0
+margin_right = 149.0
+margin_bottom = 260.0
+texture = ExtResource( 10 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ShonoTexture" type="TextureRect" parent="."]
 material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -132.0
-margin_top = 648.0
-margin_right = -356.0
-margin_bottom = 250.0
+margin_left = -142.0
+margin_top = 645.0
+margin_right = -366.0
+margin_bottom = 247.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -130,11 +157,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ArrowTexture" type="TextureRect" parent="PersonTalk"]
+material = SubResource( 8 )
+margin_left = 310.347
+margin_top = 366.0
+margin_right = 410.347
+margin_bottom = 466.0
+rect_scale = Vector2( 0.33146, 0.33146 )
+texture = ExtResource( 11 )
+expand = true
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SelfTalk" type="Control" parent="."]
 visible = false
-margin_left = 297.0
+margin_left = 153.0
 margin_top = 690.0
-margin_right = 337.0
+margin_right = 193.0
 margin_bottom = 730.0
 rect_scale = Vector2( 1.3, 1.3 )
 __meta__ = {
@@ -174,6 +215,20 @@ align = 1
 valign = 1
 autowrap = true
 clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowTexture" type="TextureRect" parent="SelfTalk"]
+material = SubResource( 9 )
+margin_left = 262.403
+margin_top = 356.67
+margin_right = 362.403
+margin_bottom = 456.67
+rect_scale = Vector2( 0.395249, 0.395249 )
+texture = ExtResource( 11 )
+expand = true
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

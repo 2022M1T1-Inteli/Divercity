@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://resources/transitions/talk_cloud_tail.png" type="Texture" id=1]
 [ext_resource path="res://resources/transitions/talk_cloud.png" type="Texture" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=8]
 [ext_resource path="res://resources/transitions/imagem 1.png" type="Texture" id=9]
 [ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=10]
+[ext_resource path="res://resources/ui/Arrow/icons8-pixel-arrow-100.png" type="Texture" id=11]
+[ext_resource path="res://sources/game/transitions/bases/ArrowTexture.gd" type="Script" id=12]
+[ext_resource path="res://sources/game/transitions/bases/ArrowTexture.gd" type="Script" id=13]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
@@ -29,6 +32,9 @@ outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 26
@@ -52,7 +58,8 @@ margin_bottom = -643.0
 rect_scale = Vector2( 2, 2 )
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [  ]
 }
 
 [node name="AllScenery" type="Control" parent="."]
@@ -147,6 +154,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ArrowTexture" type="TextureRect" parent="AllScenery/PersonTalk"]
+material = SubResource( 8 )
+margin_left = 310.347
+margin_top = 366.0
+margin_right = 410.347
+margin_bottom = 466.0
+rect_scale = Vector2( 0.33146, 0.33146 )
+texture = ExtResource( 11 )
+expand = true
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SelfTalk" type="Control" parent="AllScenery"]
 visible = false
 margin_left = -358.5
@@ -195,6 +216,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ArrowTexture" type="TextureRect" parent="AllScenery/SelfTalk"]
+material = SubResource( 8 )
+margin_left = 265.217
+margin_top = 360.892
+margin_right = 365.217
+margin_bottom = 460.892
+rect_scale = Vector2( 0.359804, 0.359804 )
+texture = ExtResource( 11 )
+expand = true
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PersonCall" type="Control" parent="AllScenery"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -239,6 +274,22 @@ align = 1
 valign = 1
 autowrap = true
 clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowTexture" type="TextureRect" parent="AllScenery/PersonCall"]
+material = SubResource( 8 )
+margin_left = 51.0
+margin_top = 334.0
+margin_right = 151.0
+margin_bottom = 434.0
+rect_rotation = 0.0556524
+rect_scale = Vector2( 0.4638, 0.4638 )
+texture = ExtResource( 11 )
+expand = true
+flip_h = true
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

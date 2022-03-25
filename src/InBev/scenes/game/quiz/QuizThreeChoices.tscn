@@ -195,7 +195,7 @@ margin_right = -61.0
 margin_bottom = -772.0
 custom_fonts/font = SubResource( 8 )
 text = "Resposta incorreta!
-Deveria ter sido levado em conta:"
+Deveria ter sido levado em conta que:"
 align = 1
 valign = 1
 autowrap = true
