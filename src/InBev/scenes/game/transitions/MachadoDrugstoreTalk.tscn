@@ -163,7 +163,7 @@ margin_bottom = 466.0
 rect_scale = Vector2( 0.33146, 0.33146 )
 texture = ExtResource( 11 )
 expand = true
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -225,7 +225,7 @@ margin_bottom = 460.892
 rect_scale = Vector2( 0.359804, 0.359804 )
 texture = ExtResource( 11 )
 expand = true
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -289,7 +289,7 @@ rect_scale = Vector2( 0.4638, 0.4638 )
 texture = ExtResource( 11 )
 expand = true
 flip_h = true
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

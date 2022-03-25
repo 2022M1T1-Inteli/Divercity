@@ -7,10 +7,10 @@ func _construct(mainNode):
 		Node constructor
 	"""
 	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal
-	LevelManager.currentLevel += 1
+	LevelManager.currentLevel += 1 # Increment level
 
-	for checkpoint in get_node("Checkpoints").get_children():
-		if checkpoint.indentifier == LevelManager.currentLevel:
-			checkpoint.set_status(true)
+	for checkpoint in get_node("Checkpoints").get_children(): # Get all checkpoints
+		if checkpoint.indentifier == LevelManager.currentLevel: # Find the checkpoint for the current level
+			checkpoint.set_status(true) # Set checkpoint to active
 		else:
-			checkpoint.set_status(false)
+			checkpoint.set_status(false) # Set checkpoint to inactive

@@ -8,6 +8,9 @@ export(Dictionary) var callbackSceneParams = {
 }
 
 func _construct(mainNode):
+	"""
+		Node constructor
+	"""
 	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal
 
 func _on_StartButton_pressed(): # Callback on click start button
@@ -17,6 +20,9 @@ func _on_StartButton_pressed(): # Callback on click start button
 	emit_signal("change_scene", callbackScenePath, true, callbackSceneParams) # Emit the change scene signal to the game scene
 
 func _change_car_position_x(positionX):
+	"""
+		Change the position of the car
+	"""
 	$CarTexture.rect_position.x = positionX
 
 func _on_ExitButton_pressed(): # Callback on click start button
