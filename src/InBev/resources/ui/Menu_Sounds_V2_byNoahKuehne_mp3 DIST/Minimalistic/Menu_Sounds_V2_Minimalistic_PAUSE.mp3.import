@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Minimalistic_PAUSE.mp3-ce6c745538f96be1475775c03693c16b.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Minimalistic/Menu_Sounds_V2_Minimalistic_PAUSE.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Minimalistic_PAUSE.mp3-ce6c745538f96be1475775c03693c16b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

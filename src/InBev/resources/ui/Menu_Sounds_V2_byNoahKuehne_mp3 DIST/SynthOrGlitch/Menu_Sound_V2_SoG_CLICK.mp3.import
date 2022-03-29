@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sound_V2_SoG_CLICK.mp3-7be239070f8f372b322c9f7963d53fe0.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/SynthOrGlitch/Menu_Sound_V2_SoG_CLICK.mp3"
+dest_files=[ "res://.import/Menu_Sound_V2_SoG_CLICK.mp3-7be239070f8f372b322c9f7963d53fe0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

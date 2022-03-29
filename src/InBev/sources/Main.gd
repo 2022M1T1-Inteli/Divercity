@@ -49,3 +49,12 @@ func _change_scene_to(scene, fade = true, params = {}): # Callback to change sce
 		yield($FadeAnimator, "tween_completed") # Wait tween finish animation
 
 	onChangingScene = false # Reset the scene changing flag
+
+func _on_PauseMenu__set_pause_game(state):
+	"""
+		Callback to set the pause game flag
+	"""
+
+	currentNode.get_tree().paused = state
+
+	print("Pause game:", state)
