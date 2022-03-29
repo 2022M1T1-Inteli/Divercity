@@ -9,6 +9,12 @@ func _ready():
 	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 
 func _change_scene_to(scene, fade = true, params = {}): # Callback to change scene from childs
+	"""
+		Change the scene to the given scene.
+		If fade is true, the scene will fade out and fade in.
+		If fade is false, the scene will be switched instantly.
+		If params is given, it will be passed to the scene.
+	"""
 	if onChangingScene: # Return if the scene is already changing
 		return
 

@@ -5,7 +5,7 @@
 [ext_resource path="res://resources/fonts/UbuntuMono-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=4]
 [ext_resource path="res://resources/ui/Buttons/green_rounded_button.png" type="Texture" id=5]
-[ext_resource path="res://resources/fonts/fibberish.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=6]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 4 )
@@ -21,8 +21,9 @@ font_data = ExtResource( 3 )
 [sub_resource type="DynamicFont" id=3]
 size = 128
 outline_size = 10
-outline_color = Color( 0.721569, 0.0196078, 0.0196078, 1 )
+outline_color = Color( 0.286275, 0.466667, 0.639216, 1 )
 use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 6 )
 
 [node name="MinigamePreMenu" type="Control"]
@@ -111,6 +112,7 @@ margin_bottom = -3.36
 custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

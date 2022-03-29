@@ -51,6 +51,8 @@ Nosso projeto ajuda no ensinamento de funcionários da <a href="https://www.ambe
 ---
 
 ## 🛠 Instalação
+<b>Pode ser jogado no browser!:</b>
+[Link do projeto WEB](https://vinicioslugli.itch.io/divercity)
 
 <b>Android:</b>
 

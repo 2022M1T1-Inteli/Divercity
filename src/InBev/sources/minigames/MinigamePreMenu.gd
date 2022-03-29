@@ -8,7 +8,7 @@ export(Dictionary) var playCallbackSceneParams
 export(String) var surrenderCallbackScenePath
 export(Dictionary) var surrenderCallbackSceneParams
 
-export(String) var minigameName = ""
+export(String) var minigameName
 
 signal change_scene
 
