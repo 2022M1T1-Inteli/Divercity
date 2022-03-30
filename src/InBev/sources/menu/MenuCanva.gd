@@ -43,8 +43,10 @@ func _on_ToggleMenuButton_pressed():
 	if menuOpacity[0] == 1: # if menu is closed
 		toggle_menu_layer() # Toggle menu layer
 		toggle_game_state() # Toggle game state
+		get_node("MenuLayer").call("_update") # Update menu layer
 
 func _on_CloseButton_pressed():
 	if menuOpacity[0] == 0: # if menu is opened
 		toggle_menu_layer() # Toggle menu layer
 		toggle_game_state() # Toggle game state
+		get_node("MenuLayer").call("_update") # Update menu layer

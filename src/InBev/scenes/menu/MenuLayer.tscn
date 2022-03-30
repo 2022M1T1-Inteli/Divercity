@@ -1,9 +1,17 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
 [ext_resource path="res://resources/ui/menu/Msg08.png" type="Texture" id=2]
+[ext_resource path="res://resources/ui/menu/Slider04.png" type="Texture" id=3]
 [ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://resources/ui/Buttons/red_rounded_button.png" type="Texture" id=5]
+[ext_resource path="res://sources/menu/MenuLayer.gd" type="Script" id=6]
+[ext_resource path="res://resources/ui/Buttons/red_rounded_button_2.png" type="Texture" id=7]
+[ext_resource path="res://resources/ui/menu/Slider04_clicked.png" type="Texture" id=8]
+[ext_resource path="res://resources/ui/menu/Slider02.png" type="Texture" id=9]
+[ext_resource path="res://resources/ui/menu/Slider02_clicked.png" type="Texture" id=10]
+[ext_resource path="res://resources/ui/menu/Slider05_clicked.png" type="Texture" id=11]
+[ext_resource path="res://resources/ui/menu/Slider05.png" type="Texture" id=12]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
@@ -15,6 +23,41 @@ outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 45
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.580392, 0.482353, 0.686275, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.72549, 0.913725, 0.992157, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.972549, 0.74902, 0.482353, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 1 )
@@ -35,7 +78,19 @@ texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 256, 128 )
 
 [sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 256, 128 )
 
 [node name="MenuLayer" type="Control"]
@@ -49,6 +104,7 @@ margin_right = 270.0
 margin_bottom = 480.0
 rect_pivot_offset = Vector2( 270, 480 )
 mouse_filter = 2
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -79,15 +135,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Labels" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 270, 480 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TittleLabel" type="Label" parent="Labels"]
+[node name="TittleLabel" type="Label" parent="."]
 margin_left = 55.0
 margin_top = 32.0
 margin_right = 487.0
@@ -100,7 +148,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Buttons" type="Control" parent="."]
+[node name="VolumeBlocks" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 270, 480 )
@@ -108,19 +156,173 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CloseButton" type="Button" parent="Buttons"]
+[node name="MainSoundBlock" type="Control" parent="VolumeBlocks"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 112.0
+margin_right = 2.0
+margin_bottom = -704.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VolumeBlocks/MainSoundBlock"]
+margin_left = 118.0
+margin_top = 24.0
+margin_right = 413.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 13 )
+text = "Som principal"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MainHSlider" type="HSlider" parent="VolumeBlocks/MainSoundBlock"]
+margin_left = 102.0
+margin_top = 72.0
+margin_right = 430.0
+margin_bottom = 128.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 16 )
+max_value = 2.0
+step = 0.1
+value = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSoundBlock" type="Control" parent="VolumeBlocks"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 236.0
+margin_right = 2.0
+margin_bottom = -580.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VolumeBlocks/MusicSoundBlock"]
+margin_left = 118.0
+margin_top = 24.0
+margin_right = 413.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 13 )
+text = "Música"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MusicHSlider" type="HSlider" parent="VolumeBlocks/MusicSoundBlock"]
+margin_left = 102.0
+margin_top = 72.0
+margin_right = 430.0
+margin_bottom = 128.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 11 )
+custom_icons/grabber = ExtResource( 12 )
+custom_styles/slider = SubResource( 17 )
+max_value = 2.0
+step = 0.1
+value = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="EffectSoundBlock" type="Control" parent="VolumeBlocks"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 357.0
+margin_right = 2.0
+margin_bottom = -459.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VolumeBlocks/EffectSoundBlock"]
+margin_left = 118.0
+margin_top = 24.0
+margin_right = 413.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 13 )
+text = "Efeitos sonóros"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsHSlider" type="HSlider" parent="VolumeBlocks/EffectSoundBlock"]
+margin_left = 102.0
+margin_top = 72.0
+margin_right = 430.0
+margin_bottom = 128.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 10 )
+custom_icons/grabber = ExtResource( 9 )
+custom_styles/slider = SubResource( 15 )
+max_value = 2.0
+step = 0.1
+value = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="."]
 material = SubResource( 4 )
 anchor_right = 0.974
 anchor_bottom = 0.967
-margin_left = 181.0
-margin_top = 832.0
-margin_right = -154.96
-margin_bottom = -25.3201
+margin_left = 429.0
+margin_top = 44.0
+margin_right = -40.96
+margin_bottom = -836.32
 custom_fonts/font = SubResource( 7 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 6 )
-text = "Fechar"
+text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ExitButton" type="Button" parent="."]
+material = SubResource( 4 )
+anchor_right = 0.974
+anchor_bottom = 0.967
+margin_left = 142.0
+margin_top = 824.0
+margin_right = -107.96
+margin_bottom = -21.3201
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Sair do jogo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="VolumeBlocks/MainSoundBlock/MainHSlider" to="." method="_on_MainHSlider_value_changed"]
+[connection signal="value_changed" from="VolumeBlocks/MusicSoundBlock/MusicHSlider" to="." method="_on_MusicHSlider_value_changed"]
+[connection signal="value_changed" from="VolumeBlocks/EffectSoundBlock/EffectsHSlider" to="." method="_on_EffectsHSlider_value_changed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

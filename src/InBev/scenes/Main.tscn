@@ -60,6 +60,6 @@ __meta__ = {
 
 [connection signal="_set_pause_game" from="CanvasLayer/PauseMenu" to="." method="_on_PauseMenu__set_pause_game"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ToggleMenuButton" to="CanvasLayer/PauseMenu" method="_on_ToggleMenuButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/PauseMenu/MenuLayer/Buttons/CloseButton" to="CanvasLayer/PauseMenu" method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MenuLayer/CloseButton" to="CanvasLayer/PauseMenu" method="_on_CloseButton_pressed"]
 
 [editable path="CanvasLayer/PauseMenu/MenuLayer"]

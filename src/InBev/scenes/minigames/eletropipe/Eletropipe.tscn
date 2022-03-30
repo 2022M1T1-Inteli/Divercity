@@ -1,7 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeStraight.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeCurved.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sources/minigames/eletropipe/Table.gd" type="Script" id=3]
 
 [node name="Eletropipe" type="Node"]
@@ -9,53 +7,25 @@
 [node name="Table" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
-[node name="CLEITON" parent="Table" instance=ExtResource( 1 )]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 72, 72 )
-holes = [ false, false, true, false ]
-canRotate = false
-type = "ENTER"
-
-[node name="plasc" parent="Table" instance=ExtResource( 1 )]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 264, 328 )
-holes = [ true, false, false, false ]
-tilePosition = Vector2( 3, 2 )
-canRotate = false
-type = "EXIT"
-
-[node name="PipeCurved" parent="Table" instance=ExtResource( 2 )]
-position = Vector2( 80, 216 )
-tilePosition = Vector2( 0, 1 )
-
-[node name="PipeCurved2" parent="Table" instance=ExtResource( 2 )]
-position = Vector2( 472, 224 )
-tilePosition = Vector2( 3, 1 )
-
-[node name="PipeStraight" parent="Table" instance=ExtResource( 1 )]
-position = Vector2( 272, 208 )
-tilePosition = Vector2( 1, 1 )
-
-[node name="PipeStraight2" parent="Table" instance=ExtResource( 1 )]
-position = Vector2( 272, 208 )
-tilePosition = Vector2( 2, 1 )
-
 [node name="Interface" type="Control" parent="."]
 anchor_right = 1.0
-anchor_bottom = 0.994
-margin_right = -720.0
-margin_bottom = -1272.32
+anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="Interface"]
+anchor_right = 1.011
+anchor_bottom = 1.0
 margin_left = 248.0
 margin_top = 1160.0
-margin_right = 416.0
-margin_bottom = 1216.0
+margin_right = -311.92
+margin_bottom = -64.0
 text = "Testar conexão"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

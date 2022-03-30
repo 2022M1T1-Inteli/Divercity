@@ -61,6 +61,4 @@ func _on_PauseMenu__set_pause_game(state):
 		Callback to set the pause game flag
 	"""
 
-	currentNode.get_tree().paused = state
-
-	print("Pause game:", state)
+	currentNode.get_tree().paused = state # Set the pause game flag

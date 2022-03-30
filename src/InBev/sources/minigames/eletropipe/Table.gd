@@ -24,6 +24,18 @@ onready var pipeStraightScene = preload("res://scenes/minigames/eletropipe/bases
 static func calculate_distance_of_tile(tilePosition1, tilePosition2):
 	return (tilePosition1 - tilePosition2).length()
 
+func load_map(map_id):
+	"""
+		Loads a map from the map id.
+		default map id: Level_{ID}
+	"""
+	var mapInstance = load("res://scenes/minigames/eletropipe/maps/Level_%d.tscn" % map_id).instance() # Copy a instance of map from the resource
+	add_child(mapInstance)
+
+
+func _ready():
+	load_map(3)
+
 func is_pipes_path_connected():
 	"""
 		Return True if the pipes are connected.
@@ -36,7 +48,7 @@ func is_pipes_path_connected():
 	var nextDirection = Vector2.ZERO # The direction of the next pipe
 	var lastDirection = Vector2.ZERO # The direction of the last pipe
 
-	for _pipe in self.get_children(): # Limit the search to the pipes with the numbers of pipes
+	for _pipe in get_node("Pipes").get_children(): # Limit the search to the pipes with the numbers of pipes
 		trackList.append(currentPipeTrack) # Add the current pipe track to the list
 
 		for outerDirection in currentPipeTrack.get_holes_sides(): # Get the outer direction of the current pipe
@@ -45,7 +57,7 @@ func is_pipes_path_connected():
 
 			var dumpPipe = get_next_pipe_from_direction(currentPipeTrack.tilePosition, outerDirection) # Get the next pipe from the direction
 
-			if dumpPipe == null:# Check if pipe exist
+			if dumpPipe == null: # Check if pipe exist
 				continue
 
 			for innerDirection in dumpPipe.get_holes_sides(): # Get the inner direction of the next pipe
@@ -135,23 +147,23 @@ func get_free_directions(tilePosition, directions = [Vector2.DOWN, Vector2.LEFT,
 
 #	return pipe
 
-func generate_random_pipes_path():
-	"""
-		Simulate a artificial intelligence to generate a random pipes path.
-	"""
-	var enterPipe = get_pipe_enter() # Get the current pipe track
-	var endPipe = get_pipe_exit() # get the exit pipe
+#func generate_random_pipes_path():
+#	"""
+#		Simulate a artificial intelligence to generate a random pipes path.
+#	"""
+#	var enterPipe = get_pipe_enter() # Get the current pipe track
+#	var endPipe = get_pipe_exit() # get the exit pipe
 
-	var lastPipe = enterPipe # The last pipe
+#	var lastPipe = enterPipe # The last pipe
 
-	for _i in range(MAX_TILE_SIZE.x * MAX_TILE_SIZE.y):
-		var nextDirection = get_free_directions(enterPipe.tilePosition, enterPipe.get_holes_sides()) # Get the next direction
+#	for _i in range(MAX_TILE_SIZE.x * MAX_TILE_SIZE.y):
+#		var nextDirection = get_free_directions(enterPipe.tilePosition, enterPipe.get_holes_sides()) # Get the next direction
 
-		if nextDirection.empty():
-			print("[Eletropipe] NOT FOUND FREE DIRECTION: The pipes dont have free directions.")
-			return false
+#		if nextDirection.empty():
+#			print("[Eletropipe] NOT FOUND FREE DIRECTION: The pipes dont have free directions.")
+#			return false
 
-		nextDirection = nextDirection[get_random_seed() % nextDirection.size()] # Get a random direction
+#		nextDirection = nextDirection[get_random_seed() % nextDirection.size()] # Get a random direction
 
 func init_energy_system():
 	pass
@@ -160,7 +172,7 @@ func get_pipe_enter():
 	"""
 		Return the pipe at the entrance.
 	"""
-	for pipe in self.get_children(): # Search for the pipe at the entrance
+	for pipe in get_node("Pipes").get_children(): # Search for the pipe at the entrance
 		if pipe.type == PIPES_TYPE.ENTER: # If the pipe is at the entrance
 			return pipe # Return the pipe at the entrance
 	return null # Return null if there is no pipe at the entrance
@@ -170,7 +182,7 @@ func get_pipe_exit():
 	"""
 		Return the pipe at the exit.
 	"""
-	for pipe in self.get_children(): # Search for the pipe at the exit
+	for pipe in get_node("Pipes").get_children(): # Search for the pipe at the exit
 		if pipe.type == PIPES_TYPE.EXIT: # If the pipe is at the exit
 			return pipe # Return the pipe at the exit
 	return null # Return null if there is no pipe at the exit
@@ -180,7 +192,7 @@ func get_pipe_from_tile(tile):
 		Returns the pipe at the given tile position.
 		If there is no pipe at the given position, returns null.
 	"""
-	return get_node_or_null(PIPES_NAME.DEFAULT + ("%dx%d" % [tile.x, tile.y])) # Return the pipe at the given position.
+	return get_node("Pipes").get_node_or_null(PIPES_NAME.DEFAULT + ("%dx%d" % [tile.x, tile.y])) # Return the pipe at the given position.
 
 func get_next_pipe_from_direction(tile, direction):
 	"""
