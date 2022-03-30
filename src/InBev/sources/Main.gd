@@ -5,6 +5,7 @@ onready var currentNode = get_node("BaseReplaceNode") # get current template nod
 var onChangingScene = false
 
 func _ready():
+	VersionManager.version = "1.3.0" # set version
 	LevelManager.currentLevel = -1 # set level to -1
 	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 

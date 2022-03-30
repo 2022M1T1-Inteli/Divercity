@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
 [ext_resource path="res://resources/map/mapa_de_longe.png" type="Texture" id=2]
-[ext_resource path="res://resources/map/Badge/Divercity_key.png" type="Texture" id=3]
+[ext_resource path="res://resources/map/Badge/Divercity_keyPT1.png" type="Texture" id=3]
 [ext_resource path="res://scenes/commons/textured_effects/RandomParticle.tscn" type="PackedScene" id=4]
-[ext_resource path="res://sources/game/transitions/EarnBadge.gd" type="Script" id=5]
+[ext_resource path="res://sources/game/transitions/EarnPartBadge.gd" type="Script" id=5]
 [ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://resources/fonts/SUBSCRIBER-Regular.otf" type="DynamicFontData" id=7]
 
@@ -18,7 +18,7 @@ use_filter = true
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=11]
-size = 32
+size = 41
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 6 )
@@ -51,12 +51,6 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
-
-[sub_resource type="DynamicFont" id=8]
-size = 32
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Badge"
@@ -127,7 +121,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[node name="EarnBadge" type="Control"]
+[node name="EarnPart1Badge" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -1432, -56 )
@@ -182,12 +176,13 @@ __meta__ = {
 [node name="RandomParticle2D" parent="Menu/Badge" instance=ExtResource( 4 )]
 position = Vector2( 360, 298 )
 scale = Vector2( 3, 3 )
+amount = 1
 scale_amount = 1.25
 color = Color( 0.337255, 0, 1, 1 )
 
 [node name="BadgeTexture" type="Sprite" parent="Menu/Badge"]
 position = Vector2( 360, 298 )
-scale = Vector2( 0.653226, 0.653226 )
+scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 3 )
 
 [node name="EarnLabel" type="Label" parent="Menu"]
@@ -201,7 +196,7 @@ margin_right = 344.0
 margin_bottom = -655.0
 custom_colors/font_color = Color( 1, 0.380392, 0.533333, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "Parabéns. Você ganhou a chave da cidade!!"
+text = "Parabéns. Você ganhou uma parte da chave da cidade!!"
 align = 1
 valign = 1
 autowrap = true
@@ -215,12 +210,12 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -344.0
-margin_top = -676.0
+margin_top = -576.0
 margin_right = 344.0
-margin_bottom = -467.0
+margin_bottom = -466.0
 custom_colors/font_color = Color( 0.662745, 0.862745, 0.462745, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "VoCê conseguiu todos as partes do emblema, agora Ela pode ser adicionada em suas redes sociais como forma de recompensa!"
+text = "Consiga a segunda parte para completar o emblema de chave"
 align = 1
 valign = 1
 autowrap = true
@@ -234,12 +229,12 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -344.0
-margin_top = -438.0
+margin_top = -400.0
 margin_right = 344.0
-margin_bottom = -396.0
+margin_bottom = -311.0
 custom_colors/font_color = Color( 0.580392, 0.482353, 0.686275, 1 )
 custom_fonts/font = SubResource( 11 )
-text = "Adicione seu email para receber o badge:"
+text = "Ao completar o emblema, você poderá leva-lo como recompensa!"
 align = 1
 valign = 1
 autowrap = true
@@ -247,7 +242,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Menu"]
+[node name="Continue" type="Button" parent="Menu"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -262,23 +257,7 @@ custom_styles/hover = SubResource( 10 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 7 )
 enabled_focus_mode = 0
-text = "Enviar badge"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LineEdit" type="LineEdit" parent="Menu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -280.0
-margin_top = 247.0
-margin_right = 280.0
-margin_bottom = 311.0
-custom_fonts/font = SubResource( 8 )
-text = "mihaellalves@hotmails.comsand.brs"
-align = 1
+text = "Continuar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -287,3 +266,5 @@ __meta__ = {
 reset_on_save = false
 anims/Badge = SubResource( 3 )
 anims/RESET = SubResource( 4 )
+
+[connection signal="pressed" from="Menu/Continue" to="." method="_on_Continue_pressed"]

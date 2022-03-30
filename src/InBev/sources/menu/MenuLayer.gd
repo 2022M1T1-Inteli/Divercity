@@ -7,22 +7,24 @@ const BUS_NAMES = {
 }
 
 func _ready():
-	_update()
+	_update() # update once to make sure the bus is updated
 
 func _update():
 	"""
 		Call to update sliders with current volume
 	"""
-	$VolumeBlocks/MainSoundBlock/MainHSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(BUS_NAMES.MAIN)))
-	$VolumeBlocks/MusicSoundBlock/MusicHSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(BUS_NAMES.MUSIC)))
-	$VolumeBlocks/EffectSoundBlock/EffectsHSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(BUS_NAMES.EFFECTS)))
+	$VolumeBlocks/MainSoundBlock/MainHSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(BUS_NAMES.MAIN))) # Update Main Bus volume
+	$VolumeBlocks/MusicSoundBlock/MusicHSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(BUS_NAMES.MUSIC))) # Update Music Bus volume
+	$VolumeBlocks/EffectSoundBlock/EffectsHSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(BUS_NAMES.EFFECTS))) # Update Effects Bus volume
+
+	$VersionLabel.text = "Versão do jogo: %s" % VersionManager.version # Update version label
 
 func set_volume(busName, linearValue):
 	"""
 		Set volume of a bus in db metric
 	"""
 
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(busName), linear2db(linearValue))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(busName), linear2db(linearValue)) # Set volume with conversion of linear value to db value
 
 func _on_ExitButton_pressed():
 	get_tree().quit() # Quit game

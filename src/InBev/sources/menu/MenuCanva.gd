@@ -13,6 +13,7 @@ static func toggle_bit(value):
 
 func _ready():
 	get_node("MenuLayer").modulate.a = 0 # Hide the menu by default
+	get_node("MenuLayer").visible = false
 
 func toggle_game_state():
 	"""
@@ -28,6 +29,9 @@ func toggle_menu_layer():
 	"""
 	menuOpacity.invert() # invert the opacity array
 
+	if menuOpacity[0] == 0:
+		get_node("MenuLayer").visible = true
+
 	var tween = Tween.new() # Create tween
 	add_child(tween) # Add tween to node
 
@@ -36,6 +40,9 @@ func toggle_menu_layer():
 	tween.start() # Start fade animation
 
 	yield(tween, "tween_all_completed") # Wait tween animation complete
+
+	if menuOpacity[0] == 1:
+		get_node("MenuLayer").visible = false
 
 	tween.call_deferred("free") # Free tween animator
 

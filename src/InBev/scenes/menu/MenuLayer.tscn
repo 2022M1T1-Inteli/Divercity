@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
 [ext_resource path="res://resources/ui/menu/Msg08.png" type="Texture" id=2]
@@ -12,12 +12,14 @@
 [ext_resource path="res://resources/ui/menu/Slider02_clicked.png" type="Texture" id=10]
 [ext_resource path="res://resources/ui/menu/Slider05_clicked.png" type="Texture" id=11]
 [ext_resource path="res://resources/ui/menu/Slider05.png" type="Texture" id=12]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button.png" type="Texture" id=13]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button_2.png" type="Texture" id=14]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=9]
-size = 70
+size = 36
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
@@ -93,6 +95,25 @@ region_rect = Rect2( 0, 0, 256, 128 )
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 256, 128 )
 
+[sub_resource type="DynamicFont" id=21]
+size = 32
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
 [node name="MenuLayer" type="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -148,6 +169,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VersionLabel" type="Label" parent="."]
+margin_left = 55.0
+margin_top = 845.0
+margin_right = 487.0
+margin_bottom = 918.0
+custom_fonts/font = SubResource( 9 )
+text = "Versão do jogo: 0.0.0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="VolumeBlocks" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -193,7 +227,7 @@ custom_icons/grabber_highlight = ExtResource( 8 )
 custom_icons/grabber = ExtResource( 3 )
 custom_styles/slider = SubResource( 16 )
 max_value = 2.0
-step = 0.1
+step = 0.05
 value = 1.0
 __meta__ = {
 "_edit_lock_": true,
@@ -237,7 +271,7 @@ custom_icons/grabber_highlight = ExtResource( 11 )
 custom_icons/grabber = ExtResource( 12 )
 custom_styles/slider = SubResource( 17 )
 max_value = 2.0
-step = 0.1
+step = 0.05
 value = 1.0
 __meta__ = {
 "_edit_lock_": true,
@@ -281,7 +315,7 @@ custom_icons/grabber_highlight = ExtResource( 10 )
 custom_icons/grabber = ExtResource( 9 )
 custom_styles/slider = SubResource( 15 )
 max_value = 2.0
-step = 0.1
+step = 0.05
 value = 1.0
 __meta__ = {
 "_edit_lock_": true,
@@ -296,10 +330,12 @@ margin_left = 429.0
 margin_top = 44.0
 margin_right = -40.96
 margin_bottom = -836.32
+focus_mode = 0
 custom_fonts/font = SubResource( 7 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 6 )
+enabled_focus_mode = 0
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -310,14 +346,35 @@ material = SubResource( 4 )
 anchor_right = 0.974
 anchor_bottom = 0.967
 margin_left = 142.0
-margin_top = 824.0
+margin_top = 768.0
 margin_right = -107.96
-margin_bottom = -21.3201
+margin_bottom = -77.3201
+focus_mode = 0
 custom_fonts/font = SubResource( 7 )
 custom_styles/hover = SubResource( 10 )
 custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
+enabled_focus_mode = 0
 text = "Sair do jogo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="Button" parent="."]
+material = SubResource( 4 )
+anchor_right = 0.974
+anchor_bottom = 0.967
+margin_left = 147.0
+margin_top = 659.0
+margin_right = -114.96
+margin_bottom = -188.32
+focus_mode = 0
+custom_fonts/font = SubResource( 21 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+enabled_focus_mode = 0
+text = "Limpar salvamentos"
 __meta__ = {
 "_edit_use_anchors_": false
 }
