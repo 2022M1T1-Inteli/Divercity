@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://sources/menu/MainAudioPlayer.gd" type="Script" id=1]
 [ext_resource path="res://sources/Main.gd" type="Script" id=2]
+[ext_resource path="res://resources/music/main/mainMusic.mp3" type="AudioStream" id=3]
 
 [node name="MainScene" type="Node"]
 script = ExtResource( 2 )
@@ -19,3 +21,8 @@ color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+script = ExtResource( 1 )

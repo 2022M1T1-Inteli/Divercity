@@ -8,6 +8,7 @@ func _ready():
 	LevelManager.currentLevel = -1 # set level to -1
 	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 
+
 func _change_scene_to(scene, fade = true, params = {}): # Callback to change scene from childs
 	"""
 		Change the scene to the given scene.

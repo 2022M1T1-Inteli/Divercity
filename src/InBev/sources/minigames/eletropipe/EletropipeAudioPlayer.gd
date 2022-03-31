@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-const DEFAULT_XFX_PATH = "res://resources/sfx/geral/"
+const DEFAULT_XFX_PATH = "res://resources/sfx/pipe/"
 
 const WIN_MINIGAME_XFX_LIST = ["MinigameWin.wav"]
 const LOSE_MINIGAME_XFX_LIST = ["MinigameLose.mp3"]
@@ -35,27 +35,3 @@ func play_lose_minigame_sound():
 	set_volume_db(0) # Set the volume to default
 	play() # Play the sound effect
 
-
-
-
-#func play_turn_sound(): # Play the turn sound effect
-#	"""
-#		Play the change round sound effect.
-#	"""
-#	var xfx = load(DEFAULT_XFX_PATH + "your_turn.mp3") # Load the turn sound effect
-#	xfx.loop = false # Set the sound effect one shot
-#	stream = xfx # Set the stream to the sound effect
-#
-#	set_volume_db(get_volume_db() - 10) # Set the volume to lower
-#	play() # Play the sound effect
-#
-#func play_win_sound():
-#	"""
-#		Play the win sound effect.
-#	"""
-#	var xfx = load(DEFAULT_XFX_PATH + "level_completed.mp3") # Load the turn sound effect
-#	xfx.loop = false # Set the sound effect one shot
-#	stream = xfx # Set the stream to the sound effect
-#
-#	set_volume_db(get_volume_db() - 10) # Set the volume to lower
-#	play() # Play the sound effect
