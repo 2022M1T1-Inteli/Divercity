@@ -18,8 +18,23 @@ const PIPES_FORMAT = {
 	STRAIGHT = "STRAIGHT"
 }
 
+const STATUS_MESSAGE = {
+	NOT_CONNECTED = "NÃO CONECTADOS",
+	CONNECTED = "CONECTADOS",
+	CHECKING = "VERIFICANDO"
+}
+
+const STATUS_COLOR = {
+	NOT_CONNECTED = "#FF6188",
+	CONNECTED = "#A9DC76",
+	CHECKING = "#FFD865"
+}
+
 onready var pipeCurvedScene = preload("res://scenes/minigames/eletropipe/bases/PipeCurved.tscn")
 onready var pipeStraightScene = preload("res://scenes/minigames/eletropipe/bases/PipeStraight.tscn")
+
+var checkingPipe = false
+var pipesAcitiveList = []
 
 static func calculate_distance_of_tile(tilePosition1, tilePosition2):
 	return (tilePosition1 - tilePosition2).length()
@@ -32,14 +47,55 @@ func load_map(map_id):
 	var mapInstance = load("res://scenes/minigames/eletropipe/maps/Level_%d.tscn" % map_id).instance() # Copy a instance of map from the resource
 	add_child(mapInstance)
 
+func connected():
+	"""
+		Shows the win layer and set labels for connected.
+	"""
+	get_node("../Interface/StatusLabel").text = STATUS_MESSAGE.CONNECTED # Set the status label
+	get_node("../Interface/StatusLabel").set("custom_colors/font_color", Color(STATUS_COLOR.CONNECTED)) # Set the status label color
+
+	get_node("../WinLayer").modulate.a = 0 # Hide the win layer with modulation
+	get_node("../WinLayer").visible = true # Show the win layer
+	get_node("AnimationTween").interpolate_property(get_node("../WinLayer"), "modulate:a", 0, 1,  0.75, Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
+	get_node("AnimationTween").start() # Start animation
+
+	checkingPipe = false
+
+func not_connected():
+	"""
+		Update label with message for not connected.
+	"""
+
+	get_node("../Interface/StatusLabel").text = STATUS_MESSAGE.NOT_CONNECTED # Update label text
+	get_node("../Interface/StatusLabel").set("custom_colors/font_color", Color(STATUS_COLOR.NOT_CONNECTED))# Update label color
+
+	revert_energy_system() # Revert energy system
+
+func checking_connected():
+	"""
+		Update label with message for checking connected.
+	"""
+
+	get_node("../Interface/StatusLabel").text = STATUS_MESSAGE.CHECKING # Update label text
+	get_node("../Interface/StatusLabel").set("custom_colors/font_color", Color(STATUS_COLOR.CHECKING)) # Update label color
 
 func _ready():
-	load_map(3)
+	get_node("../WinLayer").visible = false # Hide win layer
+
+func reset_pipes_modulation():
+	"""
+		Resets the pipes modulation.
+	"""
+	for pipe in get_all_pipes(): # For each pipe
+		if pipe.type == PIPES_TYPE.PATH: # If is a path pipe
+			pipe.modulate = Color(1, 1, 1) # Reset modulation
 
 func is_pipes_path_connected():
 	"""
-		Return True if the pipes are connected.
+		Change win layer if the pipes are connected.
 	"""
+	checking_connected()
+
 	var currentPipeTrack = get_pipe_enter() # Get the current pipe track
 	var endPipe = get_pipe_exit() # get the exit pipe
 
@@ -69,18 +125,24 @@ func is_pipes_path_connected():
 				break
 
 		if nextDirection == Vector2.ZERO: # Check if the next direction is zero
-			print("[Eletropipe] NOT CONNECT: Next direction not found.")
-			return false
+			print("[Eletropipe] NOT CONNECT: Next direction not found from " + "(%d,%d)" % [lastDirection.x, lastDirection.y] + " to " + "(%d,%d)" % [currentPipeTrack.tilePosition.x, currentPipeTrack.tilePosition.y])
+			not_connected()
+			return
 
 		currentPipeTrack = get_next_pipe_from_direction(currentPipeTrack.tilePosition, nextDirection) # Get the next pipe
 
-		if currentPipeTrack == null:
+		if currentPipeTrack == null: # Check if the pipe exist
 			print("[Eletropipe] NOT CONNECT: The pipes are not connected to continue.")
-			return false
+			not_connected()
+			return
 
-		elif currentPipeTrack == endPipe:
+		elif currentPipeTrack == endPipe: # Check if the current pipe is the end pipe
 			print("[Eletropipe] CONNECTED: The pipes are connected!.")
-			return true
+			connected()
+			return
+
+		init_energy_system(currentPipeTrack) # Init the energy system
+		yield(get_node("AnimationTween"), "tween_all_completed") # Wait tween animation complete
 
 		lastDirection = nextDirection # Set the last direction
 		nextDirection = Vector2.ZERO # Reset the next direction
@@ -165,8 +227,31 @@ func get_free_directions(tilePosition, directions = [Vector2.DOWN, Vector2.LEFT,
 
 #		nextDirection = nextDirection[get_random_seed() % nextDirection.size()] # Get a random direction
 
-func init_energy_system():
-	pass
+func init_energy_system(pipe):
+	"""
+		Initialize the energy system of the pipe.
+	"""
+	get_node("AnimationTween").interpolate_property(pipe, "modulate", pipe.modulate, Color("#FFEA79"),  0.20, Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
+	get_node("AnimationTween").start() # Start animation
+
+	pipesAcitiveList.append(pipe)
+
+func revert_energy_system():
+	if pipesAcitiveList.empty():
+		checkingPipe = false # Set checking pipe to false
+		return
+
+	pipesAcitiveList.invert()
+
+	for pipe in pipesAcitiveList:
+		if pipe:
+			get_node("AnimationTween").interpolate_property(pipe, "modulate", Color("#FFEA79"), Color(1, 1, 1, 1),  0.20,  Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
+			get_node("AnimationTween").start() # Start animation
+			yield(get_node("AnimationTween"), "tween_all_completed") # Wait tween animation complete
+
+	pipesAcitiveList.clear() # Clear the list
+
+	checkingPipe = false # Set checking pipe to false
 
 func get_pipe_enter():
 	"""
@@ -209,10 +294,14 @@ func get_all_pipes():
 
 	for xIdx in range(MAX_TILE_SIZE.x): # For each x index.
 		for yIdx in range(MAX_TILE_SIZE.y): # For each y index.
-			pipes.append(get_pipe_from_tile(Vector2(xIdx, yIdx))) # Add the pipe at the given position to the list.
+			var pipe = get_pipe_from_tile(Vector2(xIdx, yIdx))
+			if pipe:
+				pipes.append(pipe) # Add the pipe at the given position to the list.
 
 	return pipes # Return all pipes in the game.
 
-
-func _on_Button_pressed():
+func _on_TestConnectionButton_pressed():
+	if checkingPipe:
+		return
+	checkingPipe = true
 	print(is_pipes_path_connected())

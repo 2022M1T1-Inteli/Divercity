@@ -16,7 +16,7 @@ type = "ENTER"
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 504, 944 )
 holes = [ true, false, false, false ]
-tilePosition = Vector2( 3, 7 )
+tilePosition = Vector2( 3, 6 )
 canRotate = false
 type = "EXIT"
 
@@ -69,12 +69,8 @@ position = Vector2( 368, 504 )
 tilePosition = Vector2( 2, 3 )
 
 [node name="PipeStraight8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 509, 650 )
+position = Vector2( 504, 648 )
 tilePosition = Vector2( 3, 4 )
-
-[node name="PipeStraight9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 505, 797 )
-tilePosition = Vector2( 3, 5 )
 
 [node name="PipeStraight4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 72, 792 )
@@ -83,3 +79,7 @@ tilePosition = Vector2( 0, 5 )
 [node name="PipeStraight5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 220, 800 )
 tilePosition = Vector2( 1, 5 )
+
+[node name="PipeStraight9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 504, 792 )
+tilePosition = Vector2( 3, 5 )

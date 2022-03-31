@@ -1,8 +1,9 @@
 extends Node
 
 var currentMap
+var shotsCounter = 0
 
-export var loadMap = 0
+export var loadMap = 1
 export(String) var callbackScenePath
 export(Dictionary) var callbackSceneParams
 
@@ -18,6 +19,14 @@ func _ready():
 	VisualServer.set_default_clear_color(Color("#3A893D")) # Change default background color
 	load_map(loadMap) # Load example first map
 	currentMap.get_node("Hole").connect("golfball_entered", self, "on_golfball_entered") # Connect to the hole node
+
+func add_shot():
+	"""
+		Add shot to the count and update label of self
+	"""
+
+	shotsCounter += 1
+	$Interface/CountLabel.text = "Tacadas realiazadas: %d" % shotsCounter
 
 func load_map(map_id):
 	"""

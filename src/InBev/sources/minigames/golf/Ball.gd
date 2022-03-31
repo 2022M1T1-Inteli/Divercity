@@ -29,6 +29,7 @@ func _input(event):
 			isHolding = true # Set is holding
 
 		if not event.pressed: # If touch up
+			get_parent().call("add_shot")
 			$GolfBallAudioPlayer.play_hit_sound() # Play shot sound
 
 			dropDirection = get_global_mouse_position().direction_to(global_position) # Get direction of drop from start position and current position
