@@ -42,6 +42,8 @@ func correct_answer():
 	"""
 		On correct answer
 	"""
+	$AudioStreamPlayer.play_win_quiz_sound()
+	
 	emit_signal("change_scene", callbackScenePath, true, callbackSceneParams) # Emit the change scene signal to the game scene
 
 func wrong_answer(question):
@@ -53,7 +55,8 @@ func wrong_answer(question):
 	for questionMain in otherAnswers: # For each question
 		if question == questionMain["question"]: # If question is equal to the question
 			response = questionMain["justification"] # Set response text
-
+	
+	$AudioStreamPlayer.play_lose_quiz_sound()
 	$Justification/ResponseLabel.text = response # Set response text
 	$Justification.visible = true # Show justification
 
