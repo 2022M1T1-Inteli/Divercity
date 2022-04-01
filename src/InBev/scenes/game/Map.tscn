@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://resources/transitions/main_map.png" type="Texture" id=1]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=2]
@@ -9,16 +9,101 @@
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
+[sub_resource type="Animation" id=3]
+resource_name = "MoveMap"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Map:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Map:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Checkpoints:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 610, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Checkpoints:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Map:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Map:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Checkpoints:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 610, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Checkpoints:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
 [node name="MainMap" type="Node"]
 script = ExtResource( 4 )
 
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 7.0
-margin_top = 2.0
-margin_right = -713.0
-margin_bottom = -1278.0
+margin_right = -720.0
+margin_bottom = -1280.0
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -36,6 +121,7 @@ __meta__ = {
 }
 
 [node name="Checkpoints" type="Node2D" parent="."]
+position = Vector2( 610, 0 )
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 397, 1013 )
@@ -43,7 +129,11 @@ callbackScenePath = "res://scenes/game/transitions/MachadoDrugstoreTalk.tscn"
 callbackSceneParams = {
 "callbackSceneParams": {
 "callbackSceneParams": {
+"callbackSceneParams": {
 "callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", " Bom, o golf é um esporte muito elitista em que a grande maioria dos jogadores são brancos.", "Então não era tão difícil em um campeonato, eu ser o único jogador negro. Já sofri muito preconceito fora dos campos de golf também." ]
+},
+"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "loadMap": 3
 },
 "callbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
@@ -72,7 +162,7 @@ indentifier = 1
 
 [node name="Minigame2" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 6, 716 )
-callbackScenePath = "res://scenes/game/quiz/transitions/ShonoGolfTalk.tscn"
+callbackScenePath = "res://scenes/game/transitions/ShonoGolfTalk.tscn"
 indentifier = 2
 
 [node name="Quiz2" parent="Checkpoints" instance=ExtResource( 5 )]
@@ -94,7 +184,7 @@ indentifier = 3
 
 [node name="Minigame3" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 9.00002, 123 )
-callbackScenePath = "res://scenes/game/quiz/transitions/ClariceStreetTalk.tscn"
+callbackScenePath = "res://scenes/game/transitions/ClariceStreetTalk.tscn"
 indentifier = 4
 
 [node name="Quiz3" parent="Checkpoints" instance=ExtResource( 5 )]
@@ -123,4 +213,6 @@ indentifier = 6
 position = Vector2( -372, 413 )
 indentifier = 7
 
-[node name="Tween" type="Tween" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/MoveMap = SubResource( 3 )
+anims/RESET = SubResource( 4 )

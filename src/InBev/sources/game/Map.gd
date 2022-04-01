@@ -15,6 +15,5 @@ func _construct(mainNode):
 		else:
 			checkpoint.set_status(false) # Set checkpoint to inactive
 
-	if LevelManager.currentLevel >= 4:
-		$Tween.interpolate_property(get_node("Map"), "modulate", 0, 640,  3,  Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
-		$Tween.start() # Create animation
+	if LevelManager.currentLevel >= 5:
+		$AnimationPlayer.play("MoveMap")
