@@ -1,10 +1,19 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/minigames/golf/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/minigames/golf/Indicators.gd" type="Script" id=2]
 [ext_resource path="res://sources/minigames/golf/Golf.gd" type="Script" id=3]
 [ext_resource path="res://sources/minigames/golf/GolfBallAudioPlayer.gd" type="Script" id=4]
 [ext_resource path="res://scenes/commons/textured_effects/FlareParticle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=6]
+size = 38
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
 
 [sub_resource type="Gradient" id=5]
 offsets = PoolRealArray( 0, 0.99495 )
@@ -31,6 +40,30 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 smoothing_speed = 4.0
+
+[node name="Interface" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountLabel" type="Label" parent="Interface"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -216.0
+margin_top = -90.0
+margin_right = 216.0
+margin_bottom = -17.0
+custom_fonts/font = SubResource( 6 )
+text = "Tacadas realiazadas: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 360, 1100 )

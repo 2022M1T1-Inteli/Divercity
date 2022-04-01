@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "DBQuiz",
+"language": "GDScript",
+"path": "res://sources/quiz/resource/DatabaseQuiz.gd"
+}, {
+"base": "Resource",
+"class": "QuizQuestion",
+"language": "GDScript",
+"path": "res://sources/quiz/resource/ResQuestion.gd"
+}, {
+"base": "Reference",
+"class": "WAT",
+"language": "GDScript",
+"path": "res://addons/WAT/runner/namespace.gd"
+}, {
+"base": "Node",
+"class": "WATTest",
+"language": "GDScript",
+"path": "res://addons/WAT/runner/test.gd"
+} ]
+_global_script_class_icons={
+"DBQuiz": "",
+"QuizQuestion": "",
+"WAT": "",
+"WATTest": ""
+}
+
 [WAT]
 
 Test_Directory="res://tests"
@@ -21,6 +49,7 @@ config/icon="res://resources/icons/INbev.png"
 [autoload]
 
 LevelManager="*res://sources/common/LevelManager.gd"
+VersionManager="*res://sources/common/VersionManager.gd"
 
 [display]
 

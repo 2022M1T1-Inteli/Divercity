@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Minimalistic_LOAD_SAVEFILE.mp3-a069b99316ff2c7c883423f27f09b007.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Minimalistic/Menu_Sounds_V2_Minimalistic_LOAD_SAVEFILE.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Minimalistic_LOAD_SAVEFILE.mp3-a069b99316ff2c7c883423f27f09b007.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

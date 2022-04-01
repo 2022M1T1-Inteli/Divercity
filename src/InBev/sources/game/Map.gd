@@ -14,3 +14,6 @@ func _construct(mainNode):
 			checkpoint.set_status(true) # Set checkpoint to active
 		else:
 			checkpoint.set_status(false) # Set checkpoint to inactive
+
+	if LevelManager.currentLevel >= 5:
+		$AnimationPlayer.play("MoveMap")

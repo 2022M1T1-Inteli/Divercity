@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Modern_PAUSE.mp3-1cb5e634c594230702bb68a79151d13b.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Modern/Menu_Sounds_V2_Modern_PAUSE.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Modern_PAUSE.mp3-1cb5e634c594230702bb68a79151d13b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MinigameLose.mp3-4756cffda4e9db8c87a8907c93e7c7cd.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/geral/MinigameLose.mp3"
+dest_files=[ "res://.import/MinigameLose.mp3-4756cffda4e9db8c87a8907c93e7c7cd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,62 +1,237 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeStraight.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeCurved.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button_2.png" type="Texture" id=2]
 [ext_resource path="res://sources/minigames/eletropipe/Table.gd" type="Script" id=3]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button.png" type="Texture" id=4]
+[ext_resource path="res://sources/minigames/eletropipe/Eletropipe.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.403922, 0.392157, 0.0313726, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.388235, 0.380392, 0.0313726, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.435294, 0.423529, 0.0313726, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=10]
+size = 36
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 42
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 256, 128 )
 
 [node name="Eletropipe" type="Node"]
+script = ExtResource( 5 )
+callbackScenePath = "res://scenes/game/transitions/ClaricePipeTalk.tscn"
+callbackSceneParams = {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Uau Alex, você acabou de me lembrar da época que eu comecei na engenharia.", "No início da minha carreira, eu trabalhava duro como você, ia até mesmo além das minhas próprias funções a fim de ajudar e ganhar a aprovação de todos.", "Meu trabalho por si só demonstrava meu dempenho...", "Mas infelizmente, os esforços de uma mulher não tem o mesmo valor salarial que os de um homem na maioria dos lugares! Foi exatamente por isso que vim para Divercity.", "self: Ah, mas duvido que você tivesse a mesma eficiência e entregasse os mesmos resultados que seus colegas homens!", "Tinha sim e todos no trabalho reconheciam isso, até mesmo os homens!" ]
+}
 
-[node name="Table" type="Node2D" parent="."]
-script = ExtResource( 3 )
-
-[node name="CLEITON" parent="Table" instance=ExtResource( 1 )]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 72, 72 )
-holes = [ false, false, true, false ]
-canRotate = false
-type = "ENTER"
-
-[node name="plasc" parent="Table" instance=ExtResource( 1 )]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 264, 328 )
-holes = [ true, false, false, false ]
-tilePosition = Vector2( 3, 2 )
-canRotate = false
-type = "EXIT"
-
-[node name="PipeCurved" parent="Table" instance=ExtResource( 2 )]
-position = Vector2( 80, 216 )
-tilePosition = Vector2( 0, 1 )
-
-[node name="PipeCurved2" parent="Table" instance=ExtResource( 2 )]
-position = Vector2( 472, 224 )
-tilePosition = Vector2( 3, 1 )
-
-[node name="PipeStraight" parent="Table" instance=ExtResource( 1 )]
-position = Vector2( 272, 208 )
-tilePosition = Vector2( 1, 1 )
-
-[node name="PipeStraight2" parent="Table" instance=ExtResource( 1 )]
-position = Vector2( 272, 208 )
-tilePosition = Vector2( 2, 1 )
-
-[node name="Interface" type="Control" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
-anchor_bottom = 0.994
-margin_right = -720.0
-margin_bottom = -1272.32
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.258824, 0.258824, 0.258824, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Interface"]
-margin_left = 248.0
-margin_top = 1160.0
-margin_right = 416.0
-margin_bottom = 1216.0
+[node name="Table" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="AnimationTween" type="Tween" parent="Table"]
+
+[node name="Interface" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="ColorRect" parent="Interface"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -256.0
+rect_pivot_offset = Vector2( 360, 128 )
+color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TestConnectionButton" type="Button" parent="Interface"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -128.0
+margin_top = -192.0
+margin_right = 128.0
+margin_bottom = -128.0
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
 text = "Testar conexão"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Interface/Button" to="Table" method="_on_Button_pressed"]
+[node name="StatusLabel" type="Label" parent="Interface"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = 528.0
+margin_right = 176.0
+margin_bottom = 584.0
+custom_colors/font_color = Color( 0.105882, 0.435294, 0.819608, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "AGUARDANDO CONEXÃO..."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinLayer" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" type="ColorRect" parent="WinLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 270, 480 )
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="WinLayer"]
+anchor_right = 0.989
+anchor_bottom = 1.0
+margin_left = 90.0
+margin_top = 160.0
+margin_right = -82.08
+margin_bottom = -160.0
+rect_pivot_offset = Vector2( 270, 480 )
+color = Color( 0.215686, 0.215686, 0.215686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TittleLabel" type="Label" parent="WinLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.0
+margin_top = -248.0
+margin_right = 245.0
+margin_bottom = -197.0
+custom_colors/font_color = Color( 0.607843, 0.992157, 0.180392, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Parabéns, você conseguiu!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescriptionLabel" type="Label" parent="WinLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.0
+margin_top = -168.0
+margin_right = 245.0
+margin_bottom = 168.0
+custom_colors/font_color = Color( 0.254902, 0.729412, 0.854902, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Os canos se conectam e tudo voltou a funcionar como deveria!!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" type="Button" parent="WinLayer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = -256.0
+margin_right = 104.0
+margin_bottom = -184.0
+focus_mode = 0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+enabled_focus_mode = 0
+text = "Continuar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Interface/TestConnectionButton" to="Table" method="_on_TestConnectionButton_pressed"]
+[connection signal="pressed" from="WinLayer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
