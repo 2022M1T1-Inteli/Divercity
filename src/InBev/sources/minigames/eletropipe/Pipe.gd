@@ -1,5 +1,7 @@
 extends Area2D
 
+export(int) var customRotations = 0
+
 var currentPosition = 0
 
 
@@ -68,6 +70,7 @@ static func rotate_array(array, direction = 1):
 	return movedArray # Return the new array
 
 func _ready():
+	rotate_pipe(customRotations)
 	set_tile(tilePosition)
 
 	var err = self.connect("input_event", self, "_on_Pipe_input_event") # connect to the input event

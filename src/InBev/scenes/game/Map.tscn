@@ -82,7 +82,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 610, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
 tracks/3/type = "bezier"
@@ -121,7 +121,6 @@ __meta__ = {
 }
 
 [node name="Checkpoints" type="Node2D" parent="."]
-position = Vector2( 610, 0 )
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 397, 1013 )
@@ -131,7 +130,7 @@ callbackSceneParams = {
 "callbackSceneParams": {
 "callbackSceneParams": {
 "callbackScenePath": "res://scenes/game/Map.tscn",
-"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", " Bom, o golf é um esporte muito elitista em que a grande maioria dos jogadores são brancos.", "Então não era tão difícil em um campeonato, eu ser o único jogador negro. Já sofri muito preconceito fora dos campos de golf também." ]
+"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", " Bom, o golf é um esporte muito elitista em que a grande maioria dos jogadores são brancos.", "Então não era tão difícil em um campeonato, eu ser o único jogador negro. Já sofri muito preconceito fora dos campos de golf também.", "Lá na minha cidade, por exemplo, eu tinha muito medo de sair de casa para os treinos, porque a polícia sempre me parava violentamente.", "Achando que o meu taco de golfe era para agredir ou assaltar alguém. Isso me fez perceber que tinha que sair de lá, e foi quando recebi a proposta para morar em DiverCity." ]
 },
 "callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "loadMap": 3

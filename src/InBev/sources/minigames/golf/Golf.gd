@@ -16,7 +16,7 @@ func _construct(mainNode):
 	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal
 
 func _ready():
-	VisualServer.set_default_clear_color(Color("#3A893D")) # Change default background color
+	#VisualServer.set_default_clear_color(Color("#3A893D")) # Change default background color
 	load_map(loadMap) # Load example first map
 	currentMap.get_node("Hole").connect("golfball_entered", self, "on_golfball_entered") # Connect to the hole node
 

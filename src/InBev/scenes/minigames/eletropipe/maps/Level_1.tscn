@@ -26,10 +26,12 @@ tilePosition = Vector2( 0, 1 )
 
 [node name="PipeCurved2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 216, 216 )
+customRotations = 1
 tilePosition = Vector2( 1, 1 )
 
 [node name="PipeCurved3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 216, 648 )
+customRotations = 1
 tilePosition = Vector2( 1, 4 )
 
 [node name="PipeCurved4" parent="." instance=ExtResource( 4 )]
@@ -42,18 +44,22 @@ tilePosition = Vector2( 2, 3 )
 
 [node name="PipeCurved6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 511, 495 )
+customRotations = -1
 tilePosition = Vector2( 3, 3 )
 
 [node name="PipeStraight2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 504, 776 )
+customRotations = 1
 tilePosition = Vector2( 3, 5 )
 
 [node name="PipeStraight5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 512, 632 )
+customRotations = -1
 tilePosition = Vector2( 3, 4 )
 
 [node name="PipeStraight3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 216, 360 )
+customRotations = 1
 tilePosition = Vector2( 1, 2 )
 
 [node name="PipeStraight4" parent="." instance=ExtResource( 3 )]

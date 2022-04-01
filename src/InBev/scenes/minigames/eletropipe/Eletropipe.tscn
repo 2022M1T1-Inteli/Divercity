@@ -73,6 +73,15 @@ callbackSceneParams = {
 "textList": [ "Uau Alex, você acabou de me lembrar da época que eu comecei na engenharia.", "No início da minha carreira, eu trabalhava duro como você, ia até mesmo além das minhas próprias funções a fim de ajudar e ganhar a aprovação de todos.", "Meu trabalho por si só demonstrava meu dempenho...", "Mas infelizmente, os esforços de uma mulher não tem o mesmo valor salarial que os de um homem na maioria dos lugares! Foi exatamente por isso que vim para Divercity.", "self: Ah, mas duvido que você tivesse a mesma eficiência e entregasse os mesmos resultados que seus colegas homens!", "Tinha sim e todos no trabalho reconheciam isso, até mesmo os homens!" ]
 }
 
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.258824, 0.258824, 0.258824, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Table" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
