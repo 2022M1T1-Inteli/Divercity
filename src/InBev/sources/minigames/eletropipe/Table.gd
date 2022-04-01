@@ -231,7 +231,7 @@ func init_energy_system(pipe):
 	"""
 		Initialize the energy system of the pipe.
 	"""
-	get_node("AnimationTween").interpolate_property(pipe, "modulate", pipe.modulate, Color("#FFEA79"),  0.20, Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
+	get_node("AnimationTween").interpolate_property(pipe, "modulate", pipe.modulate, Color("#78DCE8"),  0.20, Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
 	get_node("AnimationTween").start() # Start animation
 
 	pipesAcitiveList.append(pipe)
@@ -245,7 +245,7 @@ func revert_energy_system():
 
 	for pipe in pipesAcitiveList:
 		if pipe:
-			get_node("AnimationTween").interpolate_property(pipe, "modulate", Color("#FFEA79"), Color(1, 1, 1, 1),  0.20,  Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
+			get_node("AnimationTween").interpolate_property(pipe, "modulate", Color("#78DCE8"), Color(1, 1, 1, 1),  0.20,  Tween.TRANS_LINEAR, Tween.EASE_IN) # Create animation
 			get_node("AnimationTween").start() # Start animation
 			yield(get_node("AnimationTween"), "tween_all_completed") # Wait tween animation complete
 

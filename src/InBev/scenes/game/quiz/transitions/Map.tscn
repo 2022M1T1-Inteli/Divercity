@@ -15,10 +15,8 @@ script = ExtResource( 4 )
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 7.0
-margin_top = 2.0
-margin_right = -713.0
-margin_bottom = -1278.0
+margin_right = -720.0
+margin_bottom = -1280.0
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -26,8 +24,8 @@ __meta__ = {
 
 [node name="MapTexture" type="TextureRect" parent="Map"]
 material = SubResource( 2 )
-margin_left = -618.0
-margin_right = 722.0
+margin_left = -720.0
+margin_right = 720.0
 margin_bottom = 1280.0
 texture = ExtResource( 1 )
 expand = true
@@ -38,23 +36,35 @@ __meta__ = {
 [node name="Checkpoints" type="Node2D" parent="."]
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( 397, 1013 )
+position = Vector2( 389, 1023 )
 callbackScenePath = "res://scenes/game/transitions/MachadoDrugstoreTalk.tscn"
 callbackSceneParams = {
 "callbackSceneParams": {
 "callbackSceneParams": {
+"backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
+"minigameName": "Mini-golfe nível 1",
+"playCallbackSceneParams": {
+"callbackSceneParams": {
 "callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Quer saber de um caso que aconteceu comigo?", " Um dia estava voltando de metrô para casa, e um bêbado de cor clara sentou ao meu lado e começou a tumultuar.", "Os passageiros chamaram as autoridades, e quando elas chegaram...", "surpreendentemente, ela abordou e agrediu nós dois! E eu nem sabia quem era esse cara!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "loadMap": 3
 },
-"callbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
-"textList": [ "self: Olá, o Machado me disse que você pode me ajudar! ", "Opa, tudo bem?! Em que eu poderia te ajudar?", "self: Eu preciso passar pelo melhor caminho para sair dessa cidade.", "Já entendi, você quer que eu seja seu guia, mas tem uma condição, você terá que cumprir alguns desafios.", "self: Tudo bem, quais seriam esses desafios?", "O primeiro começa agora. Você vai ter que me ajudar a treinar para um campeonato de golf que está por vir.", "self: Claro, vamos lá!" ]
+"playCallbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
+"surrenderCallbackSceneParams": {
+},
+"surrenderCallbackScenePath": "res://scenes/game/Map.tscn"
+},
+"callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
+"textList": [ "self:Olá, o Machado me disse que você pode me ajudar!", "Prazer, tudo bem?! Em que eu poderia te ajudar?", "self: Eu preciso passar pelo melhor caminho para sair dessa cidade.", "Já entendi, você quer que eu seja seu guia, mas tem uma condição, você terá que cumprir alguns desafios.", "self: Tudo bem, quais seriam esses desafios?", "O primeiro começa agora. Você vai ter que me ajudar a treinar para um campeonato de golf que está por vir.", "self: Claro, vamos lá!" ]
 },
 "callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "textList": [ "Olá, meu nome é Machado, seja bem vinda(o) ao bairro Étnico-racial, hoje um dos bairros mais racialmente heterogêneos da cidade, mas nem sempre foi assim…", "Enfim, isso não convém nesse momento.", "Ah! Não sei se você percebeu, mas Divercity é uma cidade bem sinalizada, atente-se às placas e essa será a sua melhor jornada até aqui.", "Olha, foi um prazer te conhecer, eu estou apressado agora, mas a gente ainda vai se ver muito por aqui ainda.", "self: O que tem ali à frente ?", " Você vai conhecer agora um dos moradores mais influentes da cidade, ele é jogador de golfe e mora aqui desde o tempo em que esse bairro não era como você vê hoje.", "As pessoas mal olhavam umas para as outras, não havia esse ar amoroso e acolhedor que você sente. Aquele homem foi peça chave dessa transformação. Converse com ele, e ele irá te guiar." ]
 }
 
 [node name="Quiz1" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( 392, 716 )
+position = Vector2( 382, 740 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
@@ -71,12 +81,33 @@ callbackSceneParams = {
 indentifier = 1
 
 [node name="Minigame2" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( 6, 716 )
-callbackScenePath = "res://scenes/game/quiz/transitions/ShonoGolfTalk.tscn"
+position = Vector2( -35, 729 )
+callbackScenePath = "res://scenes/game/transitions/ShonoGolfTalk.tscn"
+callbackSceneParams = {
+"callbackSceneParams": {
+"backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
+"callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
+"minigameName": "Mini-golfe nível 2",
+"playCallbackSceneParams": {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Vou te dar uma ajuda para evitar problemas como esse", "O Racismo é a crença em que uma raça, etnia ou certas características físicas sejam superiores a outras", "Com isso, boa sorte durante seu percurso!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/ShonoGolfTalk.tscn",
+"loadMap": 4
+},
+"playCallbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
+"surrenderCallbackSceneParams": {
+},
+"surrenderCallbackScenePath": "res://scenes/game/Map.tscn"
+},
+"callbackScenePath": "res://scenes/minigames/MinigamePreMenu.tscn",
+"textList": [ "Olá, que prazer me reunir a vocês hoje!", "Me chamo Shono, sou um grande competidor de golf e já ganhei muitas medalhas!", "self: Nossa, sua precisão deve ser muito boa, apesar dos olhos fechados!", "Brincadeira de mal gosto hein?! Me lembra épocas em que divercity não era como é hoje e que piadas comuns como essa me deixavam muito mal!", "self: Me desculpe se eu o ofendi, não era a intenção!", "Chega de apresentações. Vamos dar umas tacadas? caso consiga completar este campo, te dou uma ajuda sobre preconceito!" ]
+}
 indentifier = 2
 
 [node name="Quiz2" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( 6, 413 )
+position = Vector2( -35, 429 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
@@ -93,34 +124,18 @@ callbackSceneParams = {
 indentifier = 3
 
 [node name="Minigame3" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( 9.00002, 123 )
-callbackScenePath = "res://scenes/game/quiz/transitions/ClariceStreetTalk.tscn"
+position = Vector2( -31, 143 )
+callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
 indentifier = 4
 
 [node name="Quiz3" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( -387, 993 )
-callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
-callbackSceneParams = {
-"callbackScenePath": "res://scenes/game/Map.tscn",
-"correctAnswer": "Não, porque, apesar de terem realidades diferentes, homens e mulheres, ao exercerem as mesmas funções, têm capacidades iguais e resultados equivalentes.",
-"otherAnswers": [ {
-"justification": "Não necessariamente as obrigações com os filhos são apenas da mulher, além de que, a licença maternidade e paternidade são um direito humano. Sendo a primeira maior, por conta do período de pós-parto e da amamentação.",
-"question": "Sim porque as mulheres, geralmente, trabalham bem menos, tendo em vista que recebem licença maternidade, podem sair para levar os filhos ao médico, etc."
-}, {
-"justification": "Apesar dos limites das capacidades biológicas de cada sexo, as capacidades cognitivas permanecem as mesmas, e, portanto, não é justíficavel ganhar menos.",
-"question": "Depende. Pois as mulheres são emocionalmente mais instáveis e fisicamente mais fracas."
-} ],
-"quizzQuestion": "Mulheres deveriam ganhar menos que os homens, ao exercerem as mesmas funções?"
-}
+position = Vector2( -442, 1006 )
 indentifier = 5
 
 [node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( -376, 717 )
-callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
+position = Vector2( 68, -162 )
 indentifier = 6
 
 [node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( -372, 413 )
+position = Vector2( 66, -319 )
 indentifier = 7
-
-[node name="Tween" type="Tween" parent="."]
