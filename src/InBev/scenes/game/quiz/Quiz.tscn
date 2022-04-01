@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://resources/quiz/three-plate.png" type="Texture" id=1]
 [ext_resource path="res://resources/fonts/fibberish.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sources/game/quiz/Quiz.gd" type="Script" id=3]
+[ext_resource path="res://sources/minigames/quiz/QuizAudioPlayer.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=6]
 size = 44
@@ -168,6 +169,9 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 4 )
 
 [connection signal="pressed" from="Buttons/Answer1Button" to="." method="_on_Answer1Button_pressed"]
 [connection signal="pressed" from="Buttons/Answer2Button" to="." method="_on_Answer2Button_pressed"]
