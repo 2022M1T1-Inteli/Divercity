@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Metallic_BACKWARD.mp3-e9f3ec8bdd1478a52e0e2eeed8d8fee1.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Metallic/Menu_Sounds_V2_Metallic_BACKWARD.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Metallic_BACKWARD.mp3-e9f3ec8bdd1478a52e0e2eeed8d8fee1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

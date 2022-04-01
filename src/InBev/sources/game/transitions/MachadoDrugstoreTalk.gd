@@ -40,12 +40,6 @@ func _reset_call_and_init_text():
 	"""
 	$AllScenery/PersonCall.visible = false # Hide the call button
 
-	$GenericTimer.set_wait_time(0.5) # Set the timer to 0.5 seconds
-	$GenericTimer.start() # Start the timer
-
-	yield(get_node("GenericTimer"), "timeout") # Wait for the timer to finish
-	$GenericTimer.stop() # Stop the timer
-
 	_runtime_talk() # Start the runtime talk
 
 

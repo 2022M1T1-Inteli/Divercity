@@ -3,7 +3,7 @@
 [ext_resource path="res://resources/transitions/Shono.png" type="Texture" id=1]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=2]
 [ext_resource path="res://resources/transitions/shono_far.png" type="Texture" id=3]
-[ext_resource path="res://resources/transitions/shono_far_plate.png" type="Texture" id=4]
+[ext_resource path="res://resources/transitions/pixil-frame-0 (89).png" type="Texture" id=4]
 [ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://resources/transitions/talk_cloud.png" type="Texture" id=6]
 [ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=7]
@@ -55,6 +55,16 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+textList = [ "Olá, que prazer me reunir a vocês hoje!", "Me chamo Shono, sou um grande competidor de golf e já ganhei muitas medalhas!", "self: Nossa, sua precisão deve ser muito boa, apesar dos olhos fechados!", "Brincadeira de mal gosto hein?! Me lembra épocas em que divercity não era como é hoje e que piadas comuns como essa me deixavam muito mal!", "self: Me desculpe se eu o ofendi, não era a intenção!", "Chega de apresentações. Vamos dar umas tacadas? caso consiga completar este campo, te dou uma ajuda sobre preconceito!" ]
+callbackScenePath = "res://scenes/minigames/golf/Golf.tscn"
+callbackSceneParams = {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Caramba você é muito bom nisso!", "Agora sobre o racismo, lembre-se, o racismo é a crença em que uma raça, etnia ou certas características físicas sejam superiores a outras. ", "Boa sorte em seu percurso...", "self: Muito obrigado!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/ShonoGolfTalk.tscn",
+"loadMap": 4
+}
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 material = SubResource( 2 )
@@ -70,12 +80,12 @@ __meta__ = {
 
 [node name="PlateFarTexture" type="TextureRect" parent="."]
 material = SubResource( 2 )
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 189.0
-margin_top = 464.0
-margin_right = 189.0
-margin_bottom = 464.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 217.0
+margin_top = 413.0
+margin_right = -143.0
+margin_bottom = -227.0
 texture = ExtResource( 4 )
 expand = true
 __meta__ = {

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Modern_FORWARD.mp3-949f01b8c185354dc12082ed3ac84239.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Modern/Menu_Sounds_V2_Modern_FORWARD.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Modern_FORWARD.mp3-949f01b8c185354dc12082ed3ac84239.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Introduction.mp3-162a12c3e1e7e1e8f68408aee1d5bbd3.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/SOUND_FX/Introduction.mp3"
+dest_files=[ "res://.import/Introduction.mp3-162a12c3e1e7e1e8f68408aee1d5bbd3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

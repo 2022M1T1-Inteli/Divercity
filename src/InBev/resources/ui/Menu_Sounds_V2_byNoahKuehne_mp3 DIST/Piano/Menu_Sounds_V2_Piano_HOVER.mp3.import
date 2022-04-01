@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Piano_HOVER.mp3-d95aecc1806362d8485371a6fd7f82d4.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Piano/Menu_Sounds_V2_Piano_HOVER.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Piano_HOVER.mp3-d95aecc1806362d8485371a6fd7f82d4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

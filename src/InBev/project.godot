@@ -49,6 +49,7 @@ config/icon="res://resources/icons/INbev.png"
 [autoload]
 
 LevelManager="*res://sources/common/LevelManager.gd"
+VersionManager="*res://sources/common/VersionManager.gd"
 
 [display]
 
