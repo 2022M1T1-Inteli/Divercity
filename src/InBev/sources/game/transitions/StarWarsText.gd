@@ -22,7 +22,10 @@ func _ready():
 	$TextTween.start()
 
 func save_temp_position_y(positionY):
-	tempPositionY = positionY
+	"""
+		Save temp position for updates.
+	"""
+	tempPositionY = positionY # Set temp position
 
 func _set_main_text_position_y(positionY):
 	"""
@@ -42,7 +45,6 @@ func _process(delta):
 
 func _on_TextTween_tween_all_completed():
 	emit_signal("change_scene", callbackScenePath, true, callbackSceneParams) # Emit the change scene signal to the game scene
-
 
 func _on_Button_button_down():
 	rapid = true
