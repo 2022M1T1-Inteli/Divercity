@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/QuizLose.wav-b651a6a323dfa43604809a5efebf36bb.sample"
+
+[deps]
+
+source_file="res://resources/sfx/quiz/QuizLose.wav"
+dest_files=[ "res://.import/QuizLose.wav-b651a6a323dfa43604809a5efebf36bb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

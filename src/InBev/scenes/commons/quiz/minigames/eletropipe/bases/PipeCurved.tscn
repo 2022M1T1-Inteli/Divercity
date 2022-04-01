@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sources/minigames/eletropipe/Pipe.gd" type="Script" id=1]
+[ext_resource path="res://resources/minigames/eletropipe/pipeCurve.png" type="Texture" id=2]
+[ext_resource path="res://scenes/commons/quiz/minigames/eletropipe/bases/PipeStraight.tscn::2" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="PackedScene" id=2]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Pipe", "Area2D", "scale", "script", "holes", "Sprite", "Sprite", "CollisionShape2D", "CollisionShape2D", "scale", "shape", "Tween", "Tween" ),
+"node_count": 4,
+"node_paths": [ NodePath("."), NodePath("."), NodePath(".") ],
+"nodes": PoolIntArray( -1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 1073741824, 0, 6, 5, -1, 0, 0, 1073741825, 0, 8, 7, -1, 2, 9, 3, 10, 4, 0, 1073741826, 0, 12, 11, -1, 0, 0 ),
+"variants": [ Vector2( 2.225, 2.225 ), ExtResource( 1 ), [ false, false, false, false ], Vector2( 3.25, 3.25 ), SubResource( 1 ) ],
+"version": 2
+}
+
+[node name="PipeCurved" instance=ExtResource( 3 )]
+holes = [ false, true, true, false ]
+format = "CURVED"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )

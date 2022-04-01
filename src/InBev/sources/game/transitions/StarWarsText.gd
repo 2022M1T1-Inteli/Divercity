@@ -13,7 +13,7 @@ func _construct(mainNode):
 
 func _ready():
 	# Set up scene text animation
-	$TextTween.interpolate_method(self, "_set_main_text_position_y", $MainTextLabel.rect_position.y, -1800, 25, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
+	$TextTween.interpolate_method(self, "_set_main_text_position_y", $MainTextLabel.rect_position.y, -1800, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
 	$TextTween.start()
 
 func _set_main_text_position_y(positionY):
