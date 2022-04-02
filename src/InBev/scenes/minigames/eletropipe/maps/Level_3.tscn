@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeStraight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/minigames/eletropipe/bases/PipeCurved.tscn" type="PackedScene" id=4]
+
+[node name="Pipes" type="Node2D"]
+
+[node name="Start" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 72, 72 )
+holes = [ false, false, true, false ]
+canRotate = false
+type = "ENTER"
+
+[node name="End" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 504, 944 )
+holes = [ true, false, false, false ]
+tilePosition = Vector2( 3, 6 )
+canRotate = false
+type = "EXIT"
+
+[node name="PipeCurved" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 216 )
+tilePosition = Vector2( 0, 1 )
+
+[node name="PipeCurved2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 216, 216 )
+tilePosition = Vector2( 1, 1 )
+
+[node name="PipeCurved3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 216, 360 )
+tilePosition = Vector2( 1, 2 )
+
+[node name="PipeCurved8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 222, 504 )
+tilePosition = Vector2( 1, 3 )
+
+[node name="PipeCurved9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 512, 504 )
+tilePosition = Vector2( 3, 3 )
+
+[node name="PipeCurved7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 221, 936 )
+tilePosition = Vector2( 1, 6 )
+
+[node name="PipeCurved6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 936 )
+tilePosition = Vector2( 0, 6 )
+
+[node name="PipeCurved5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 360 )
+tilePosition = Vector2( 0, 2 )
+
+[node name="PipeStraight2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 72, 504 )
+tilePosition = Vector2( 0, 3 )
+
+[node name="PipeStraight3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 72, 648 )
+tilePosition = Vector2( 0, 4 )
+
+[node name="PipeStraight6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 217, 651 )
+tilePosition = Vector2( 1, 4 )
+
+[node name="PipeStraight7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 368, 504 )
+tilePosition = Vector2( 2, 3 )
+
+[node name="PipeStraight8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 504, 648 )
+tilePosition = Vector2( 3, 4 )
+
+[node name="PipeStraight4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 72, 792 )
+tilePosition = Vector2( 0, 5 )
+
+[node name="PipeStraight5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 220, 800 )
+tilePosition = Vector2( 1, 5 )
+
+[node name="PipeStraight9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 504, 792 )
+tilePosition = Vector2( 3, 5 )

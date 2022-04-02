@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Metallic_ENTER.mp3-b7432ef2189773759feb80098f9004ae.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Metallic/Menu_Sounds_V2_Metallic_ENTER.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Metallic_ENTER.mp3-b7432ef2189773759feb80098f9004ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

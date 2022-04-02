@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Metallic_ERROR.mp3-542c42796bce508b5c463d09456cec40.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Metallic/Menu_Sounds_V2_Metallic_ERROR.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Metallic_ERROR.mp3-542c42796bce508b5c463d09456cec40.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

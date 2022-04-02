@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Sounds_V2_Metallic_STEP_TWO.mp3-2f127d420a160ba71c9136a056702742.mp3str"
+
+[deps]
+
+source_file="res://resources/ui/Menu_Sounds_V2_byNoahKuehne_mp3 DIST/Metallic/Menu_Sounds_V2_Metallic_STEP_TWO.mp3"
+dest_files=[ "res://.import/Menu_Sounds_V2_Metallic_STEP_TWO.mp3-2f127d420a160ba71c9136a056702742.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

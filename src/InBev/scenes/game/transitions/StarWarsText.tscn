@@ -49,4 +49,14 @@ __meta__ = {
 
 [node name="TextTween" type="Tween" parent="."]
 
+[node name="Button" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="tween_all_completed" from="TextTween" to="." method="_on_TextTween_tween_all_completed"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]

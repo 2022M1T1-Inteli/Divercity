@@ -5,8 +5,10 @@ onready var currentNode = get_node("BaseReplaceNode") # get current template nod
 var onChangingScene = false
 
 func _ready():
+	VersionManager.version = "1.3.0" # set version
 	LevelManager.currentLevel = -1 # set level to -1
 	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
+
 
 func _change_scene_to(scene, fade = true, params = {}): # Callback to change scene from childs
 	"""
@@ -55,3 +57,10 @@ func _change_scene_to(scene, fade = true, params = {}): # Callback to change sce
 		yield($FadeAnimator, "tween_completed") # Wait tween finish animation
 
 	onChangingScene = false # Reset the scene changing flag
+
+func _on_PauseMenu__set_pause_game(state):
+	"""
+		Callback to set the pause game flag
+	"""
+
+	currentNode.get_tree().paused = state # Set the pause game flag
