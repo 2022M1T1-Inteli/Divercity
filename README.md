@@ -103,6 +103,13 @@ Para abrir este projeto você necessita das seguintes ferramentas:
   * Criado base para minigame eletropipe.
   * Refatorado mapa para melhor aproveitamento visual.
   * Adicionado sistema de levels durante o decorrer do jogo.
+
+* 1.4.0
+  * Adicionado início trilha de gênero.
+  * Implementado mais efeitos sonoros e música de ambiente.
+  * Implementado botão de menu configurações.
+  * Simples mudanças de interface para melhor usabilidade.
+  * Refatoração do mapa de Divercity.
 ---
 
 ## 📋 Licença/License
