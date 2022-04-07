@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://resources/fonts/UbuntuMono-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sources/menu/Menu.gd" type="Script" id=2]
@@ -7,7 +7,13 @@
 [ext_resource path="res://resources/transitions/montainParallax.png" type="Texture" id=5]
 [ext_resource path="res://sources/common/shaders/InfinityBackgroundPixelPerfect.gdshader" type="Shader" id=6]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=7]
-[ext_resource path="res://resources/ui/Buttons/CGB01-blue_M_rounded_btn.png" type="Texture" id=9]
+[ext_resource path="res://resources/ui/Buttons/blue_rounded_2.png" type="Texture" id=8]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button_2.png" type="Texture" id=9]
+[ext_resource path="res://resources/ui/Buttons/blue_rounded.png" type="Texture" id=10]
+[ext_resource path="res://resources/ui/Buttons/green_rounded_button.png" type="Texture" id=11]
+[ext_resource path="res://resources/ui/Buttons/red_rounded_button.png" type="Texture" id=12]
+[ext_resource path="res://resources/ui/Buttons/red_rounded_button_2.png" type="Texture" id=13]
+[ext_resource path="res://scenes/menu/CreditsLayer.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
@@ -103,8 +109,8 @@ __meta__ = {
 [node name="StartButton" type="TouchScreenButton" parent="CenterContainer"]
 modulate = Color( 1.05, 1.05, 1.05, 1 )
 position = Vector2( 232, 0 )
-normal = ExtResource( 9 )
-pressed = ExtResource( 9 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -128,10 +134,10 @@ __meta__ = {
 
 [node name="ExitButton" type="TouchScreenButton" parent="CenterContainer"]
 modulate = Color( 1.05, 1.05, 1.05, 1 )
-position = Vector2( 252, 180 )
+position = Vector2( 252, 320 )
 scale = Vector2( 0.828125, 0.828125 )
-normal = ExtResource( 9 )
-pressed = ExtResource( 9 )
+normal = ExtResource( 13 )
+pressed = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -153,6 +159,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CreditsButton" type="TouchScreenButton" parent="CenterContainer"]
+modulate = Color( 1.05, 1.05, 1.05, 1 )
+position = Vector2( 252, 180 )
+scale = Vector2( 0.828125, 0.828125 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="CenterContainer/CreditsButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.0
+margin_top = -43.0
+margin_right = 108.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 4 )
+text = "Créditos"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLayer" parent="." instance=ExtResource( 14 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 80.0
+margin_top = 180.0
+margin_right = 80.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 270, 450 )
+
+[node name="CloseButton" parent="CreditsLayer" index="3"]
+margin_left = 408.0
+margin_right = 464.0
+margin_bottom = 92.0
+
+[node name="UserLinkerVinicios" parent="CreditsLayer" index="5"]
+margin_right = 414.0
+margin_bottom = 779.0
+
+[node name="UserLinkerGabriel" parent="CreditsLayer" index="6"]
+margin_right = 414.0
+margin_bottom = 713.0
+
+[node name="UserLinkerHenrique" parent="CreditsLayer" index="7"]
+margin_right = 414.0
+margin_bottom = 645.0
+
+[node name="UserLinkerAriel" parent="CreditsLayer" index="8"]
+margin_right = 414.0
+margin_bottom = 909.0
+
+[node name="UserLinkerMihaell" parent="CreditsLayer" index="9"]
+margin_right = 414.0
+margin_bottom = 845.0
+
+[node name="UserLinkerValentina" parent="CreditsLayer" index="10"]
+margin_right = 414.0
+margin_bottom = 514.0
+
+[node name="UserLinkerIzabella" parent="CreditsLayer" index="11"]
+margin_right = 414.0
+margin_bottom = 580.0
+
 [node name="WorldEnvironmentMenu" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
 
@@ -160,3 +235,6 @@ environment = SubResource( 5 )
 
 [connection signal="pressed" from="CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="CenterContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CenterContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+
+[editable path="CreditsLayer"]

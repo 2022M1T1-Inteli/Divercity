@@ -27,3 +27,7 @@ func _change_car_position_x(positionX):
 
 func _on_ExitButton_pressed(): # Callback on click start button
 	get_tree().quit() # Quit game
+
+
+func _on_CreditsButton_pressed():
+	$CreditsLayer.show_self()
