@@ -297,8 +297,8 @@ __meta__ = {
 
 [node name="NextTalk" type="TouchScreenButton" parent="AllScenery/ClickAreas"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -352.5, 1.5 )
-scale = Vector2( 1.35938, 2.48633 )
+position = Vector2( -180, 1.5 )
+scale = Vector2( 0.685552, 2.48633 )
 normal = ExtResource( 7 )
 pressed = ExtResource( 7 )
 
@@ -309,10 +309,18 @@ scale = Vector2( 0.833984, 2.48047 )
 normal = ExtResource( 7 )
 pressed = ExtResource( 7 )
 
+[node name="ReturnTalk" type="TouchScreenButton" parent="AllScenery/ClickAreas"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -350.5, 18.5 )
+scale = Vector2( 0.609375, 2.37493 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 7 )
+
 [node name="CameraMoveTween" type="Tween" parent="."]
 
 [node name="GenericTimer" type="Timer" parent="."]
 
 [connection signal="pressed" from="AllScenery/ClickAreas/NextTalk" to="." method="_on_NextTalk_pressed"]
 [connection signal="pressed" from="AllScenery/ClickAreas/ChangeView" to="." method="_on_ChangeView_pressed"]
+[connection signal="pressed" from="AllScenery/ClickAreas/ReturnTalk" to="." method="_on_ReturnTalk_pressed"]
 [connection signal="tween_all_completed" from="CameraMoveTween" to="." method="_on_Tween_tween_all_completed"]

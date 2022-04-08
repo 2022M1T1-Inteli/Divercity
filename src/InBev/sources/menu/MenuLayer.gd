@@ -37,3 +37,7 @@ func _on_MusicHSlider_value_changed(value):
 
 func _on_MainHSlider_value_changed(value):
 	set_volume(BUS_NAMES.MAIN, value) # Set volume of main bus
+
+
+func _on_CreditsButton_pressed():
+	$CreditsLayer.show_self() # Show credits layer

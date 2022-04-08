@@ -1,0 +1,226 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
+[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://sources/menu/CreditsLayer.gd" type="Script" id=3]
+[ext_resource path="res://resources/ui/Buttons/red_rounded_button.png" type="Texture" id=4]
+[ext_resource path="res://resources/ui/menu/Msg08.png" type="Texture" id=5]
+[ext_resource path="res://resources/ui/Buttons/red_rounded_button_2.png" type="Texture" id=6]
+[ext_resource path="res://scenes/menu/UserLinker.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sources/menu/UserLinker.gd" type="Script" id=8]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 46
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[node name="CreditsLayer" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+material = SubResource( 2 )
+margin_right = 540.0
+margin_bottom = 960.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Description" type="Label" parent="."]
+margin_left = 70.0
+margin_top = 136.0
+margin_right = 470.0
+margin_bottom = 448.0
+custom_fonts/font = SubResource( 26 )
+text = "Divercity é um jogo desenvolvido como um projeto do Instituto de Tecnologia e Liderança, encomendado pela empresa Ambev. Os alunos do Grupo Inbev da Turma 1 são os autores do presente trabalho. São eles: "
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TittleLabel" type="Label" parent="."]
+margin_left = 55.0
+margin_top = 32.0
+margin_right = 487.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 9 )
+text = "CRÉDITOS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="."]
+material = SubResource( 4 )
+anchor_right = 0.974
+anchor_bottom = 0.967
+margin_left = 429.0
+margin_top = 44.0
+margin_right = -40.96
+margin_bottom = -836.32
+focus_mode = 0
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 6 )
+enabled_focus_mode = 0
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="UserLinkerVinicios" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 724.0
+margin_right = 141.0
+margin_bottom = 724.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/vinicioslugli/"
+username = "Vinicios Lugli"
+
+[node name="UserLinkerGabriel" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 658.0
+margin_right = 141.0
+margin_bottom = 658.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/gabrielriostorres "
+username = "Gabriel Torres"
+
+[node name="UserLinkerHenrique" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 590.0
+margin_right = 141.0
+margin_bottom = 590.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/henrique-marlon-6771331ba/"
+username = "Henrique Marlon"
+
+[node name="UserLinkerAriel" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 854.0
+margin_right = 141.0
+margin_bottom = 854.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/ariel-kisilevzky-7b1770ba/"
+username = "Ariel Kisilevzky"
+
+[node name="UserLinkerMihaell" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 790.0
+margin_right = 141.0
+margin_bottom = 790.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/mihaellalves"
+username = "Mihaell Alves"
+
+[node name="UserLinkerValentina" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 459.0
+margin_right = 141.0
+margin_bottom = 459.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/valentina-garcia-a015981b8/"
+username = "Valentina Garcia"
+
+[node name="UserLinkerIzabella" type="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.5
+anchor_bottom = 0.056
+margin_left = 134.0
+margin_top = 525.0
+margin_right = 141.0
+margin_bottom = 525.24
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+url = "https://www.linkedin.com/in/izabellaalmeida"
+username = "Izabella Almeida"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]

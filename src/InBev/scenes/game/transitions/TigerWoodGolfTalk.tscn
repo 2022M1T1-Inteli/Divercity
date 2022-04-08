@@ -203,11 +203,19 @@ __meta__ = {
 
 [node name="NextTalk" type="TouchScreenButton" parent="ClickAreas"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 45, 61 )
-scale = Vector2( 2.45178, 4.64446 )
+position = Vector2( 405, 61 )
+scale = Vector2( 1.2135, 4.64446 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 1 )
+
+[node name="ReturnTalk" type="TouchScreenButton" parent="ClickAreas"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 7, 61 )
+scale = Vector2( 1.39453, 4.64446 )
 normal = ExtResource( 1 )
 pressed = ExtResource( 1 )
 
 [node name="GenericTimer" type="Timer" parent="."]
 
 [connection signal="pressed" from="ClickAreas/NextTalk" to="." method="_on_NextTalk_pressed"]
+[connection signal="pressed" from="ClickAreas/ReturnTalk" to="." method="_on_ReturnTalk_pressed"]

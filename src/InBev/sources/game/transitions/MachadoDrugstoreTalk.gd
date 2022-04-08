@@ -57,3 +57,5 @@ func _on_ChangeView_pressed():
 	$CameraMoveTween.interpolate_method(self, "_change_all_scenery_position_x", $AllScenery.rect_position.x, 350, 1.5, Tween.TRANS_LINEAR, Tween.EASE_IN) # Position animation
 	$CameraMoveTween.start() # Start animation
 
+func _on_ReturnTalk_pressed():
+	_return_talk()

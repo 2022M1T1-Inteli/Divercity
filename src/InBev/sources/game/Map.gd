@@ -10,10 +10,16 @@ func _construct(mainNode):
 	LevelManager.currentLevel += 1 # Increment level
 
 	for checkpoint in get_node("Checkpoints").get_children(): # Get all checkpoints
-		if checkpoint.indentifier == LevelManager.currentLevel: # Find the checkpoint for the current level
+		if not checkpoint is TouchScreenButton: # If it's not the touch screen button
+			continue # Skip it
+
+		if checkpoint.indentifier == 0: # Find the checkpoint for the current level
 			checkpoint.set_status(true) # Set checkpoint to active
 		else:
 			checkpoint.set_status(false) # Set checkpoint to inactive
 
 	if LevelManager.currentLevel >= 5:
 		$AnimationPlayer.play("MoveMap")
+
+func _ready():
+	$BlinkAnimationPlayer.play("BlinkCheckpoints")

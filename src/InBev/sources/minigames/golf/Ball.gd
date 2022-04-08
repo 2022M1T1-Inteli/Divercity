@@ -38,12 +38,13 @@ func _input(event):
 			velocity = Vector2(speed, 0).rotated(dropDirection.angle()) # Set velocity
 
 func _draw():
-	if isHolding: # If is holding
+	if isHolding: # If is 
 		draw_line(global_position - position, get_global_mouse_position() - position, Color.black, 5, true) # Draw line from current position to mouse position
 
 func _process(_delta):
 	if isHolding: # If is holding
 		speed = calculate_speed(global_position.distance_to(get_global_mouse_position())) # Calculate speed
+		speed = -speed
 		get_node("Indicators/ForceLength").value = int(speed / maxSpeed * 100) # Set force length indicator
 	else:
 		get_node("Indicators/ForceLength").value = 0 # Set force length indicator to default

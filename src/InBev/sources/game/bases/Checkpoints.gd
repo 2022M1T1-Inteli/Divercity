@@ -16,7 +16,7 @@ func get_status():
 	"""
 		Get state of grayscale shaders params.
 	"""
-	return not material.get_shader_param("grayscale") # Get the shader parameter.
+	return visible # Get visible.
 
 func _ready():
 	visible = isEnable

@@ -26,7 +26,7 @@ func add_shot():
 	"""
 
 	shotsCounter += 1
-	$Interface/CountLabel.text = "Tacadas realiazadas: %d" % shotsCounter
+	$Interface/CountLabel.text = "Tacadas realizadas: %d" % shotsCounter
 
 func load_map(map_id):
 	"""

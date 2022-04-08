@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
 [ext_resource path="res://resources/ui/menu/Msg08.png" type="Texture" id=2]
@@ -14,12 +14,15 @@
 [ext_resource path="res://resources/ui/menu/Slider05.png" type="Texture" id=12]
 [ext_resource path="res://resources/ui/Buttons/green_rounded_button.png" type="Texture" id=13]
 [ext_resource path="res://resources/ui/Buttons/green_rounded_button_2.png" type="Texture" id=14]
+[ext_resource path="res://resources/ui/Buttons/blue_rounded_2.png" type="Texture" id=15]
+[ext_resource path="res://resources/ui/Buttons/blue_rounded.png" type="Texture" id=16]
+[ext_resource path="res://scenes/menu/CreditsLayer.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=9]
-size = 36
+size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
@@ -93,6 +96,24 @@ region_rect = Rect2( 0, 0, 256, 128 )
 
 [sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=23]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 256, 128 )
+
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 256, 128 )
 
 [sub_resource type="DynamicFont" id=21]
@@ -369,17 +390,39 @@ margin_top = 659.0
 margin_right = -114.96
 margin_bottom = -188.32
 focus_mode = 0
-custom_fonts/font = SubResource( 21 )
-custom_styles/hover = SubResource( 18 )
-custom_styles/pressed = SubResource( 19 )
-custom_styles/normal = SubResource( 20 )
+custom_fonts/font = SubResource( 25 )
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
 enabled_focus_mode = 0
 text = "Limpar salvamentos"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CreditsButton" type="Button" parent="."]
+material = SubResource( 4 )
+anchor_right = 0.974
+anchor_bottom = 0.967
+margin_left = 173.0
+margin_top = 541.0
+margin_right = -136.96
+margin_bottom = -306.32
+focus_mode = 0
+custom_fonts/font = SubResource( 21 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+enabled_focus_mode = 0
+text = "Créditos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLayer" parent="." instance=ExtResource( 17 )]
+
 [connection signal="value_changed" from="VolumeBlocks/MainSoundBlock/MainHSlider" to="." method="_on_MainHSlider_value_changed"]
 [connection signal="value_changed" from="VolumeBlocks/MusicSoundBlock/MusicHSlider" to="." method="_on_MusicHSlider_value_changed"]
 [connection signal="value_changed" from="VolumeBlocks/EffectSoundBlock/EffectsHSlider" to="." method="_on_EffectsHSlider_value_changed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
