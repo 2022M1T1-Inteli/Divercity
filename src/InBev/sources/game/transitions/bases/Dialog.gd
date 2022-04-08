@@ -10,6 +10,13 @@ const TIME_BETWEEN_CLICKS = 550 # ms
 var personNode = null
 var selfNode = null
 var nextSceneCallback = null
+var can_skip = true
+
+func _return_talk():
+	currentTextList -= 2
+	if currentTextList < 0:
+		currentTextList = 0
+	_runtime_talk()
 
 func _runtime_talk():
 	"""
@@ -50,4 +57,6 @@ func can_jump_dialog():
 	"""
 		This function checks if the player can jump to the next dialog.
 	"""
+	if not can_skip:
+		return
 	return (OS.get_system_time_msecs() - lastClickTime) > TIME_BETWEEN_CLICKS # If the time between clicks is less than the threshold

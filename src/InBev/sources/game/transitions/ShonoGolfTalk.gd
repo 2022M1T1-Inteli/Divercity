@@ -36,3 +36,7 @@ func _on_NextTalk_pressed():
 		return
 
 	_runtime_talk() # Call the runtime talk function
+
+
+func _on_ReturnTalk_pressed():
+	_return_talk()

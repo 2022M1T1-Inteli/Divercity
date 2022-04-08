@@ -366,8 +366,6 @@ script = ExtResource( 4 )
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -720.0
-margin_bottom = -1280.0
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -469,7 +467,6 @@ indentifier = 5
 
 [node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( -376, 717 )
-callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
 indentifier = 6
 
 [node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
