@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var deceleration = 100
-export var maxSpeed = 750
+export var maxSpeed = 650
 export var maxReach = 250
 
 var isHolding = false
@@ -38,7 +38,7 @@ func _input(event):
 			velocity = Vector2(speed, 0).rotated(dropDirection.angle()) # Set velocity
 
 func _draw():
-	if isHolding: # If is 
+	if isHolding: # If is
 		draw_line(global_position - position, get_global_mouse_position() - position, Color.black, 5, true) # Draw line from current position to mouse position
 
 func _process(_delta):

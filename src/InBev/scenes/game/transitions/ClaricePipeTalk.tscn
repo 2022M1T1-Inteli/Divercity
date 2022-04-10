@@ -5,7 +5,7 @@
 [ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=4]
 [ext_resource path="res://resources/transitions/imagem 13 - engenheira no minigame.png" type="Texture" id=5]
-[ext_resource path="res://sources/game/transitions/TigerWoodGolfTalk.gd" type="Script" id=6]
+[ext_resource path="res://sources/game/transitions/ClaricePipeTalk.gd" type="Script" id=6]
 [ext_resource path="res://resources/ui/Arrow/icons8-pixel-arrow-100.png" type="Texture" id=7]
 [ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=8]
 [ext_resource path="res://sources/game/transitions/bases/ArrowTexture.gd" type="Script" id=9]
@@ -39,7 +39,7 @@ font_data = ExtResource( 3 )
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 4 )
 
-[node name="TigerWoodGolfTalk" type="Control"]
+[node name="ClaricePipeTalk" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
@@ -48,7 +48,6 @@ __meta__ = {
 }
 textList = [ "Mãos à obra!", "self: Vamos!" ]
 callbackScenePath = "res://scenes/minigames/eletropipe/Eletropipe.tscn"
-
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 material = SubResource( 6 )
 anchor_right = 0.5

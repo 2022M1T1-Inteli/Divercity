@@ -469,6 +469,7 @@ indentifier = 5
 
 [node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( -376, 717 )
+callbackScenePath = "res://scenes/game/transitions/CharliePipeTalk.tscn"
 indentifier = 6
 
 [node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
