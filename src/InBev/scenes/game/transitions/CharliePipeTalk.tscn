@@ -44,9 +44,6 @@ shader = ExtResource( 4 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 textList = [ "Ei, tudo bem, meu nome é Charlie!", "self: Olha só, que demais! Essa é aquela moça que você tinha mencionado, Clarice?", "Desculpa interromper, mas eu não sou uma moça!", "self: Nossa mil desculpas, não queria ser desagradável.", "Tudo bem, já passei por essa situação diversas vezes antes de vir a divercity. Vamos só começar logo o trabalho." ]
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
