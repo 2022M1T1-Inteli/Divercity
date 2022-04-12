@@ -1,7 +1,7 @@
 extends Control
 
 export(String) var correctAnswer
-export(Array) var otherAnswers
+export(Dictionary) var otherAnswer
 export(String) var quizzQuestion
 
 export(String) var callbackScenePath
@@ -23,17 +23,15 @@ func _ready():
 
 	randomize() # Randomize answers
 
-	var nodesAnswers = ["AnswersLabel/Answers1Label", "AnswersLabel/Answers2Label", "AnswersLabel/Answers3Label"] # List of nodes for answers
+	var nodesAnswers = ["AnswersLabel/Answers1Label", "AnswersLabel/Answers2Label"] # List of nodes for answers
 
 	nodesAnswers.shuffle() # Randomize answers
 
-	var copyOtherAnswers = otherAnswers # Copy array of answers
-	print(otherAnswers) # Print answers
+	var copyOtherAnswers = otherAnswer # Copy array of answers
+
 	correctButttonPath = nodesAnswers.pop_front()# Get correct answer button path
-	var i = 0 # Counter
-	for nodePath in nodesAnswers:# For each answer
-		get_node(nodePath).text = copyOtherAnswers[i]["question"] # Set answer text
-		i += 1 # Increase counter
+
+	get_node(nodesAnswers[0]).text = copyOtherAnswers["question"] # Set answer text
 
 	get_node(correctButttonPath).text = correctAnswer# Set correct answer text
 
@@ -52,9 +50,8 @@ func wrong_answer(question):
 	"""
 	var response = "" # Response text
 
-	for questionMain in otherAnswers: # For each question
-		if question == questionMain["question"]: # If question is equal to the question
-			response = questionMain["justification"] # Set response text
+	if question == otherAnswer["question"]: # If question is equal to the question
+		response = otherAnswer["justification"] # Set response text
 
 	$AudioStreamPlayer.play_lose_quiz_sound()
 	$Justification/ResponseLabel.text = response # Set response text
@@ -65,11 +62,6 @@ func check_answer(answer, question): # Check answer
 		correct_answer() # On correct answer
 	else:
 		wrong_answer(question) # On wrong answer
-
-func _on_Answer3Button_pressed():
-	if $Justification.visible or (OS.get_system_time_msecs() - lastClickTime) < 1000: # If justification is visible or last click was less than 1 second ago
-		return
-	check_answer(3, get_node("AnswersLabel/Answers3Label").text) # Check answer
 
 func _on_Answer2Button_pressed():
 	if $Justification.visible or (OS.get_system_time_msecs() - lastClickTime) < 1000: # If justification is visible or last click was less than 1 second ago

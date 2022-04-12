@@ -54,11 +54,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 8 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="PersonTalk" type="Control" parent="."]
+visible = false
 margin_left = 63.0
 margin_top = 170.0
 margin_right = 103.0
@@ -77,9 +75,6 @@ margin_top = 68.0
 margin_right = 340.0
 margin_bottom = 688.0
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TalkLabel" type="Label" parent="PersonTalk"]
 anchor_left = 0.5
@@ -94,7 +89,6 @@ custom_colors/font_color = Color( 0, 0.00392157, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 0
 custom_fonts/font = SubResource( 3 )
-text = "asdasdasdas"
 align = 1
 valign = 1
 autowrap = true

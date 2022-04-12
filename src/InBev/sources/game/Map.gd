@@ -18,5 +18,6 @@ func _construct(mainNode):
 	if LevelManager.currentLevel >= 5:
 		$AnimationPlayer.play("MoveMap")
 
+
 func _ready():
 	$BlinkAnimationPlayer.play("BlinkCheckpoints")

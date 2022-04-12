@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=1]
-[ext_resource path="res://resources/map/mapa_de_longe.png" type="Texture" id=2]
+[ext_resource path="res://resources/transitions/main_map.png" type="Texture" id=2]
 [ext_resource path="res://resources/map/Badge/Divercity_key.png" type="Texture" id=3]
 [ext_resource path="res://scenes/commons/textured_effects/RandomParticle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sources/game/transitions/EarnBadge.gd" type="Script" id=5]
@@ -132,19 +132,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -1432, -56 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MapTexture" type="TextureRect" parent="."]
 material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_scale = Vector2( 2, 1 )
 texture = ExtResource( 2 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BlurColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0

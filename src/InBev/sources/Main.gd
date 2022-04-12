@@ -6,7 +6,7 @@ var onChangingScene = false
 
 func _ready():
 	VersionManager.version = "1.3.0" # set version
-	LevelManager.currentLevel = 3 # set level to -1
+	LevelManager.currentLevel = 6 # set level to -1
 	_change_scene_to("res://scenes/menu/Menu.tscn", false) # Add the menu scene to the scene stack
 
 

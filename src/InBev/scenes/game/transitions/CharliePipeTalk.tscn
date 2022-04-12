@@ -45,6 +45,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
 textList = [ "Ei, tudo bem, meu nome é Charlie!", "self: Olha só, que demais! Essa é aquela moça que você tinha mencionado, Clarice?", "Desculpa interromper, mas eu não sou uma moça!", "self: Nossa mil desculpas, não queria ser desagradável.", "Tudo bem, já passei por essa situação diversas vezes antes de vir a divercity. Vamos só começar logo o trabalho." ]
+callbackScenePath = "res://scenes/minigames/eletropipe/Eletropipe.tscn"
+callbackSceneParams = {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "self: Foi muito bom trabalhar com você, moço.", "Também não sou moço. Sou identificade como alguém de um gênero não binário, ou seja, não me identifico nem com o gênero feminino e nem com o masculino.", "self: Tudo bem, acho que entendi. ", "Você vai entender isso melhor ao longo de sua jornada por aqui!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/CharliePipeTalk.tscn",
+"loadMap": 2
+}
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 material = SubResource( 6 )
@@ -69,9 +78,6 @@ margin_right = 408.0
 margin_bottom = 651.0
 texture = ExtResource( 10 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="PersonTalk" type="Control" parent="."]
 visible = false
