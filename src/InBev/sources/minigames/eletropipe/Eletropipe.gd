@@ -3,7 +3,7 @@ extends Node
 
 export(String) var callbackScenePath
 export(Dictionary) var callbackSceneParams
-export var loadMap = 1
+export var loadMap = 2
 
 signal change_scene # Create local signal for change to game scene
 

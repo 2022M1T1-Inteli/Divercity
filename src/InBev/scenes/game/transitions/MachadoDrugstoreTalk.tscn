@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://resources/transitions/talk_cloud_tail.png" type="Texture" id=1]
 [ext_resource path="res://resources/transitions/talk_cloud.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://resources/transitions/machado.png" type="Texture" id=5]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=6]
 [ext_resource path="res://resources/transitions/empty.png" type="Texture" id=7]
-[ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=8]
 [ext_resource path="res://resources/transitions/imagem 1.png" type="Texture" id=9]
 [ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=10]
 [ext_resource path="res://resources/ui/Arrow/icons8-pixel-arrow-100.png" type="Texture" id=11]
@@ -27,24 +26,24 @@ shader = ExtResource( 6 )
 shader = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 24
+size = 19
 outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 12 )
 
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 26
+size = 22
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 56
+size = 54
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 12 )
