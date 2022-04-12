@@ -7,14 +7,6 @@
 [ext_resource path="res://scenes/commons/textured_effects/FlareParticle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://resources/fonts/VillainTeamUpSpiked-2Ov5e.otf" type="DynamicFontData" id=6]
 
-[sub_resource type="DynamicFont" id=6]
-size = 38
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 6 )
-
 [sub_resource type="Gradient" id=5]
 offsets = PoolRealArray( 0, 0.99495 )
 colors = PoolColorArray( 0.47451, 0.796078, 0.160784, 1, 0.14902, 0.301961, 0, 1 )
@@ -29,6 +21,14 @@ colors = PoolColorArray( 1, 0, 0, 1, 0.968627, 1, 0, 1, 0.450195, 1, 0, 1, 0.968
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 3 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 38
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
 [node name="Golf" type="Node"]
 script = ExtResource( 3 )
 loadMap = 4
@@ -40,30 +40,6 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 smoothing_speed = 4.0
-
-[node name="Interface" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CountLabel" type="Label" parent="Interface"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -216.0
-margin_top = -90.0
-margin_right = 216.0
-margin_bottom = -17.0
-custom_fonts/font = SubResource( 6 )
-text = "Tacadas realizadas: 0"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 360, 1100 )
@@ -109,6 +85,30 @@ rect_min_size = Vector2( 500, 45 )
 texture_progress = SubResource( 2 )
 fill_mode = 6
 nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interface" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountLabel" type="Label" parent="Interface"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -216.0
+margin_top = -90.0
+margin_right = 216.0
+margin_bottom = -17.0
+custom_fonts/font = SubResource( 6 )
+text = "Tacadas realizadas: 0"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

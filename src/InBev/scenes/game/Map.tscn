@@ -366,11 +366,10 @@ script = ExtResource( 4 )
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 720.0
-margin_bottom = 1280.0
+margin_right = 2160.0
+margin_bottom = 3840.0
 __meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
 [node name="MapTexture" type="TextureRect" parent="Map"]
@@ -469,11 +468,27 @@ indentifier = 5
 
 [node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( -376, 717 )
+callbackScenePath = "res://scenes/game/transitions/CharliePipeTalk.tscn"
 indentifier = 6
 
 [node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( -372, 413 )
+callbackScenePath = "res://scenes/game/quiz/QuizTrueFalse.tscn"
+callbackSceneParams = {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"correctAnswer": "Falso",
+"otherAnswer": {
+"justification": " Apesar da anatomia dos órgãos genitais ser um fator relevante, não é ela que define o gênero das pessoas. Se o indivíduo se identifica com o sexo biológico com o qual nasceu, essa pessoa é cisgênero, se não se identifica com o que nasceu, mas se identifica com outro, essa pessoa é trânsgenero e, caso não se identifique com nenhum dos dois binários (masculino e feminino), é uma pessoa não binária.",
+"question": "Verdadeiro"
+},
+"quizzQuestion": " A definição de gênero está relacionada, somente, à anatomia dos órgãos genitais."
+}
 indentifier = 7
+
+[node name="Minigame5" parent="Checkpoints" instance=ExtResource( 3 )]
+position = Vector2( -376, 142 )
+callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
+indentifier = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/BlinkCheckopoints = SubResource( 5 )
