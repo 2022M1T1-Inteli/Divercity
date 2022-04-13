@@ -13,7 +13,8 @@ func _construct(mainNode):
 		if checkpoint.indentifier == LevelManager.currentLevel: # Find the checkpoint for the current level
 			checkpoint.set_status(true) # Set checkpoint to active
 		else:
-			checkpoint.set_status(false) # Set checkpoint to inactive
+			checkpoint.set_status(true) # Set checkpoint to active but with no effect
+			checkpoint.modulate = Color(0.4, 0.4, 0.4) # Remove effect
 
 	if LevelManager.currentLevel >= 5:
 		$AnimationPlayer.play("MoveMap")
