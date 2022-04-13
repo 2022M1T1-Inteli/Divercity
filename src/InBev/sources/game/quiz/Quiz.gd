@@ -4,6 +4,7 @@ export(String) var correctAnswer
 export(Array) var otherAnswers
 export(String) var quizzQuestion
 
+export(String) var backgroundTexture = null
 export(String) var callbackScenePath
 export(Dictionary) var callbackSceneParams
 
@@ -19,6 +20,8 @@ func _construct(mainNode):
 	connect("change_scene", mainNode, "_change_scene_to") # Connect callback for local signal
 
 func _ready():
+	if backgroundTexture != null:
+		get_node("BackgroundTexture").texture = load(backgroundTexture)
 	$QuestionLabel.text = quizzQuestion # Set question text
 
 	randomize() # Randomize answers

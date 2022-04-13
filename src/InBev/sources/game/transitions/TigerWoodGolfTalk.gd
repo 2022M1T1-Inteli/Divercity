@@ -21,6 +21,7 @@ func _ready():
 	nextSceneCallback = "_go_next_scene" # Set the next scene callback
 	selfNode = get_node("SelfTalk") # Get the self talk node
 	personNode = get_node("PersonTalk") # Get the person talk node
+	personName = "Tiger Wood"
 
 	$GenericTimer.set_wait_time(0.5) # Set the timer to 0.5 seconds
 	$GenericTimer.start() # Start the timer

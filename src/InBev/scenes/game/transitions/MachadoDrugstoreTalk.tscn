@@ -149,9 +149,6 @@ align = 1
 valign = 1
 autowrap = true
 clip_text = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ArrowTexture" type="TextureRect" parent="AllScenery/PersonTalk"]
 material = SubResource( 8 )
@@ -236,8 +233,7 @@ margin_top = 265.0
 margin_bottom = 265.0
 rect_scale = Vector2( 0.5, 0.5 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
 [node name="TalkCloudTexture" type="TextureRect" parent="AllScenery/PersonCall"]
@@ -291,6 +287,9 @@ flip_h = true
 script = ExtResource( 13 )
 
 [node name="ClickAreas" type="Node2D" parent="AllScenery"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="NextTalk" type="TouchScreenButton" parent="AllScenery/ClickAreas"]
 modulate = Color( 1, 1, 1, 0 )
@@ -298,6 +297,9 @@ position = Vector2( -180, 1.5 )
 scale = Vector2( 0.685552, 2.48633 )
 normal = ExtResource( 7 )
 pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ChangeView" type="TouchScreenButton" parent="AllScenery/ClickAreas"]
 modulate = Color( 1, 1, 1, 0 )
@@ -305,6 +307,9 @@ position = Vector2( 2.50003, 4 )
 scale = Vector2( 0.833984, 2.48047 )
 normal = ExtResource( 7 )
 pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ReturnTalk" type="TouchScreenButton" parent="AllScenery/ClickAreas"]
 modulate = Color( 1, 1, 1, 0 )
@@ -312,6 +317,9 @@ position = Vector2( -350.5, 18.5 )
 scale = Vector2( 0.609375, 2.37493 )
 normal = ExtResource( 7 )
 pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CameraMoveTween" type="Tween" parent="."]
 

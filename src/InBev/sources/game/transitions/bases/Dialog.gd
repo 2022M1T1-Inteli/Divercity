@@ -10,7 +10,8 @@ const TIME_BETWEEN_CLICKS = 550 # ms
 var personNode = null
 var selfNode = null
 var nextSceneCallback = null
-var can_skip = true
+var canSkip = true
+var personName = ""
 
 func _return_talk():
 	currentTextList -= 2
@@ -37,12 +38,12 @@ func _runtime_talk():
 		call(nextSceneCallback) # Call the next scene
 	else:
 		if textList[currentTextList].begins_with("self: "): # If the text starts with "self: "
-			selfNode.get_node("TalkLabel").text = textList[currentTextList].replace("self: ", "") # Set the text
+			selfNode.get_node("TalkLabel").text = "Você: " + textList[currentTextList].replace("self: ", "") # Set the text
 			selfNode.visible = true # Show the self talk node
 			personNode.visible = false # Hide the person talk node
 			currentTextList += 1 # Increment the current text list
 		else:
-			personNode.get_node("TalkLabel").text = textList[currentTextList] # Set the text
+			personNode.get_node("TalkLabel").text = personName + ": " + textList[currentTextList] # Set the text
 			selfNode.visible = false # Hide the self talk
 			personNode.visible = true # Show the person talk
 			currentTextList += 1 # Increment the current text list
@@ -57,6 +58,6 @@ func can_jump_dialog():
 	"""
 		This function checks if the player can jump to the next dialog.
 	"""
-	if not can_skip:
+	if not canSkip:
 		return
 	return (OS.get_system_time_msecs() - lastClickTime) > TIME_BETWEEN_CLICKS # If the time between clicks is less than the threshold

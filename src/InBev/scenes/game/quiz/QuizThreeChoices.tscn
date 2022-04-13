@@ -8,7 +8,7 @@
 [ext_resource path="res://sources/minigames/quiz/QuizAudioPlayer.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=6]
-size = 38
+size = 34
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
@@ -35,10 +35,15 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="Quiz" type="Control"]
+[node name="QuizThreeChoices" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
 
 [node name="Plate" type="Sprite" parent="."]
 position = Vector2( 360, 640 )
@@ -146,9 +151,6 @@ margin_left = -360.0
 margin_top = -640.0
 margin_right = 360.0
 margin_bottom = 640.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BackgroundPanel" type="ColorRect" parent="Justification"]
 anchor_right = 1.0
@@ -162,9 +164,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 40.0
-margin_top = 352.0
+margin_top = 236.0
 margin_right = -40.0
-margin_bottom = -296.0
+margin_bottom = -134.0
 color = Color( 1, 0.830688, 0.429688, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -174,9 +176,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 56.0
-margin_top = 544.0
+margin_top = 500.0
 margin_right = -56.0
-margin_bottom = -312.0
+margin_bottom = -156.0
 custom_fonts/font = SubResource( 9 )
 align = 1
 autowrap = true
@@ -188,26 +190,23 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 59.0
-margin_top = 376.0
+margin_top = 272.0
 margin_right = -61.0
-margin_bottom = -772.0
+margin_bottom = -876.0
 custom_fonts/font = SubResource( 8 )
 text = "Resposta incorreta!
 Deveria ter sido levado em conta que:"
 align = 1
 valign = 1
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CloseLabel" type="Label" parent="Justification"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 40.0
-margin_top = 1016.0
+margin_top = 1144.0
 margin_right = -40.0
-margin_bottom = -132.0
+margin_bottom = -4.0
 custom_fonts/font = SubResource( 8 )
 text = "Clique para fechar a justificativa"
 align = 1

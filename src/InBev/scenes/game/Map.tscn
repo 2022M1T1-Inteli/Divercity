@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://resources/transitions/main_map.png" type="Texture" id=1]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=2]
@@ -9,349 +9,6 @@
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
-[sub_resource type="Animation" id=5]
-resource_name = "BlinkCheckopoints"
-length = 1.5
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Checkpoints:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Checkpoints:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.392157, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "MoveMap"
-length = 2.0
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 610, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-
-[sub_resource type="Animation" id=4]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath("Checkpoints:modulate:r")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath("Checkpoints:modulate:g")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/6/type = "bezier"
-tracks/6/path = NodePath("Checkpoints:modulate:b")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/7/type = "bezier"
-tracks/7/path = NodePath("Checkpoints:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "BlinkCheckpoints"
-length = 1.5
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Checkpoints:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Checkpoints:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "MoveMap"
-length = 2.0
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 610, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-
-[sub_resource type="Animation" id=8]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath("Checkpoints:modulate:r")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath("Checkpoints:modulate:g")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/6/type = "bezier"
-tracks/6/path = NodePath("Checkpoints:modulate:b")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/7/type = "bezier"
-tracks/7/path = NodePath("Checkpoints:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
 [sub_resource type="Environment" id=9]
 background_mode = 4
 glow_enabled = true
@@ -360,14 +17,101 @@ glow_blend_mode = 1
 glow_hdr_threshold = 0.8
 adjustment_brightness = 0.71
 
+[sub_resource type="Animation" id=10]
+resource_name = "MoveMap"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Map:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Map:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Checkpoints:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Checkpoints:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Map:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Map:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Checkpoints:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Checkpoints:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
 [node name="MainMap" type="Node"]
 script = ExtResource( 4 )
 
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 2880.0
-margin_bottom = 5120.0
+margin_right = 5760.0
+margin_bottom = 10240.0
 __meta__ = {
 "_edit_group_": true
 }
@@ -393,7 +137,7 @@ callbackSceneParams = {
 "callbackSceneParams": {
 "callbackSceneParams": {
 "callbackScenePath": "res://scenes/game/Map.tscn",
-"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", "Olha, infelizmente, o golfe é um esporte muito elitista, em que a grande maioria dos jogadores são brancos.", "Então, não era tão difícil eu ser o único jogador negro em um campeonato. Por isso, já sofri muito preconceito e discriminação dentro e fora dos campos.", "Quando eu era mais novo, Divercity era chamada por um nome obscuro. Mas não é só o nome que era diferente...", " A região era comandada por uma milícia extremamente preconceituosa e intolerante com todas as minorias.", "A brutalidade era um método comum utilizado para tratar pessoas negras.", "Inclusive, eu tinha muito medo de sair de casa para os treinos, porque a polícia sempre me parava violentamente achando que o meu taco de golfe era para agredir alguém.", " Isso, entre outras coisas, me fez querer agir para transformar essa cidade e livrá-la de tantas abominações. Foi assim que decidi liderar a Revolução Diversa.", "self:  Caramba, não imaginava que essa cidade possui tanta história!" ]
+"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", "Olha, infelizmente, o golfe é um esporte muito elitista, em que a grande maioria dos jogadores são brancos.", "Então, não era tão difícil eu ser o único jogador negro em um campeonato. Por isso, já sofri muito preconceito e discriminação dentro e fora dos campos.", "Quando eu era mais novo, Divercity era chamada por um nome obscuro. Mas não é só o nome que era diferente...", "A região era comandada por uma milícia extremamente preconceituosa e intolerante com todas as minorias.", "A brutalidade era um método comum utilizado para tratar pessoas negras.", " Inclusive, eu tinha muito medo de sair de casa para os treinos...", " porque a polícia sempre me parava violentamente achando que o meu taco de golfe era para agredir alguém.", " Isso, entre outras coisas, me fez querer agir para transformar essa cidade e livrá-la de tantas abominações. Foi assim que decidi liderar a Revolução Diversa.", "self: Caramba, não imaginava que essa cidade possui tanta história!" ]
 },
 "callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "loadMap": 3
@@ -409,6 +153,7 @@ callbackSceneParams = {
 position = Vector2( 392, 716 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
+"backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Negros são 78% dos mortos pela letalidade policial.",
 "otherAnswers": [ {
@@ -431,6 +176,7 @@ indentifier = 2
 position = Vector2( 6, 413 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
+"backgroundTexture": "res://resources/transitions/shono_close.png",
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Sim",
 "otherAnswers": [ {
@@ -451,7 +197,7 @@ indentifier = 4
 
 [node name="Quiz3" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( -387, 993 )
-callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
+callbackScenePath = "res://scenes/game/quiz/QuizThreeChoicesEng.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Não, porque, apesar de terem realidades diferentes, homens e mulheres, ao exercerem as mesmas funções, têm capacidades iguais e resultados equivalentes.",
@@ -473,7 +219,7 @@ indentifier = 6
 
 [node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
 position = Vector2( -372, 413 )
-callbackScenePath = "res://scenes/game/quiz/QuizTrueFalse.tscn"
+callbackScenePath = "res://scenes/game/quiz/QuizTrueFalseEng.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Falso",
@@ -490,16 +236,13 @@ position = Vector2( -376, 142 )
 callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
 indentifier = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/BlinkCheckopoints = SubResource( 5 )
-anims/MoveMap = SubResource( 3 )
-anims/RESET = SubResource( 4 )
-
-[node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
-reset_on_save = false
-anims/BlinkCheckpoints = SubResource( 6 )
-anims/MoveMap = SubResource( 7 )
-anims/RESET = SubResource( 8 )
-
 [node name="WorldEnvironmentMenu" type="WorldEnvironment" parent="."]
 environment = SubResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/MoveMap = SubResource( 10 )
+anims/RESET = SubResource( 11 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

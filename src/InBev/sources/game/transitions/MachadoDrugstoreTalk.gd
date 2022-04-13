@@ -11,6 +11,7 @@ func _ready():
 	nextSceneCallback = "_go_next_scene" # Set the next scene callback
 	selfNode = get_node("AllScenery/SelfTalk") # Get the self talk node
 	personNode = get_node("AllScenery/PersonTalk") # Get the person talk node
+	personName = "Machado"
 
 func _construct(mainNode):
 	"""
@@ -44,7 +45,7 @@ func _reset_call_and_init_text():
 
 
 func _on_NextTalk_pressed():
-	if not changedView and not can_jump_dialog(): # If the user clicks the button too fast, ignore it
+	if not changedView or not can_jump_dialog(): # If the user clicks the button too fast, ignore it
 		return
 
 	_runtime_talk() # Go to the next text
