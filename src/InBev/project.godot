@@ -44,7 +44,7 @@ Test_Directory="res://tests"
 
 config/name="DiverCity"
 run/main_scene="res://scenes/Main.tscn"
-config/icon="res://resources/icons/INbev.png"
+config/icon="res://resources/icons/DIVERCITY.png"
 
 [autoload]
 
