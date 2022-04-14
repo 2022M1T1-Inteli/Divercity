@@ -18,6 +18,7 @@
 [ext_resource path="res://resources/ui/Buttons/blue_rounded.png" type="Texture" id=16]
 [ext_resource path="res://scenes/menu/CreditsLayer.tscn" type="PackedScene" id=17]
 
+
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
 
@@ -425,4 +426,5 @@ __meta__ = {
 [connection signal="value_changed" from="VolumeBlocks/MusicSoundBlock/MusicHSlider" to="." method="_on_MusicHSlider_value_changed"]
 [connection signal="value_changed" from="VolumeBlocks/EffectSoundBlock/EffectsHSlider" to="." method="_on_EffectsHSlider_value_changed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]

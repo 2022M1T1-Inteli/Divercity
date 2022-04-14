@@ -37,3 +37,7 @@ func _on_CreditsButton_pressed():
 	if $CreditsLayer.visible: # If credits layer is visible
 		return # Do nothing
 	$CreditsLayer.show_self() # Show credits layer
+
+
+func _on_TutorialButton_pressed():
+	emit_signal("change_scene", "res://scenes/menu/Tutorial.tscn", true, []) # Emit the change scene signal to the game scene

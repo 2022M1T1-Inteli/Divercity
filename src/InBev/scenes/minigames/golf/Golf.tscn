@@ -42,7 +42,7 @@ smoothing_enabled = true
 smoothing_speed = 4.0
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 360, 1100 )
+position = Vector2( 360, 1169 )
 
 [node name="FlareParticle2D" parent="GolfBall" instance=ExtResource( 5 )]
 speed_scale = 5.0
@@ -92,9 +92,6 @@ __meta__ = {
 [node name="Interface" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CountLabel" type="Label" parent="Interface"]
 anchor_left = 0.5

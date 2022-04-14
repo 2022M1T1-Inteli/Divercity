@@ -39,12 +39,9 @@ margin_right = -20.0
 margin_bottom = 1773.0
 custom_colors/font_color = Color( 0.854902, 0.847059, 0.572549, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Bem vindo a Divercity, você morava em Kenerland, mas, por ter dificuldades em aceitar as diferenças das pessoas, não se adaptou ao ambiente em que vivia. Em busca disso, julgava ser necessário uma mudança de ares, botou uma mochila nas costas, e saiu mundo afora. Dentre as paradas, você acabou chegando em uma cidade diferente, conhecida por transformar a vida daqueles que passam por ela. "
+text = "Bem vinde a Divercity, você morava em Kenerland, mas, por ter dificuldades em aceitar as diferenças das pessoas, não se adaptou ao ambiente em que vivia. Em busca disso, julgava ser necessário uma mudança de ares, botou uma mochila nas costas, e saiu mundo afora. Dentre as paradas, você acabou chegando em uma cidade diferente, conhecida por transformar a vida daqueles que passam por ela. "
 align = 1
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextTween" type="Tween" parent="."]
 

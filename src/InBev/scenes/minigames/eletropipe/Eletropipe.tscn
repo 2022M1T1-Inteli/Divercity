@@ -70,7 +70,7 @@ script = ExtResource( 5 )
 callbackScenePath = "res://scenes/game/transitions/ClaricePipeTalk.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
-"textList": [ "Uau Alex, você acabou de me lembrar da época que eu comecei na engenharia.", "No início da minha carreira, eu trabalhava duro como você, ia até mesmo além das minhas próprias funções a fim de ajudar e ganhar a aprovação de todos.", "Meu trabalho por si só demonstrava meu dempenho...", "Mas infelizmente, os esforços de uma mulher não tem o mesmo valor salarial que os de um homem na maioria dos lugares! Foi exatamente por isso que vim para Divercity.", "self: Ah, mas duvido que você tivesse a mesma eficiência e entregasse os mesmos resultados !", "Tinha sim e todos no trabalho reconheciam isso, até mesmo os homens!", "Mas em fim... em breve vamos receber uma pessoa que vai me ajudar a terminar todo o trabalho de hoje. Assim, você estará livre para seguir seu caminho.", "self: Acho que vou ficar até o fim. Gostei muito do trabalho e, afinal, três trabalham mais rápido que dois.", "Isso seria perfeito, muito obrigada pela disposição. Aliás, acho que a pessoa que está para chegar, será um importante contato para você!", "Não vejo a hora desse momento chegar!" ]
+"textList": [ "Uau Alex, você acabou de me lembrar da época que eu comecei na engenharia.", "No início da minha carreira, eu trabalhava duro como você, ia até mesmo além das minhas próprias funções a fim de ajudar e ganhar a aprovação de todos.", "Meu trabalho por si só demonstrava meu dempenho...", "Mas infelizmente, os esforços de uma mulher não tem o mesmo valor salarial que os de um homem na maioria dos lugares! Foi exatamente por isso que vim para Divercity.", "self: Ah, mas duvido que você tivesse a mesma eficiência e entregasse os mesmos resultados!", "Tinha sim e todos no trabalho reconheciam isso, até mesmo os homens!", "Mas enfim... em breve vamos receber uma pessoa que vai me ajudar a terminar todo o trabalho de hoje. Assim, você estará livre para seguir seu caminho.", "self: Acho que vou ficar até o fim. Gostei muito do trabalho e, afinal, três trabalham mais rápido que dois.", "Isso seria perfeito, muito obrigada pela disposição. Aliás, acho que a pessoa que está para chegar, será um importante contato para você!", "self: Não vejo a hora desse momento chegar!" ]
 }
 
 [node name="Background" type="ColorRect" parent="."]
@@ -78,9 +78,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0.258824, 0.258824, 0.258824, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Table" type="Node2D" parent="."]
 script = ExtResource( 3 )
