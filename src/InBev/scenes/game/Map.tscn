@@ -110,8 +110,8 @@ script = ExtResource( 4 )
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 2160.0
-margin_bottom = 3840.0
+margin_right = 1440.0
+margin_bottom = 2560.0
 __meta__ = {
 "_edit_group_": true
 }
