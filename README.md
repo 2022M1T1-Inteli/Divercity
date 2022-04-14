@@ -8,7 +8,7 @@
 
 ## InBev
 
-## Integrantes: <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>, <a href="https://www.linkedin.com/in/izabella-almeida-10">Izabella Almeida</a>, <a href="https://www.linkedin.com/in/mihaell-alves-4ab12720b/">Mihaell Alves</a>, <a href="https://www.linkedin.com/in/gabriel-torres-233851231/">Gabriel Torres</a>, <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8">Valentina Garcia</a>
+## Integrantes: <a href="https://www.linkedin.com/in/ariel-kisilevzky-7b1770ba/">Ariel Kisilevzky</a>, <a href="https://www.linkedin.com/in/gabriel-torres-233851231/">Gabriel Torres</a>, <a href="https://www.linkedin.com/in/henrique-marlon-6771331ba/">Henrique Marlon</a>, <a href="https://www.linkedin.com/in/izabella-almeida-10">Izabella Almeida</a>, <a href="https://www.linkedin.com/in/mihaell-alves-4ab12720b/">Mihaell Alves</a>, <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8">Valentina Garcia</a>, <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
 
 ## Descrição
 

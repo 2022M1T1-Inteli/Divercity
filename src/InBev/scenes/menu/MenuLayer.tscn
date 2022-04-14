@@ -18,6 +18,7 @@
 [ext_resource path="res://resources/ui/Buttons/blue_rounded.png" type="Texture" id=16]
 [ext_resource path="res://scenes/menu/CreditsLayer.tscn" type="PackedScene" id=17]
 
+
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
 

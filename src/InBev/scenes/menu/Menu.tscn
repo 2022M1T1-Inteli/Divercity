@@ -108,7 +108,7 @@ __meta__ = {
 
 [node name="StartButton" type="TouchScreenButton" parent="CenterContainer"]
 modulate = Color( 1.05, 1.05, 1.05, 1 )
-position = Vector2( 232, 0 )
+position = Vector2( 232, -68 )
 normal = ExtResource( 10 )
 pressed = ExtResource( 8 )
 __meta__ = {
@@ -134,7 +134,7 @@ __meta__ = {
 
 [node name="ExitButton" type="TouchScreenButton" parent="CenterContainer"]
 modulate = Color( 1.05, 1.05, 1.05, 1 )
-position = Vector2( 252, 320 )
+position = Vector2( 252, 341 )
 scale = Vector2( 0.828125, 0.828125 )
 normal = ExtResource( 13 )
 pressed = ExtResource( 12 )
@@ -161,7 +161,7 @@ __meta__ = {
 
 [node name="CreditsButton" type="TouchScreenButton" parent="CenterContainer"]
 modulate = Color( 1.05, 1.05, 1.05, 1 )
-position = Vector2( 252, 180 )
+position = Vector2( 252, 209 )
 scale = Vector2( 0.828125, 0.828125 )
 normal = ExtResource( 9 )
 pressed = ExtResource( 11 )
@@ -180,6 +180,33 @@ margin_right = 108.0
 margin_bottom = 43.0
 custom_fonts/font = SubResource( 4 )
 text = "Créditos"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TutorialButton" type="TouchScreenButton" parent="CenterContainer"]
+modulate = Color( 1.05, 1.05, 1.05, 1 )
+position = Vector2( 254, 86 )
+scale = Vector2( 0.828125, 0.828125 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="CenterContainer/TutorialButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.0
+margin_top = -43.0
+margin_right = 108.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 4 )
+text = "Tutorial"
 align = 1
 valign = 1
 __meta__ = {
@@ -236,5 +263,6 @@ environment = SubResource( 5 )
 [connection signal="pressed" from="CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="CenterContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="CenterContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="CenterContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
 
 [editable path="CreditsLayer"]

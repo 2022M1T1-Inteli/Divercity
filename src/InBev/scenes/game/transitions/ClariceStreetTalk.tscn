@@ -44,7 +44,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
 textList = [ "Oi?! Você não é daqui né? Vi você saindo do bairro étnico racial, está perdido?", "self: Nossa, você caiu do céu!", "self: Preciso de ajuda para atravessar o bairro pelo melhor caminho.", "Prazer, eu sou a Clarice. Quanto à orientação, eu posso sim ajudar, mas antes você terá que me fazer um favor!", "self: Tudo bem, o que você precisa?", "Estou com um problema no encanamento da cidade e preciso de ajuda para conectar os canos corretamente. Você pode me acompanhar até a sala de máquinas?", "self: Claro!" ]
-callbackScenePath = "res://scenes/game/transitions/ClaricePipeTalk.tscn"
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 material = SubResource( 6 )
