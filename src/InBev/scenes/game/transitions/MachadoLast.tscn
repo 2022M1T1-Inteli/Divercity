@@ -1,16 +1,20 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://resources/transitions/empty.png" type="Texture" id=1]
 [ext_resource path="res://resources/transitions/talk_cloud.png" type="Texture" id=2]
+[ext_resource path="res://resources/transitions/machado.png" type="Texture" id=3]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=4]
-[ext_resource path="res://sources/game/transitions/ClariceStreetTalk.gd" type="Script" id=5]
+[ext_resource path="res://sources/game/transitions/MachadoLast.gd" type="Script" id=5]
 [ext_resource path="res://resources/ui/Arrow/icons8-pixel-arrow-100.png" type="Texture" id=6]
 [ext_resource path="res://resources/transitions/talk_cloud_straigth.png" type="Texture" id=7]
-[ext_resource path="res://resources/transitions/imagem 10 - conversa 1 - equidade de genro.png" type="Texture" id=8]
-[ext_resource path="res://resources/fonts/Ballon.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://resources/transitions/exit_simple.png" type="Texture" id=8]
 [ext_resource path="res://sources/game/transitions/bases/ArrowTexture.gd" type="Script" id=10]
+[ext_resource path="res://resources/fonts/Ballon.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
 
 [sub_resource type="ShaderMaterial" id=2]
@@ -21,7 +25,7 @@ size = 22
 outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 11 )
 
 [sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 4 )
@@ -30,39 +34,51 @@ shader = ExtResource( 4 )
 shader = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 24
+size = 22
 outline_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 11 )
 
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 4 )
 
-[node name="ClariceStreetTalk" type="Control"]
+[node name="MachadoLast" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
-textList = [ "Oi?! Você não é daqui né? Vi você saindo do bairro étnico racial, está perdido?", "self: Nossa, você caiu do céu!", "self: Preciso de ajuda para atravessar o bairro pelo melhor caminho.", "Prazer, eu sou a Clarice. Quanto à orientação, eu posso sim ajudar, mas antes você terá que me fazer um favor!", "self: Tudo bem, o que você precisa?", "Estou com um problema no encanamento da cidade e preciso de ajuda para conectar os canos corretamente. Você pode me acompanhar até a sala de máquinas?", "self: Claro!" ]
-callbackScenePath = "res://scenes/game/transitions/ClaricePipeTalk.tscn"
+textList = [ "Olha só! Você ainda está aqui?", "self: Sim, acabei de deixar uns brinquedos para doação na creche a pedido de uma moça chamada Clarice.", "Nossa, que legal! Mas, o mais legal nisso tudo é que você está chegando perto de seu objetivo, né?", "self: Que objetivo?", "Bom, você já está nas fronteiras de Divercity, achei que seu objetivo fosse sair da nossa cidade…", "self: Pensando bem, gostei tanto da cidade, das pessoas e da forma de convivência de vocês, que decidi ficar. Sinto que aprendi muito durante essa travessia.", "self: Desde o princípio, achava que a mudança que eu necessitava era externa...", "self: Quando, na verdade, o que eu precisava mesmo era aprender a respeitar as diferenças e as diversidades.", "self: Ou seja, ter uma mudança externa. Esse lugar me transformou! Agradeço, Machado, por me apresentar essa cidade tão rica!", "Venha, vamos encontrar uma bela casa para você e dar início a essa nova fase da sua vida aqui!" ]
+callbackScenePath = "res://scenes/game/transitions/Final.tscn"
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 material = SubResource( 6 )
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_right = 360.0
+margin_bottom = 640.0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="TigerWoodTexture" type="TextureRect" parent="."]
+material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 8 )
+margin_left = -48.0
+margin_top = 557.0
+margin_right = -272.0
+margin_bottom = 159.0
+texture = ExtResource( 3 )
 expand = true
 
 [node name="PersonTalk" type="Control" parent="."]
 visible = false
-margin_left = 63.0
-margin_top = 170.0
-margin_right = 103.0
-margin_bottom = 210.0
+margin_left = 199.0
+margin_top = 7.00002
+margin_right = 239.0
+margin_bottom = 47.0
 rect_scale = Vector2( 1.4, 1.4 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
 [node name="TalkCloudTexture" type="TextureRect" parent="PersonTalk"]
@@ -73,6 +89,10 @@ margin_top = 68.0
 margin_right = 340.0
 margin_bottom = 688.0
 texture = ExtResource( 2 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TalkLabel" type="Label" parent="PersonTalk"]
 anchor_left = 0.5
@@ -91,6 +111,9 @@ align = 1
 valign = 1
 autowrap = true
 clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ArrowTexture" type="TextureRect" parent="PersonTalk"]
 material = SubResource( 7 )
@@ -108,10 +131,10 @@ __meta__ = {
 
 [node name="SelfTalk" type="Control" parent="."]
 visible = false
-margin_left = -8.0
-margin_top = 697.0
-margin_right = 32.0
-margin_bottom = 737.0
+margin_left = 297.0
+margin_top = 690.0
+margin_right = 337.0
+margin_bottom = 730.0
 rect_scale = Vector2( 1.3, 1.3 )
 __meta__ = {
 "_edit_group_": true,
@@ -172,8 +195,8 @@ __meta__ = {
 
 [node name="NextTalk" type="TouchScreenButton" parent="ClickAreas"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 367, 53 )
-scale = Vector2( 1.35022, 4.64446 )
+position = Vector2( 405, 61 )
+scale = Vector2( 1.2135, 4.64446 )
 normal = ExtResource( 1 )
 pressed = ExtResource( 1 )
 

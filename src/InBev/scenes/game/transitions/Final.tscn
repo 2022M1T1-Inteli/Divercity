@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sources/game/transitions/Final.gd" type="Script" id=2]
+[ext_resource path="res://resources/transitions/end.png" type="Texture" id=3]
+[ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 4 )
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("BackgroundTexture:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("BackgroundTexture:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Scroll"
+length = 8.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("BackgroundTexture:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -1300, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 8 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("BackgroundTexture:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 8 )
+}
+
+[node name="MachadoLast" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+callbackScenePath = "res://scenes/menu/Menu.tscn"
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+material = SubResource( 6 )
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_right = 1659.0
+margin_bottom = 640.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="GenericTimer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 8 )
+anims/Scroll = SubResource( 7 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

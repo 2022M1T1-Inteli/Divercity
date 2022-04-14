@@ -41,3 +41,8 @@ func _on_MainHSlider_value_changed(value):
 
 func _on_CreditsButton_pressed():
 	$CreditsLayer.show_self() # Show credits layer
+
+func _on_RestartButton_pressed():
+	LevelManager.currentLevel = -1 # Reset current level
+	print(get_tree().get_root().get_node("MainScene"))
+	get_tree().get_root().get_node("MainScene")._change_scene_to("res://scenes/menu/Menu.tscn", true) # Change scene to menu

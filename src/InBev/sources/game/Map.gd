@@ -25,9 +25,9 @@ func _ready():
 			checkpoint.set_status(false) # Set checkpoint to inactive
 			checkpoint.modulate = Color(0.4, 0.4, 0.4) # Remove effect
 
-	if LevelManager.currentLevel == 5:
+	if LevelManager.currentLevel == 8:
 		$AnimationPlayer.play("MoveMap")
-	elif LevelManager.currentLevel > 5:
+	elif LevelManager.currentLevel > 8:
 		get_node("Map").rect_position = Vector2(620, 0)
 		get_node("Checkpoints").position = Vector2(620, 0)
 

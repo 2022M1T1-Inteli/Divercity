@@ -58,6 +58,7 @@ mouse_filter = 2
 color = Color( 0, 0, 0, 0 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 6 )
 volume_db = -10.0
 autoplay = true
