@@ -47,9 +47,6 @@ shader = ExtResource( 4 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 material = SubResource( 6 )

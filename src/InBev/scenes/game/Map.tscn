@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://resources/transitions/main_map.png" type="Texture" id=1]
 [ext_resource path="res://sources/common/shaders/PixelPerfect.gdshader" type="Shader" id=2]
@@ -9,349 +9,6 @@
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
-[sub_resource type="Animation" id=5]
-resource_name = "BlinkCheckopoints"
-length = 1.5
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Checkpoints:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Checkpoints:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.392157, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "MoveMap"
-length = 2.0
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 610, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-
-[sub_resource type="Animation" id=4]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath("Checkpoints:modulate:r")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath("Checkpoints:modulate:g")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/6/type = "bezier"
-tracks/6/path = NodePath("Checkpoints:modulate:b")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/7/type = "bezier"
-tracks/7/path = NodePath("Checkpoints:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "BlinkCheckpoints"
-length = 1.5
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Checkpoints:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Checkpoints:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.8, 1.5 )
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "MoveMap"
-length = 2.0
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 610, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2 )
-}
-
-[sub_resource type="Animation" id=8]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Map:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Map:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("Checkpoints:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Checkpoints:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath("Checkpoints:modulate:r")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath("Checkpoints:modulate:g")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/6/type = "bezier"
-tracks/6/path = NodePath("Checkpoints:modulate:b")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/7/type = "bezier"
-tracks/7/path = NodePath("Checkpoints:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
 [sub_resource type="Environment" id=9]
 background_mode = 4
 glow_enabled = true
@@ -360,14 +17,101 @@ glow_blend_mode = 1
 glow_hdr_threshold = 0.8
 adjustment_brightness = 0.71
 
+[sub_resource type="Animation" id=10]
+resource_name = "MoveMap"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Map:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Map:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Checkpoints:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 620, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Checkpoints:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Map:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Map:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Checkpoints:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Checkpoints:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
 [node name="MainMap" type="Node"]
 script = ExtResource( 4 )
 
 [node name="Map" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 2880.0
-margin_bottom = 5120.0
+margin_right = 1440.0
+margin_bottom = 2560.0
 __meta__ = {
 "_edit_group_": true
 }
@@ -386,14 +130,14 @@ __meta__ = {
 [node name="Checkpoints" type="Node2D" parent="."]
 
 [node name="Minigame1" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( 397, 1013 )
+position = Vector2( 2, 117 )
 callbackScenePath = "res://scenes/game/transitions/MachadoDrugstoreTalk.tscn"
 callbackSceneParams = {
 "callbackSceneParams": {
 "callbackSceneParams": {
 "callbackSceneParams": {
 "callbackScenePath": "res://scenes/game/Map.tscn",
-"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", " Bom, o golf é um esporte muito elitista em que a grande maioria dos jogadores são brancos.", "Então não era tão difícil em um campeonato, eu ser o único jogador negro. Já sofri muito preconceito fora dos campos de golf também.", "Lá na minha cidade, por exemplo, eu tinha muito medo de sair de casa para os treinos, porque a polícia sempre me parava violentamente.", "Achando que o meu taco de golfe era para agredir ou assaltar alguém. Isso me fez perceber que tinha que sair de lá, e foi quando recebi a proposta para morar em DiverCity." ]
+"textList": [ "O golfe é um jogo em que para ser jogado dependemos apenas de um taco e uma bola, mas no jogo da vida nem sempre é assim...", "inclusive eu já passei por um bocado de desafios.", "self: Me conte um pouco mais! ", "Olha, infelizmente, o golfe é um esporte muito elitista, em que a grande maioria dos jogadores são brancos.", "Então, não era tão difícil eu ser o único jogador negro em um campeonato. Por isso, já sofri muito preconceito e discriminação dentro e fora dos campos.", "Quando eu era mais novo, Divercity era chamada por um nome obscuro. Mas não é só o nome que era diferente...", "A região era comandada por uma milícia extremamente preconceituosa e intolerante com todas as minorias.", "A brutalidade era um método comum utilizado para tratar pessoas negras.", " Inclusive, eu tinha muito medo de sair de casa para os treinos...", " porque a polícia sempre me parava violentamente achando que o meu taco de golfe era para agredir alguém.", " Isso, entre outras coisas, me fez querer agir para transformar essa cidade e livrá-la de tantas abominações. Foi assim que decidi liderar a Revolução Diversa.", "self: Caramba, não imaginava que essa cidade possui tanta história!" ]
 },
 "callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
 "loadMap": 3
@@ -402,13 +146,14 @@ callbackSceneParams = {
 "textList": [ "self: Olá, o Machado me disse que você pode me ajudar! ", "Opa, tudo bem?! Em que eu poderia te ajudar?", "self: Eu preciso passar pelo melhor caminho para sair dessa cidade.", "Já entendi, você quer que eu seja seu guia, mas tem uma condição, você terá que cumprir alguns desafios.", "self: Tudo bem, quais seriam esses desafios?", "O primeiro começa agora. Você vai ter que me ajudar a treinar para um campeonato de golf que está por vir.", "self: Claro, vamos lá!" ]
 },
 "callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
-"textList": [ "Olá, meu nome é Machado, seja bem vinda(o) ao bairro Étnico-racial, hoje um dos bairros mais racialmente heterogêneos da cidade, mas nem sempre foi assim…", "Enfim, isso não convém nesse momento.", "Ah! Não sei se você percebeu, mas Divercity é uma cidade bem sinalizada, atente-se às placas e essa será a sua melhor jornada até aqui.", "Olha, foi um prazer te conhecer, eu estou apressado agora, mas a gente ainda vai se ver muito por aqui ainda.", "self: O que tem ali à frente ?", " Você vai conhecer agora um dos moradores mais influentes da cidade, ele é jogador de golfe e mora aqui desde o tempo em que esse bairro não era como você vê hoje.", "As pessoas mal olhavam umas para as outras, não havia esse ar amoroso e acolhedor que você sente. Aquele homem foi peça chave dessa transformação. Converse com ele, e ele irá te guiar." ]
+"textList": [ "Olá, meu nome é Machado, seja bem vinde ao bairro Étnico-racial, hoje um dos bairros mais racialmente heterogêneos da cidade, mas nem sempre foi assim…", "Enfim, isso não convém nesse momento.", "Ah! Não sei se você percebeu, mas Divercity é uma cidade bem sinalizada, atente-se às placas e essa será a sua melhor jornada até aqui.", "Olha, foi um prazer te conhecer, eu estou apressado agora, mas a gente ainda vai se ver muito por aqui ainda.", "self: O que tem ali à frente ?", "Agora você vai conhecer um dos moradores mais influentes da cidade. Ele é jogador de golfe e mora aqui desde o tempo em que esse bairro não era como você vê hoje. ", " Ele liderou a revolução de Divercity em meados de 1980, época em que os habitantes eram segregados entre os bairros e lemas como inclusão e respeito não pertenciam à cultura local. Converse com ele e ele irá te guiar." ]
 }
 
 [node name="Quiz1" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( 392, 716 )
+position = Vector2( 385, 119 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
+"backgroundTexture": "res://resources/transitions/imagem 6 - minigolfe 2.png",
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Negros são 78% dos mortos pela letalidade policial.",
 "otherAnswers": [ {
@@ -423,14 +168,15 @@ callbackSceneParams = {
 indentifier = 1
 
 [node name="Minigame2" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( 6, 716 )
+position = Vector2( 398, 410 )
 callbackScenePath = "res://scenes/game/transitions/ShonoGolfTalk.tscn"
 indentifier = 2
 
 [node name="Quiz2" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( 6, 413 )
+position = Vector2( 9, 396 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
 callbackSceneParams = {
+"backgroundTexture": "res://resources/transitions/shono_close.png",
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Sim",
 "otherAnswers": [ {
@@ -445,13 +191,47 @@ callbackSceneParams = {
 indentifier = 3
 
 [node name="Minigame3" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( 9.00002, 123 )
-callbackScenePath = "res://scenes/game/transitions/ClariceStreetTalk.tscn"
+position = Vector2( -0.999996, 720 )
+callbackScenePath = "res://scenes/game/transitions/TigerWoodGolfTalk.tscn"
+callbackSceneParams = {
+"callbackSceneParams": {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "Por exemplo, eu sou da raça negra, porém sou da etnia indígena caiapó. Entende como as duas não são a mesma coisa?", "self: Ah entendi, agora fez sentido para mim!" ]
+},
+"callbackScenePath": "res://scenes/game/transitions/TigerWoodGolfTalk.tscn",
+"loadMap": 5
+},
+"callbackScenePath": "res://scenes/minigames/golf/Golf.tscn",
+"textList": [ "Agora, acho que você conseguiu entender um pouco mais sobre as dores que pessoas da raça amarela sofrem!", "self: Calma lá, mas o correto não seria etnia amarela?", "Olha, não é bem assim… depois que terminarmos de jogar, te explico." ]
+}
 indentifier = 4
 
 [node name="Quiz3" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( -387, 993 )
+position = Vector2( 396, 728 )
 callbackScenePath = "res://scenes/game/quiz/QuizThreeChoices.tscn"
+callbackSceneParams = {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"correctAnswer": "Sim, raça se refere a questões biológicas, enquanto etnia se refere, além disso, a questões culturais.",
+"otherAnswers": [ {
+"justification": "Na verdade, é exatamente o contrário. Etnia se refere a questões culturais, linguísticas e semelhanças genéticas, enquanto raça se refere a questões primordialmente biológicas.",
+"question": "Sim, etnia é um termo que se refere a questões biológicas (como cor de pele, tipo de cabelo ou herança genética) e raça é um termo que se refere, também, a questões culturais."
+}, {
+"justification": "Apesar de serem, muitas vezes, utilizados como sinônimos, esses termos são diferentes. Etnia se refere a questões culturais, além das biológicas, enquanto raça se refere a questões biológicas, primordialmente.",
+"question": "Não existe diferença entre os dois, referem-se a mesma coisa."
+} ],
+"quizzQuestion": "Existe diferença entre raça e etnia?"
+}
+indentifier = 5
+
+[node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
+position = Vector2( 387, 998 )
+callbackScenePath = "res://scenes/game/transitions/ClariceStreetTalk.tscn"
+indentifier = 6
+
+[node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
+position = Vector2( 1, 997 )
+callbackScenePath = "res://scenes/game/quiz/QuizThreeChoicesEng.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Não, porque, apesar de terem realidades diferentes, homens e mulheres, ao exercerem as mesmas funções, têm capacidades iguais e resultados equivalentes.",
@@ -464,16 +244,16 @@ callbackSceneParams = {
 } ],
 "quizzQuestion": "Mulheres deveriam ganhar menos que os homens, ao exercerem as mesmas funções?"
 }
-indentifier = 5
+indentifier = 7
 
-[node name="Minigame4" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( -376, 717 )
+[node name="Minigame5" parent="Checkpoints" instance=ExtResource( 3 )]
+position = Vector2( -380, 996 )
 callbackScenePath = "res://scenes/game/transitions/CharliePipeTalk.tscn"
-indentifier = 6
+indentifier = 8
 
-[node name="Quiz4" parent="Checkpoints" instance=ExtResource( 5 )]
-position = Vector2( -372, 413 )
-callbackScenePath = "res://scenes/game/quiz/QuizTrueFalse.tscn"
+[node name="Quiz5" parent="Checkpoints" instance=ExtResource( 5 )]
+position = Vector2( -374, 713 )
+callbackScenePath = "res://scenes/game/quiz/QuizTrueFalseEng.tscn"
 callbackSceneParams = {
 "callbackScenePath": "res://scenes/game/Map.tscn",
 "correctAnswer": "Falso",
@@ -481,25 +261,51 @@ callbackSceneParams = {
 "justification": " Apesar da anatomia dos órgãos genitais ser um fator relevante, não é ela que define o gênero das pessoas. Se o indivíduo se identifica com o sexo biológico com o qual nasceu, essa pessoa é cisgênero, se não se identifica com o que nasceu, mas se identifica com outro, essa pessoa é trânsgenero e, caso não se identifique com nenhum dos dois binários (masculino e feminino), é uma pessoa não binária.",
 "question": "Verdadeiro"
 },
-"quizzQuestion": " A definição de gênero está relacionada, somente, à anatomia dos órgãos genitais."
+"quizzQuestion": "A definição de gênero está relacionada, somente, à anatomia dos órgãos genitais."
 }
-indentifier = 7
+indentifier = 9
 
-[node name="Minigame5" parent="Checkpoints" instance=ExtResource( 3 )]
-position = Vector2( -376, 142 )
-callbackScenePath = "res://scenes/game/transitions/EarnBadge.tscn"
-indentifier = 8
+[node name="Minigame6" parent="Checkpoints" instance=ExtResource( 3 )]
+position = Vector2( -380, 404 )
+callbackScenePath = "res://scenes/game/transitions/ClaricePipeTalk.tscn"
+callbackSceneParams = {
+"callbackSceneParams": {
+"callbackSceneParams": {
+"callbackScenePath": "res://scenes/game/Map.tscn",
+"textList": [ "self: Terminei aqui, esse é o saco de brinquedos que tenho que levar?", "Isso mesmo. Tem várias bonecas, casinhas e uma mini cozinha, por favor, tome cuidado para não danificá-los.", "self: As meninas da creche irão adorar! ", "Não é legal fazermos esse tipo de diferenciação…", "Não somente as meninas da creche vão adorar, mas todas as crianças em geral. Inclusive, esses brinquedos são do meu filho." ]
+},
+"callbackScenePath": "res://scenes/game/transitions/ClaricePipeTalk.tscn",
+"loadMap": 3
+},
+"callbackScenePath": "res://scenes/minigames/eletropipe/Eletropipe.tscn",
+"textList": [ "Nosso trabalho, hoje, já está quase finalizado. Eu ainda vou ficar ocupada por aqui!", "Você poderia me fazer um outro favor e levar aquele saco de brinquedos que eu separei para doação até a creche “Companhia”, que fica a dois blocos daqui?", "self: Claro, assim que terminarmos eu levo." ]
+}
+indentifier = 10
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/BlinkCheckopoints = SubResource( 5 )
-anims/MoveMap = SubResource( 3 )
-anims/RESET = SubResource( 4 )
-
-[node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
-reset_on_save = false
-anims/BlinkCheckpoints = SubResource( 6 )
-anims/MoveMap = SubResource( 7 )
-anims/RESET = SubResource( 8 )
+[node name="Quiz6" parent="Checkpoints" instance=ExtResource( 5 )]
+position = Vector2( -375, 116 )
+callbackScenePath = "res://scenes/game/quiz/QuizThreeChoicesEng.tscn"
+callbackSceneParams = {
+"callbackScenePath": "res://scenes/game/transitions/MachadoLast.tscn",
+"correctAnswer": "Não distinguir brinquedos de meninos e meninas.",
+"otherAnswers": [ {
+"justification": "Apesar de fazer com que a criança brinque com os dois tipos de brinquedo, ainda haveria uma diferenciação.",
+"question": "Deixar que os meninos brinquem com o brinquedo das meninas, e vice-versa."
+}, {
+"justification": " Lavar a louça não é uma tarefa exclusiva de algum gênero para ser diferenciada.",
+"question": "Fazer com que seus filhos lavem a louça desde cedo."
+} ],
+"quizzQuestion": "A verdadeira construção da igualdade de gêneros começa na infância. Qual destas ferramentas será efetiva para diminuir a diferença entre homens e mulheres no futuro?"
+}
+indentifier = 11
 
 [node name="WorldEnvironmentMenu" type="WorldEnvironment" parent="."]
 environment = SubResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/MoveMap = SubResource( 10 )
+anims/RESET = SubResource( 11 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
