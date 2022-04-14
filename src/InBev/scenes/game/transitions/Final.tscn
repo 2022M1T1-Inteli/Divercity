@@ -64,8 +64,8 @@ callbackScenePath = "res://scenes/menu/Menu.tscn"
 material = SubResource( 6 )
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_right = 2019.0
-margin_bottom = 1280.0
+margin_right = 2739.0
+margin_bottom = 2560.0
 texture = ExtResource( 3 )
 expand = true
 

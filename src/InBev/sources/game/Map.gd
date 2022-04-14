@@ -23,6 +23,7 @@ func _ready():
 			get_node("Tween").start()
 		else:
 			checkpoint.set_status(false) # Set checkpoint to inactive
+			checkpoint.modulate = Color(0.4, 0.4, 0.4)
 
 	if LevelManager.currentLevel == 8:
 		$AnimationPlayer.play("MoveMap")
