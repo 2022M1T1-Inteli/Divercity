@@ -10,6 +10,13 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/ariel-kisilevzky-7b1770ba/">Ariel Kisilevzky</a>, <a href="https://www.linkedin.com/in/gabriel-torres-233851231/">Gabriel Torres</a>, <a href="https://www.linkedin.com/in/henrique-marlon-6771331ba/">Henrique Marlon</a>, <a href="https://www.linkedin.com/in/izabella-almeida-10">Izabella Almeida</a>, <a href="https://www.linkedin.com/in/mihaell-alves-4ab12720b/">Mihaell Alves</a>, <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8">Valentina Garcia</a>, <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
 
+## Professores Orientadores: 
+<a href="http://lattes.cnpq.br/2716416791407528" target="_blank" rel="noopener noreferrer"> Flavio Marques Azevedo </a>, 
+<a href="http://lattes.cnpq.br/9324969584977927" target="_blank" rel="noopener noreferrer"> Laíza Ribeiro </a>, 
+<a href="http://lattes.cnpq.br/2951162577564329" target="_blank" rel="noopener noreferrer"> Pedro Teberga</a>, 
+<a href="http://lattes.cnpq.br/2327073767433655" target="_blank" rel="noopener noreferrer"> Ricardo Missori </a>,
+<a href="http://lattes.cnpq.br/3254174044411983" target="_blank" rel="noopener noreferrer"> Victor Bruno Alexander Rosetti de Quiroz </a>
+
 ## Descrição
 
 📜 Jogo DIVERCITY, desenvolvido por alunos do Instituto de Tecnologia e Liderança, durante o projeto do primeiro módulo em parceria com a empresa <a href="https://www.ambev.com.br/">Ambev</a>.
