@@ -38,37 +38,48 @@ Nosso projeto ajuda no ensinamento de funcionários da <a href="https://www.ambe
 
 ## 🛠 Estrutura de pastas
 
-- 📂 __Projeto4__
-   - 📄 [README.md](README.md)
-   - 📂 __[documentos](documentos/)__
-     - 📄 Arquivos de documentos do projeto
-   - 📂 __[executáveis](executáveis/)__
-      - 📄 Local onde estão os executáveis do jogo
-   - 📂 __[imagens](imagens/)__
-      - 📄 Imagens usadas para descrição do projeto
-   - 📂 __[src](src/)__ | Projetos
-      - 📂 __[InBev](src/InBev)__ | Projeto GODOT principal
-        - 📂 __[resources](src/InBev/resources)__
-          - 📄 Materiais usados para a criação
-        - 📂 __[scenes](src/InBev/scenes)__
-          - 📄 Cenas contidas do jogo
-        - 📂 __[sources](src/InBev/sources)__
-          - 📄 Código fonte do jogo
 
----
+📦<b>Projeto 3</b><br>
+📎 __[documentos](documentos/)__<br>
+&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br>
+💻__[executáveis](executáveis/)<br>
+&emsp;&emsp;📁|-->Windows<br>
+&emsp;&emsp;📁|-->Android<br>
+&emsp;&emsp;📁|-->HTML<br>
+📷[Imagens](Imagens/)<br>
+💾[Src](src)<br>
+📄[README.md](README.md)<br>
+📜[license.txt](license.txt)
+
+
 
 ## 🛠 Instalação
 <b>Pode ser jogado no browser!:</b>
 [Link do projeto WEB](https://vinicioslugli.itch.io/divercity)
 
+<b>Windows:</b>
+
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em https://github.com/2022M1T1/Projeto4/tree/master/execut%C3%A1veis/Windows e execute "1.5.0_DiverCity.exe" como qualquer outro programa.
+
+
 <b>Android:</b>
 
 Faça o Download do ultimo binário do [jogo](/executáveis/Android), transfira o arquivo `.apk` para o seu dispositivo Android e instale o jogo.
-
+```sh
 ⚠️ Atenção, caso seu dispositivo afirme que o jogo não possa ser instalado por conta de permissões de fontes externas desconhecidas, aceite as permissões, habilite a autorização de instação de aplicativos de fontes desconhecidas e instale novamente!
-
+```
 ---
 
+<b>HTML:</b>
+
+Não há instalação! Baixe os arquivos disponíveis em https://github.com/2022M1T1/Projeto4/tree/master/execut%C3%A1veis/HTML/Divercity_1.5.0_html e execute-o como uma página da web (através de algum navegador).
+
+```sh
+Dependendo de suas configurações de firewall, talvez seja necessário
+instaurar um web service como xampp ou wampp para que o jogo rode lo-
+calmente.
+```
+---
 ## 📈 Exemplo de uso
 <img src="imagens/mapa.png" alt="DiverCity" border="0">
 <img src="imagens/conversa.png" alt="DiverCity" border="0">
@@ -129,9 +140,14 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M1T1/Projeto4">Projeto4</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2022M1T1/Projeto4/blob/master/README.md#InBev">INBEV</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2022M1T1/Projeto4/blob/master/README.md#InBev">INBEV</a>, by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
 
 ---
+
+
+
+## 📋 Licença/License
+
 
 ## 🎓 Referências
 
