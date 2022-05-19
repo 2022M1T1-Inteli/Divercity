@@ -38,21 +38,19 @@ Nosso projeto ajuda no ensinamento de funcionários da <a href="https://www.ambe
 
 ## 🛠 Estrutura de pastas
 
-
 <b>Projeto 4</b><br>
- __[documentos](documentos/)__<br>
+Documentos
+&emsp;|-->antigos<br>
 &emsp;|--> GDD grupo 4.pdf <br>
-__[executáveis](executáveis/)__<br>
+executáveis<br>
 &emsp;|--> Windows<br>
 &emsp;|--> Android<br>
 &emsp;|--> HTML<br>
-[Imagens](Imagens/)<br>
-[Src](src)<br>
+imagens<br>
+src<br>
 &emsp;|--> InBev<br>
-[README.md](README.md)<br>
-[license.txt](license.txt)
-
-
+readme.md<br>
+licença.txt <br>
 
 ## 🛠 Instalação
 <b>Pode ser jogado no browser!:</b>
